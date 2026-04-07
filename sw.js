@@ -11,8 +11,8 @@ const ASSETS = [
   '/style.css',
   '/species-data.js',
   '/manifest.json',
-  '/icons/icon-192.png',
-  '/icons/icon-512.png'
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 // Install: cache all core assets
