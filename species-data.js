@@ -2270,6 +2270,16 @@ const SPECIES_DB = [
     "notes": "Peru national, elaborate lek"
   },
   {
+    "name": "Strawberry poison frog",
+    "group": "Amphibian",
+    "subgroup": "Dendrobatid",
+    "S": 0.58,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Individually provisions multiple tadpoles at separate locations over weeks"
+  },
+  {
     "name": "Pteranodon",
     "group": "Dinosaur",
     "subgroup": "Pterosauria",
@@ -2850,6 +2860,16 @@ const SPECIES_DB = [
     "notes": "Singapore national bird"
   },
   {
+    "name": "Poison dart frog",
+    "group": "Amphibian",
+    "subgroup": "Dendrobatid",
+    "S": 0.58,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "MEDIUM",
+    "notes": "Tadpole transport, territorial wrestling with assessment"
+  },
+  {
     "name": "Grasshopper/Locust",
     "group": "Insect",
     "subgroup": "Orthoptera",
@@ -2990,6 +3010,16 @@ const SPECIES_DB = [
     "notes": "Independent eyes, color communication"
   },
   {
+    "name": "Tungara frog",
+    "group": "Amphibian",
+    "subgroup": "Leptodactylid",
+    "S": 0.55,
+    "I": 0.48,
+    "U": 0.45,
+    "confidence": "MEDIUM",
+    "notes": "Adjusts call complexity by competition AND predation risk"
+  },
+  {
     "name": "Moray eel",
     "group": "Fish",
     "subgroup": "Muraenidae",
@@ -3078,6 +3108,16 @@ const SPECIES_DB = [
     "U": 0.45,
     "confidence": "LOW",
     "notes": "Netherlands national"
+  },
+  {
+    "name": "Golden poison frog",
+    "group": "Amphibian",
+    "subgroup": "Dendrobatid",
+    "S": 0.55,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Most toxic vertebrate, social for a frog"
   },
   {
     "name": "Cricket",
@@ -3170,6 +3210,16 @@ const SPECIES_DB = [
     "notes": "Only asymmetric-billed bird"
   },
   {
+    "name": "Goliath frog",
+    "group": "Amphibian",
+    "subgroup": "Conrauidae",
+    "S": 0.52,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Builds breeding ponds by clearing rocks"
+  },
+  {
     "name": "Sailfish",
     "group": "Fish",
     "subgroup": "Istiophoridae",
@@ -3228,6 +3278,16 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "MEDIUM",
     "notes": "Biparental care, adjusts brood to resource"
+  },
+  {
+    "name": "Darwin's frog",
+    "group": "Amphibian",
+    "subgroup": "Rhinodermatid",
+    "S": 0.5,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Male broods tadpoles in vocal sac 6-8 weeks"
   },
   {
     "name": "Giant anteater",
@@ -3330,6 +3390,36 @@ const SPECIES_DB = [
     "notes": "Pheromone mass attacks"
   },
   {
+    "name": "American bullfrog",
+    "group": "Amphibian",
+    "subgroup": "Ranid",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Graded territorial escalation, individual voice recognition"
+  },
+  {
+    "name": "Red-eyed tree frog",
+    "group": "Amphibian",
+    "subgroup": "Phyllomedusid",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Embryos hatch early if they detect snake vibrations"
+  },
+  {
+    "name": "Mantella",
+    "group": "Amphibian",
+    "subgroup": "Mantellid",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Madagascar convergent poison frog"
+  },
+  {
     "name": "Pike",
     "group": "Fish",
     "subgroup": "Esocidae",
@@ -3410,6 +3500,16 @@ const SPECIES_DB = [
     "notes": "Opponent size assessment before combat"
   },
   {
+    "name": "Cane toad",
+    "group": "Amphibian",
+    "subgroup": "Bufonid",
+    "S": 0.52,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Most successful amphibian invader, behavioral flexibility"
+  },
+  {
     "name": "Swordfish",
     "group": "Fish",
     "subgroup": "Xiphiidae",
@@ -3418,6 +3518,26 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "VERY LOW",
     "notes": "Brain-heating organ"
+  },
+  {
+    "name": "Midwife toad",
+    "group": "Amphibian",
+    "subgroup": "Alytid",
+    "S": 0.5,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Male carries eggs on legs for weeks"
+  },
+  {
+    "name": "African clawed frog",
+    "group": "Amphibian",
+    "subgroup": "Pipid",
+    "S": 0.5,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "HIGH",
+    "notes": "Major lab model, spatial learning documented"
   },
   {
     "name": "Lobster",
@@ -3730,6 +3850,36 @@ const SPECIES_DB = [
     "notes": "Numerical discrimination, mate copying"
   },
   {
+    "name": "Glass frog",
+    "group": "Amphibian",
+    "subgroup": "Centrolenid",
+    "S": 0.5,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Paternal care, leaf vibration communication"
+  },
+  {
+    "name": "Common toad",
+    "group": "Amphibian",
+    "subgroup": "Bufonid",
+    "S": 0.5,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "MEDIUM",
+    "notes": "Annual migration with multi-year pond memory"
+  },
+  {
+    "name": "Gray tree frog",
+    "group": "Amphibian",
+    "subgroup": "Hylid",
+    "S": 0.5,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Changes color to match substrate"
+  },
+  {
     "name": "Galapagos tortoise",
     "group": "Reptile",
     "subgroup": "Tortoise",
@@ -3788,6 +3938,46 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "LOW",
     "notes": "Horn+frill display"
+  },
+  {
+    "name": "Red-backed salamander",
+    "group": "Amphibian",
+    "subgroup": "Plethodontid",
+    "S": 0.48,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "MEDIUM",
+    "notes": "Chemical territories, dear enemy recognition by scent"
+  },
+  {
+    "name": "Chinese giant salamander",
+    "group": "Amphibian",
+    "subgroup": "Cryptobranchid",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Largest amphibian, 2-3 month paternal care"
+  },
+  {
+    "name": "Japanese giant salamander",
+    "group": "Amphibian",
+    "subgroup": "Cryptobranchid",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Active tail-fanning egg care, national treasure"
+  },
+  {
+    "name": "Fire salamander",
+    "group": "Amphibian",
+    "subgroup": "Salamandrid",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Live birth in some subspecies"
   },
   {
     "name": "Anole",
@@ -3860,6 +4050,116 @@ const SPECIES_DB = [
     "notes": "Most trafficked mammal"
   },
   {
+    "name": "Axolotl",
+    "group": "Amphibian",
+    "subgroup": "Ambystomatid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "MEDIUM",
+    "notes": "Regenerates limbs + brain, neotenic, spatial learning"
+  },
+  {
+    "name": "Horned frog",
+    "group": "Amphibian",
+    "subgroup": "Ceratophryid",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Toe-wiggling prey lure, eats prey its own size"
+  },
+  {
+    "name": "Wallace's flying frog",
+    "group": "Amphibian",
+    "subgroup": "Rhacophorid",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Glides between trees, foam nest construction"
+  },
+  {
+    "name": "Surinam toad",
+    "group": "Amphibian",
+    "subgroup": "Pipid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Babies develop inside mother's back skin"
+  },
+  {
+    "name": "Wood frog",
+    "group": "Amphibian",
+    "subgroup": "Ranid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Survives being frozen solid, natal pond fidelity"
+  },
+  {
+    "name": "Spring peeper",
+    "group": "Amphibian",
+    "subgroup": "Hylid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Chorus timing coordination, antifreeze survival"
+  },
+  {
+    "name": "Harlequin frog",
+    "group": "Amphibian",
+    "subgroup": "Bufonid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Hand-waving communication, critically endangered"
+  },
+  {
+    "name": "Tiger salamander",
+    "group": "Amphibian",
+    "subgroup": "Ambystomatid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Chooses whether to metamorphose, cannibal morph when crowded"
+  },
+  {
+    "name": "Rough-skinned newt",
+    "group": "Amphibian",
+    "subgroup": "Salamandrid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Arms race with garter snakes, tetrodotoxin"
+  },
+  {
+    "name": "Hellbender",
+    "group": "Amphibian",
+    "subgroup": "Cryptobranchid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Flips rocks to hunt, male nest guarding"
+  },
+  {
+    "name": "Eastern newt",
+    "group": "Amphibian",
+    "subgroup": "Salamandrid",
+    "S": 0.48,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Magnetic compass for homing, three life stages"
+  },
+  {
     "name": "Goldfish",
     "group": "Fish",
     "subgroup": "Cyprinidae",
@@ -3930,6 +4230,26 @@ const SPECIES_DB = [
     "notes": "Best neural data, connectome in progress"
   },
   {
+    "name": "Spotted salamander",
+    "group": "Amphibian",
+    "subgroup": "Ambystomatid",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Only vertebrate with intracellular algal symbiont"
+  },
+  {
+    "name": "Mudpuppy",
+    "group": "Amphibian",
+    "subgroup": "Proteidae",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Neotenic, keeps gills for life"
+  },
+  {
     "name": "Corn snake",
     "group": "Reptile",
     "subgroup": "Snake",
@@ -3970,6 +4290,26 @@ const SPECIES_DB = [
     "notes": "Aestivation, closest fish to tetrapods"
   },
   {
+    "name": "Olm",
+    "group": "Amphibian",
+    "subgroup": "Proteidae",
+    "S": 0.45,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Blind cave salamander, lives 100+ years, 10+ years without food"
+  },
+  {
+    "name": "Caecilian",
+    "group": "Amphibian",
+    "subgroup": "Caecilian",
+    "S": 0.45,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Legless, babies eat mother's skin, unique tentacle sensor"
+  },
+  {
     "name": "Red-eared slider",
     "group": "Reptile",
     "subgroup": "Turtle",
@@ -3988,6 +4328,26 @@ const SPECIES_DB = [
     "U": 0.35,
     "confidence": "VERY LOW",
     "notes": "Builds cases from found materials"
+  },
+  {
+    "name": "Vietnamese mossy frog",
+    "group": "Amphibian",
+    "subgroup": "Rhacophorid",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Extreme camouflage, death feigning"
+  },
+  {
+    "name": "Tomato frog",
+    "group": "Amphibian",
+    "subgroup": "Microhylid",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Puffs up + sticky skin defense"
   },
   {
     "name": "Sturgeon",
@@ -4070,6 +4430,16 @@ const SPECIES_DB = [
     "notes": "Mealworm research model"
   },
   {
+    "name": "Siren",
+    "group": "Amphibian",
+    "subgroup": "Sirenid",
+    "S": 0.45,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Eel-like salamander, aestivation cocoon"
+  },
+  {
     "name": "Silk moth",
     "group": "Insect",
     "subgroup": "Lepidoptera",
@@ -4148,6 +4518,16 @@ const SPECIES_DB = [
     "U": 0.32,
     "confidence": "MEDIUM",
     "notes": "Well-studied nervous system"
+  },
+  {
+    "name": "Purple frog",
+    "group": "Amphibian",
+    "subgroup": "Sooglossid",
+    "S": 0.42,
+    "I": 0.32,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "100M year lineage, lives underground"
   },
   {
     "name": "Physarum",
