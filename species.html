@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Species Database - SIU Framework</title>
-  <meta name="description" content="Complete database of organisms scored using the SIU awareness framework. Searchable, filterable, sortable. Mammals, fish, birds, insects, and more.">
+  <meta name="description" content="Complete database of 443 organisms scored using the SIU awareness framework. Searchable, filterable, sortable. Mammals, fish, birds, insects, and more.">
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0a0a0f">
@@ -19,7 +19,7 @@
     <div class="links">
       <a href="index.html">Home</a>
       <a href="calculator.html">Calculator</a>
-      <a href="species.html" class="active">Species Database</a>
+      <a href="species.html">Species Database</a>
       <a href="methodology.html">Methodology</a>
     </div>
   </div>
@@ -28,7 +28,7 @@
 <div class="wide-container">
 
   <div class="hero" style="padding-bottom: 24px;">
-    <h1><span id="db-count">249</span> organisms, ranked</h1>
+    <h1>443 organisms, ranked</h1>
     <p class="subtitle">Every score justified. Confidence levels noted. Bias corrections applied. Deep dives completed for mammals, fish, birds, and insects. Search, filter, and sort.</p>
   </div>
 
@@ -85,119 +85,138 @@
 const H_SIU = 0.85 * 0.95 * 0.95;
 
 function getTier(pctHuman) {
-  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware"};
-  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious"};
-  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious"};
-  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive"};
-  return {name: "Minimal", cls: "tier-minimal"};
+  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware", order: 5};
+  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious", order: 4};
+  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious", order: 3};
+  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", order: 2};
+  return {name: "Minimal", cls: "tier-minimal", order: 1};
 }
 
-let data = SPECIES.map((sp, idx) => {
-  const siu = (sp.S / 100) * (sp.I / 100) * (sp.U / 100);
+// Build enriched data
+let data = SPECIES_DB.map((sp, idx) => {
+  const siu = sp.S * sp.I * sp.U;
   const pct = (siu / H_SIU) * 100;
   const tier = getTier(pct);
-  return { ...sp, siu, pct, tier, rank: 0 };
-}).sort((a, b) => b.siu - a.siu);
-data.forEach((d, i) => d.rank = i + 1);
+  return {...sp, siu, pct, tier: tier.name, tierCls: tier.cls, tierOrder: tier.order};
+}).sort((a, b) => b.siu - a.siu).map((sp, idx) => ({...sp, rank: idx + 1}));
 
-// Update dynamic count
-document.getElementById('db-count').textContent = data.length;
+// Groups and tiers
+const groups = [...new Set(data.map(d => d.group))].sort();
+const tiers = ["Self-Aware", "Conscious", "Subconscious", "Reactive", "Minimal"];
 
-let sortCol = 'rank', sortDir = 1;
 let activeGroups = new Set();
 let activeTiers = new Set();
+let sortKey = 'rank';
+let sortAsc = true;
+let searchText = '';
 
 // Build group filters
-const groups = [...new Set(data.map(d => d.group))].sort();
-const gfEl = document.getElementById('group-filters');
+const groupFilters = document.getElementById('group-filters');
 groups.forEach(g => {
   const btn = document.createElement('button');
   btn.className = 'chip';
-  btn.textContent = g;
+  btn.textContent = `${g} (${data.filter(d => d.group === g).length})`;
   btn.onclick = () => {
     if (activeGroups.has(g)) { activeGroups.delete(g); btn.classList.remove('active'); }
     else { activeGroups.add(g); btn.classList.add('active'); }
     render();
   };
-  gfEl.appendChild(btn);
+  groupFilters.appendChild(btn);
 });
 
 // Build tier filters
-const tierNames = ["Self-Aware", "Conscious", "Subconscious", "Reactive", "Minimal"];
-const tfEl = document.getElementById('tier-filters');
-tierNames.forEach(t => {
+const tierFilters = document.getElementById('tier-filters');
+const tierClasses = {"Self-Aware":"tier-selfaware","Conscious":"tier-conscious","Subconscious":"tier-subconscious","Reactive":"tier-reactive","Minimal":"tier-minimal"};
+tiers.forEach(t => {
   const btn = document.createElement('button');
   btn.className = 'chip';
-  btn.textContent = t;
+  btn.innerHTML = `<span class="tier-badge ${tierClasses[t]}" style="font-size:10px; padding: 2px 6px">${t}</span> (${data.filter(d => d.tier === t).length})`;
   btn.onclick = () => {
     if (activeTiers.has(t)) { activeTiers.delete(t); btn.classList.remove('active'); }
     else { activeTiers.add(t); btn.classList.add('active'); }
     render();
   };
-  tfEl.appendChild(btn);
+  tierFilters.appendChild(btn);
+});
+
+// Tier summary
+const tierSummary = document.getElementById('tier-summary');
+tiers.forEach(t => {
+  const count = data.filter(d => d.tier === t).length;
+  const pctRange = data.filter(d => d.tier === t);
+  const min = pctRange.length ? Math.min(...pctRange.map(d => d.pct)).toFixed(1) : 0;
+  const max = pctRange.length ? Math.max(...pctRange.map(d => d.pct)).toFixed(1) : 0;
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.innerHTML = `<span class="tier-badge ${tierClasses[t]}">${t}</span>
+    <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;">${count}</div>
+    <div style="font-size: 12px; color: var(--text-muted);">${min}% - ${max}% of human</div>`;
+  tierSummary.appendChild(div);
 });
 
 // Sort
-document.querySelectorAll('#species-table th[data-sort]').forEach(th => {
+document.querySelectorAll('th[data-sort]').forEach(th => {
   th.onclick = () => {
-    const col = th.dataset.sort;
-    if (sortCol === col) sortDir *= -1;
-    else { sortCol = col; sortDir = 1; }
+    const key = th.dataset.sort;
+    if (sortKey === key) sortAsc = !sortAsc;
+    else { sortKey = key; sortAsc = key === 'name' || key === 'group'; }
     render();
   };
 });
 
 // Search
-document.getElementById('search').addEventListener('input', () => render());
-
-// Tier summary
-const tierSummary = document.getElementById('tier-summary');
-tierNames.forEach(t => {
-  const count = data.filter(d => d.tier.name === t).length;
-  const cls = t.toLowerCase().replace('-', '').replace(' ', '');
-  tierSummary.innerHTML += `<div class="card" style="text-align:center; padding: 16px;">
-    <div style="font-family: var(--mono); font-size: 28px; font-weight: 600;">${count}</div>
-    <span class="tier-badge tier-${cls}">${t}</span>
-  </div>`;
+document.getElementById('search').addEventListener('input', e => {
+  searchText = e.target.value.toLowerCase();
+  render();
 });
 
 function render() {
-  const q = document.getElementById('search').value.toLowerCase();
   let filtered = data.filter(d => {
-    if (q && !d.name.toLowerCase().includes(q) && !d.group.toLowerCase().includes(q) && !(d.notes || '').toLowerCase().includes(q)) return false;
     if (activeGroups.size && !activeGroups.has(d.group)) return false;
-    if (activeTiers.size && !activeTiers.has(d.tier.name)) return false;
+    if (activeTiers.size && !activeTiers.has(d.tier)) return false;
+    if (searchText) {
+      const hay = `${d.name} ${d.group} ${d.subgroup} ${d.notes}`.toLowerCase();
+      if (!hay.includes(searchText)) return false;
+    }
     return true;
   });
 
-  filtered.sort((a, b) => {
-    let va = a[sortCol], vb = b[sortCol];
-    if (sortCol === 'name' || sortCol === 'group' || sortCol === 'tier') {
-      va = sortCol === 'tier' ? a.tier.name : va;
-      vb = sortCol === 'tier' ? b.tier.name : vb;
-      return sortDir * String(va).localeCompare(String(vb));
-    }
-    return sortDir * (va - vb);
-  });
+  const sortFns = {
+    rank: (a, b) => a.rank - b.rank,
+    name: (a, b) => a.name.localeCompare(b.name),
+    group: (a, b) => a.group.localeCompare(b.group),
+    S: (a, b) => a.S - b.S,
+    I: (a, b) => a.I - b.I,
+    U: (a, b) => a.U - b.U,
+    siu: (a, b) => a.siu - b.siu,
+    pct: (a, b) => a.pct - b.pct,
+    tier: (a, b) => a.tierOrder - b.tierOrder,
+  };
+  if (sortFns[sortKey]) {
+    filtered.sort((a, b) => {
+      const result = sortFns[sortKey](a, b);
+      return sortAsc ? result : -result;
+    });
+  }
 
-  document.getElementById('table-body').innerHTML = filtered.map(d => `<tr>
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = filtered.map(d => `<tr>
     <td class="num">${d.rank}</td>
-    <td><strong>${d.name}</strong>${d.subgroup ? `<br><span style="font-size:11px;color:var(--text-dim)">${d.subgroup}</span>` : ''}</td>
-    <td>${d.group}</td>
-    <td class="num">${(d.S / 100).toFixed(2)}</td>
-    <td class="num">${(d.I / 100).toFixed(2)}</td>
-    <td class="num">${(d.U / 100).toFixed(2)}</td>
+    <td style="font-weight: 600">${d.name}</td>
+    <td style="color: var(--text-dim); font-size: 13px">${d.group}</td>
+    <td class="num">${d.S.toFixed(2)}</td>
+    <td class="num">${d.I.toFixed(2)}</td>
+    <td class="num">${d.U.toFixed(2)}</td>
     <td class="num">${(d.siu * 100).toFixed(1)}%</td>
     <td class="num">${d.pct.toFixed(1)}%</td>
-    <td><span class="tier-badge ${d.tier.cls}">${d.tier.name}</span></td>
-    <td style="color: ${d.confidence === 'HIGH' ? 'var(--tier-selfaware)' : d.confidence === 'MEDIUM' ? 'var(--tier-subconscious)' : 'var(--tier-reactive)'}">${d.confidence}</td>
+    <td><span class="tier-badge ${d.tierCls}">${d.tier}</span></td>
+    <td style="font-family: var(--mono); font-size: 11px; color: ${d.confidence === 'HIGH' ? 'var(--tier-selfaware)' : d.confidence === 'MEDIUM' ? 'var(--tier-subconscious)' : 'var(--tier-reactive)'}">${d.confidence}</td>
     <td style="font-size: 12px; color: var(--text-dim); max-width: 300px">${d.notes}</td>
   </tr>`).join('');
 }
 
 render();
 </script>
-
 <script>
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
