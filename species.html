@@ -6,10 +6,6 @@
   <title>Species Database - SIU Framework</title>
   <meta name="description" content="Complete database of 443 organisms scored using the SIU awareness framework. Searchable, filterable, sortable. Mammals, fish, birds, insects, and more.">
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0a0a0f">
-  <link rel="apple-touch-icon" href="icon-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 
@@ -216,13 +212,6 @@ function render() {
 }
 
 render();
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-    .then(() => console.log('SIU offline ready'))
-    .catch(err => console.log('SW error:', err));
-}
 </script>
 </body>
 </html>

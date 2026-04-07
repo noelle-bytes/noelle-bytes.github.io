@@ -17,7 +17,7 @@ const SPECIES_DB = [
     "I": 0.9,
     "U": 0.9,
     "confidence": "HIGH",
-    "notes": "Tool manufacture, culture, warfare, mirror test"
+    "notes": "Tool manufacture, culture, mirror test"
   },
   {
     "name": "Orca",
@@ -27,7 +27,7 @@ const SPECIES_DB = [
     "I": 0.88,
     "U": 0.9,
     "confidence": "HIGH",
-    "notes": "Cultural dialects, population-specific hunting, mourning, teaching"
+    "notes": "Cultural dialects, mourning, teaching"
   },
   {
     "name": "Bonobo",
@@ -37,7 +37,7 @@ const SPECIES_DB = [
     "I": 0.88,
     "U": 0.88,
     "confidence": "HIGH",
-    "notes": "Symbol use (Kanzi), empathy, conflict resolution"
+    "notes": "Symbol use (Kanzi), empathy"
   },
   {
     "name": "Bottlenose dolphin",
@@ -47,7 +47,7 @@ const SPECIES_DB = [
     "I": 0.88,
     "U": 0.88,
     "confidence": "HIGH",
-    "notes": "Name whistles, mirror test, cultural sponge tool use"
+    "notes": "Name whistles, mirror test, sponge tools"
   },
   {
     "name": "Gorilla",
@@ -57,7 +57,7 @@ const SPECIES_DB = [
     "I": 0.85,
     "U": 0.85,
     "confidence": "HIGH",
-    "notes": "Tool use, sign language (Koko, debated)"
+    "notes": "Tool use, sign language (Koko)"
   },
   {
     "name": "African elephant",
@@ -67,7 +67,7 @@ const SPECIES_DB = [
     "I": 0.85,
     "U": 0.85,
     "confidence": "HIGH",
-    "notes": "Mirror test, mourning rituals, bone visitation, infrasound"
+    "notes": "Mirror test, mourning, infrasound"
   },
   {
     "name": "Orangutan",
@@ -77,7 +77,7 @@ const SPECIES_DB = [
     "I": 0.85,
     "U": 0.85,
     "confidence": "HIGH",
-    "notes": "Most sophisticated tool manufacture, future planning, pantomime"
+    "notes": "Sophisticated tools, future planning"
   },
   {
     "name": "Asian elephant",
@@ -87,7 +87,7 @@ const SPECIES_DB = [
     "I": 0.83,
     "U": 0.84,
     "confidence": "HIGH",
-    "notes": "Mirror test, body awareness, cooperative timing, vocal mimicry"
+    "notes": "Mirror test, body awareness"
   },
   {
     "name": "New Caledonian crow",
@@ -97,7 +97,7 @@ const SPECIES_DB = [
     "I": 0.82,
     "U": 0.82,
     "confidence": "HIGH",
-    "notes": "Hook tool manufacture, mental metatool representation"
+    "notes": "Hook tools, metatool representation"
   },
   {
     "name": "Octopus",
@@ -107,7 +107,7 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.82,
     "confidence": "HIGH",
-    "notes": "Tool use, play, escape artistry, distributed but unified control"
+    "notes": "Tool use, play, escape artistry"
   },
   {
     "name": "Sperm whale",
@@ -117,7 +117,7 @@ const SPECIES_DB = [
     "I": 0.8,
     "U": 0.82,
     "confidence": "MEDIUM",
-    "notes": "Largest brain, clan dialects, communal calf care"
+    "notes": "Largest brain, clan dialects"
   },
   {
     "name": "Common raven",
@@ -127,7 +127,7 @@ const SPECIES_DB = [
     "I": 0.8,
     "U": 0.82,
     "confidence": "HIGH",
-    "notes": "Future planning (tools+barter), theory of mind"
+    "notes": "Future planning, theory of mind"
   },
   {
     "name": "Humpback whale",
@@ -137,7 +137,7 @@ const SPECIES_DB = [
     "I": 0.78,
     "U": 0.8,
     "confidence": "MEDIUM",
-    "notes": "Song culture, cross-species altruism, bubble net cooperation"
+    "notes": "Song culture, cross-species altruism"
   },
   {
     "name": "African grey parrot",
@@ -147,7 +147,7 @@ const SPECIES_DB = [
     "I": 0.78,
     "U": 0.8,
     "confidence": "HIGH",
-    "notes": "Alex: 100 objects, zero concept, 'What color am I?'"
+    "notes": "Alex: 'What color am I?'"
   },
   {
     "name": "American crow",
@@ -157,17 +157,17 @@ const SPECIES_DB = [
     "I": 0.78,
     "U": 0.78,
     "confidence": "HIGH",
-    "notes": "Cultural face recognition transmission, funerals"
+    "notes": "Cultural face recognition, funerals"
   },
   {
-    "name": "Capuchin monkey",
+    "name": "Capuchin",
     "group": "Mammal",
     "subgroup": "Primate",
     "S": 0.72,
     "I": 0.75,
     "U": 0.78,
     "confidence": "HIGH",
-    "notes": "3000-year tool record, fairness sensitivity, bartering"
+    "notes": "3000-year tool record, fairness"
   },
   {
     "name": "Wolf",
@@ -177,7 +177,17 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.75,
     "confidence": "MEDIUM",
-    "notes": "Pack hunting with roles, complex social hierarchy"
+    "notes": "Pack hunting with roles"
+  },
+  {
+    "name": "Paper wasp",
+    "group": "Insect",
+    "subgroup": "Social Hymenoptera",
+    "S": 0.7,
+    "I": 0.75,
+    "U": 0.78,
+    "confidence": "MEDIUM",
+    "notes": "Face recognition, transitive inference"
   },
   {
     "name": "Beluga whale",
@@ -197,7 +207,7 @@ const SPECIES_DB = [
     "I": 0.75,
     "U": 0.78,
     "confidence": "HIGH",
-    "notes": "First non-mammal mirror test (Prior 2008)"
+    "notes": "First non-mammal mirror test"
   },
   {
     "name": "Hooded crow",
@@ -207,27 +217,17 @@ const SPECIES_DB = [
     "I": 0.75,
     "U": 0.78,
     "confidence": "MEDIUM",
-    "notes": "NEURAL EVIDENCE of subjective experience (Nieder 2020 Science)"
+    "notes": "Neural evidence of subjective experience"
   },
   {
-    "name": "Paper wasp (Polistes)",
-    "group": "Insect",
-    "subgroup": "Social Hymenoptera",
-    "S": 0.7,
-    "I": 0.75,
-    "U": 0.78,
-    "confidence": "MEDIUM",
-    "notes": "Face recognition via configural processing, transitive inference"
-  },
-  {
-    "name": "Dog (domestic)",
+    "name": "Dog",
     "group": "Mammal",
     "subgroup": "Canid",
     "S": 0.75,
     "I": 0.72,
     "U": 0.75,
     "confidence": "HIGH",
-    "notes": "1000+ word vocabulary, human emotion reading, pointing"
+    "notes": "1000+ words, human emotion reading"
   },
   {
     "name": "Bat (echolocating)",
@@ -237,7 +237,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.7,
     "confidence": "MEDIUM",
-    "notes": "3D spatial mapping via echolocation, vocal learning"
+    "notes": "3D spatial mapping, vocal learning"
   },
   {
     "name": "Eurasian jay",
@@ -247,7 +247,7 @@ const SPECIES_DB = [
     "I": 0.75,
     "U": 0.76,
     "confidence": "HIGH",
-    "notes": "Episodic memory, desire-state attribution, experience-projection"
+    "notes": "Episodic memory, desire attribution"
   },
   {
     "name": "Kea",
@@ -257,7 +257,7 @@ const SPECIES_DB = [
     "I": 0.75,
     "U": 0.76,
     "confidence": "MEDIUM",
-    "notes": "Probability reasoning, extreme neophilia, play"
+    "notes": "Probability reasoning, neophilia"
   },
   {
     "name": "Honeybee",
@@ -277,7 +277,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.72,
     "confidence": "MEDIUM",
-    "notes": "Camouflage communication, episodic memory, self-control"
+    "notes": "Camouflage, episodic memory"
   },
   {
     "name": "Lion",
@@ -287,7 +287,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.72,
     "confidence": "MEDIUM",
-    "notes": "Counts rival numbers by roars, cooperative hunting"
+    "notes": "Counts rivals by roars"
   },
   {
     "name": "Rhesus macaque",
@@ -297,7 +297,7 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "Metacognition (opt-out when uncertain)"
+    "notes": "Metacognition"
   },
   {
     "name": "Baboon",
@@ -307,7 +307,17 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.72,
     "confidence": "MEDIUM",
-    "notes": "Complex alliance politics, analogical reasoning"
+    "notes": "Alliance politics, analogical reasoning"
+  },
+  {
+    "name": "Japanese macaque",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.72,
+    "I": 0.72,
+    "U": 0.72,
+    "confidence": "MEDIUM",
+    "notes": "Cultural potato washing, hot springs"
   },
   {
     "name": "Hyena (spotted)",
@@ -317,7 +327,7 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.72,
     "confidence": "MEDIUM",
-    "notes": "Outperforms chimps on cooperative tasks"
+    "notes": "Outperforms chimps on cooperation"
   },
   {
     "name": "Sulphur-crested cockatoo",
@@ -327,7 +337,17 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.74,
     "confidence": "MEDIUM",
-    "notes": "Bin-opening culture across Sydney (2021 Science), 14 dance moves"
+    "notes": "Bin-opening culture, 14 dance moves"
+  },
+  {
+    "name": "Gibbon",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.72,
+    "I": 0.7,
+    "U": 0.72,
+    "confidence": "MEDIUM",
+    "notes": "Duet singing, brachiation"
   },
   {
     "name": "Pig",
@@ -337,7 +357,7 @@ const SPECIES_DB = [
     "I": 0.7,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "Mirror-guided food finding, joystick operation"
+    "notes": "Mirror-guided food, joystick operation"
   },
   {
     "name": "Leafcutter ant",
@@ -347,7 +367,7 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.8,
     "confidence": "MEDIUM",
-    "notes": "Fungal agriculture with antibiotics, 4+ castes"
+    "notes": "Fungal agriculture"
   },
   {
     "name": "Raccoon",
@@ -357,7 +377,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.7,
     "confidence": "MEDIUM",
-    "notes": "Complex latch opening, 3-year task memory"
+    "notes": "Latch opening, 3-year memory"
   },
   {
     "name": "Dragonfly",
@@ -367,27 +387,17 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.65,
     "confidence": "MEDIUM",
-    "notes": "95% hunting success, predictive interception (Nature 2015)"
+    "notes": "95% hunting success, predictive interception"
   },
   {
-    "name": "Jackdaw",
-    "group": "Bird",
-    "subgroup": "Corvid",
-    "S": 0.68,
-    "I": 0.72,
-    "U": 0.72,
-    "confidence": "MEDIUM",
-    "notes": "Gaze following, collective flock decisions"
-  },
-  {
-    "name": "Rook",
-    "group": "Bird",
-    "subgroup": "Corvid",
+    "name": "Desert ant",
+    "group": "Insect",
+    "subgroup": "Social Hymenoptera",
     "S": 0.68,
     "I": 0.72,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "Water displacement understanding (Aesop's fable)"
+    "notes": "Pedometer navigation, stilts experiment"
   },
   {
     "name": "Goffin's cockatoo",
@@ -397,17 +407,37 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "Makes and carries tool kits, 5-step lock picking"
+    "notes": "Tool kits, 5-step lock picking"
   },
   {
-    "name": "Desert ant (Cataglyphis)",
-    "group": "Insect",
-    "subgroup": "Social Hymenoptera",
+    "name": "Jackdaw",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.68,
+    "I": 0.72,
+    "U": 0.72,
+    "confidence": "MEDIUM",
+    "notes": "Gaze following, consensus decisions"
+  },
+  {
+    "name": "Rook",
+    "group": "Bird",
+    "subgroup": "Corvid",
     "S": 0.68,
     "I": 0.72,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "Pedometer + polarization compass, Wittlinger stilts experiment"
+    "notes": "Aesop's fable water displacement"
+  },
+  {
+    "name": "Jungle crow",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.68,
+    "I": 0.72,
+    "U": 0.72,
+    "confidence": "LOW",
+    "notes": "Human face discrimination"
   },
   {
     "name": "Tiger",
@@ -417,7 +447,37 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.68,
     "confidence": "LOW",
-    "notes": "Infrasound vocalization, huge territory management"
+    "notes": "Infrasound, huge territory"
+  },
+  {
+    "name": "Jaguar",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.78,
+    "I": 0.65,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Strongest relative bite, underwater hunting"
+  },
+  {
+    "name": "Leopard",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.78,
+    "I": 0.65,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Caches prey in trees"
+  },
+  {
+    "name": "Bengal tiger",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.78,
+    "I": 0.65,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Mangrove specialist"
   },
   {
     "name": "Harris's hawk",
@@ -427,7 +487,7 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.68,
     "confidence": "MEDIUM",
-    "notes": "Only raptor with cooperative pack hunting"
+    "notes": "Only cooperative hunting raptor"
   },
   {
     "name": "Sea otter",
@@ -437,7 +497,17 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.7,
     "confidence": "MEDIUM",
-    "notes": "Stone tool use with individual rock preference"
+    "notes": "Stone tool use"
+  },
+  {
+    "name": "African wild dog",
+    "group": "Mammal",
+    "subgroup": "Canid",
+    "S": 0.72,
+    "I": 0.68,
+    "U": 0.7,
+    "confidence": "MEDIUM",
+    "notes": "80% hunt success, sneezing votes"
   },
   {
     "name": "Rat",
@@ -447,7 +517,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.7,
     "confidence": "HIGH",
-    "notes": "Empathic rescue, regret, metacognition, ultrasonic laughter"
+    "notes": "Empathic rescue, regret, metacognition"
   },
   {
     "name": "Clark's nutcracker",
@@ -457,27 +527,7 @@ const SPECIES_DB = [
     "I": 0.72,
     "U": 0.7,
     "confidence": "MEDIUM",
-    "notes": "33,000 cache locations across months"
-  },
-  {
-    "name": "Indian house crow",
-    "group": "Bird",
-    "subgroup": "Corvid",
-    "S": 0.68,
-    "I": 0.7,
-    "U": 0.72,
-    "confidence": "MEDIUM",
-    "notes": "Mirror test passed, extreme urban adaptability"
-  },
-  {
-    "name": "Fish crow",
-    "group": "Bird",
-    "subgroup": "Corvid",
-    "S": 0.68,
-    "I": 0.7,
-    "U": 0.72,
-    "confidence": "LOW",
-    "notes": "Corvid-typical cognition"
+    "notes": "33,000 cache memories"
   },
   {
     "name": "Bumblebee",
@@ -487,7 +537,27 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.72,
     "confidence": "HIGH",
-    "notes": "First insect play behavior, two-step social learning (2024)"
+    "notes": "First insect play, two-step social learning"
+  },
+  {
+    "name": "Indian house crow",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.68,
+    "I": 0.7,
+    "U": 0.72,
+    "confidence": "MEDIUM",
+    "notes": "Mirror test passed"
+  },
+  {
+    "name": "Fish crow",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.68,
+    "I": 0.7,
+    "U": 0.72,
+    "confidence": "LOW",
+    "notes": "Corvid-typical"
   },
   {
     "name": "Golden eagle",
@@ -497,7 +567,7 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.65,
     "confidence": "MEDIUM",
-    "notes": "4-8x human visual acuity, flexible hunting strategies"
+    "notes": "4-8x human visual acuity"
   },
   {
     "name": "Jumping spider",
@@ -507,17 +577,17 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.7,
     "confidence": "HIGH",
-    "notes": "Route planning, deception hunting, attention"
+    "notes": "Route planning, deception"
   },
   {
-    "name": "Macaw",
+    "name": "Macaw (scarlet)",
     "group": "Bird",
     "subgroup": "Parrot",
     "S": 0.7,
     "I": 0.68,
     "U": 0.7,
     "confidence": "MEDIUM",
-    "notes": "Lifelong pair bonds, regional dialects"
+    "notes": "Lifelong bonds, regional dialects"
   },
   {
     "name": "Narwhal",
@@ -527,7 +597,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.72,
     "confidence": "LOW",
-    "notes": "Tusk = 10M nerve ending sensory organ"
+    "notes": "Tusk = 10M nerve sensor"
   },
   {
     "name": "Striated caracara",
@@ -537,7 +607,7 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.68,
     "confidence": "MEDIUM",
-    "notes": "Outperforms cockatoos on problem-solving"
+    "notes": "Outperforms cockatoos"
   },
   {
     "name": "Mantis shrimp",
@@ -547,7 +617,7 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.62,
     "confidence": "MEDIUM",
-    "notes": "16 color receptors, individual recognition"
+    "notes": "16 color receptors"
   },
   {
     "name": "Spider monkey",
@@ -557,7 +627,17 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.68,
     "confidence": "LOW",
-    "notes": "Fission-fusion social system"
+    "notes": "Fission-fusion"
+  },
+  {
+    "name": "Mandrill",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.7,
+    "I": 0.68,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Most colorful mammal face"
   },
   {
     "name": "Bear (grizzly)",
@@ -567,7 +647,7 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.68,
     "confidence": "LOW",
-    "notes": "Individual fishing techniques, extraordinary olfaction"
+    "notes": "Individual fishing techniques"
   },
   {
     "name": "Horse",
@@ -577,17 +657,17 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.68,
     "confidence": "MEDIUM",
-    "notes": "Reads human emotions from photos, symbol communication"
+    "notes": "Cross-modal human recognition"
   },
   {
-    "name": "Bat (fruit/flying fox)",
+    "name": "Bat (fruit)",
     "group": "Mammal",
     "subgroup": "Chiroptera",
     "S": 0.72,
     "I": 0.65,
     "U": 0.68,
     "confidence": "MEDIUM",
-    "notes": "Reciprocal altruism with bookkeeping"
+    "notes": "Reciprocal altruism"
   },
   {
     "name": "Peregrine falcon",
@@ -597,17 +677,27 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.62,
     "confidence": "MEDIUM",
-    "notes": "Fastest animal, ballistic stoop at 390 km/h"
+    "notes": "Fastest animal, 390 km/h"
   },
   {
-    "name": "Cat (domestic)",
+    "name": "Canada jay",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.68,
+    "I": 0.68,
+    "U": 0.68,
+    "confidence": "MEDIUM",
+    "notes": "Cultural caching, cold specialist"
+  },
+  {
+    "name": "Cat",
     "group": "Mammal",
     "subgroup": "Felid",
     "S": 0.78,
     "I": 0.62,
     "U": 0.65,
     "confidence": "MEDIUM",
-    "notes": "Object permanence, individual human voice recognition"
+    "notes": "Object permanence, voice recognition"
   },
   {
     "name": "Weaver ant",
@@ -617,7 +707,37 @@ const SPECIES_DB = [
     "I": 0.68,
     "U": 0.75,
     "confidence": "LOW",
-    "notes": "Living chains for construction, larval silk gluing"
+    "notes": "Living chains, larval silk gluing"
+  },
+  {
+    "name": "Bald eagle",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.82,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "Fish-snatching, piracy"
+  },
+  {
+    "name": "Philippine eagle",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.82,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Monkey-hunting, critically endangered"
+  },
+  {
+    "name": "Polar bear",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.75,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "LOW",
+    "notes": "Seal hunting patience"
   },
   {
     "name": "Marmoset",
@@ -627,7 +747,7 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.68,
     "confidence": "MEDIUM",
-    "notes": "Vocal turn-taking, cooperative breeding"
+    "notes": "Vocal turn-taking"
   },
   {
     "name": "Great horned owl",
@@ -637,7 +757,67 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "Hunts in total darkness by sound alone"
+    "notes": "Hunts by sound in total darkness"
+  },
+  {
+    "name": "Weaver ant (Australian)",
+    "group": "Insect",
+    "subgroup": "Social Hymenoptera",
+    "S": 0.6,
+    "I": 0.65,
+    "U": 0.75,
+    "confidence": "LOW",
+    "notes": "1700 years as bio-control"
+  },
+  {
+    "name": "Vampire bat",
+    "group": "Mammal",
+    "subgroup": "Chiroptera",
+    "S": 0.72,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "MEDIUM",
+    "notes": "Reciprocal altruism with bookkeeping"
+  },
+  {
+    "name": "Giant otter",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.72,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "LOW",
+    "notes": "9+ distinct calls, cooperative hunting"
+  },
+  {
+    "name": "Gyrfalcon",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.82,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Largest falcon, Arctic"
+  },
+  {
+    "name": "Spanish imperial eagle",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.82,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Iberian endemic"
+  },
+  {
+    "name": "Meerkat",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.7,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "MEDIUM",
+    "notes": "Teaching with progressive difficulty"
   },
   {
     "name": "Sea lion",
@@ -647,7 +827,7 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.65,
     "confidence": "MEDIUM",
-    "notes": "Logical syllogistic reasoning, musical beat-keeping"
+    "notes": "Logical reasoning, beat-keeping"
   },
   {
     "name": "Cheetah",
@@ -657,7 +837,17 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "70 mph pursuit with real-time trajectory adjustment"
+    "notes": "70 mph pursuit trajectory"
+  },
+  {
+    "name": "Snow leopard",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.75,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Mountain specialist"
   },
   {
     "name": "Army ant",
@@ -667,17 +857,47 @@ const SPECIES_DB = [
     "I": 0.65,
     "U": 0.78,
     "confidence": "LOW",
-    "notes": "Living architecture, swarm intelligence, mostly blind"
+    "notes": "Living architecture, swarm intelligence"
   },
   {
-    "name": "Fox (red)",
+    "name": "Osprey",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.8,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "MEDIUM",
+    "notes": "Specialized fish hunter"
+  },
+  {
+    "name": "Fox",
     "group": "Mammal",
     "subgroup": "Canid",
     "S": 0.72,
     "I": 0.62,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "Magnetic-aligned pouncing, hundreds of cache memories"
+    "notes": "Magnetic-aligned pouncing"
+  },
+  {
+    "name": "Black kite (firehawk)",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.72,
+    "I": 0.62,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "Intentional fire-spreading"
+  },
+  {
+    "name": "Azure-winged magpie",
+    "group": "Bird",
+    "subgroup": "Corvid",
+    "S": 0.65,
+    "I": 0.65,
+    "U": 0.65,
+    "confidence": "LOW",
+    "notes": "Prosocial food sharing"
   },
   {
     "name": "Stingless bee",
@@ -687,7 +907,7 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.68,
     "confidence": "LOW",
-    "notes": "Pulsed sound communication, understudied"
+    "notes": "Pulsed sound communication"
   },
   {
     "name": "Eclectus parrot",
@@ -697,7 +917,37 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.65,
     "confidence": "LOW",
-    "notes": "Extreme sexual dimorphism, polyandrous"
+    "notes": "Extreme sexual dimorphism"
+  },
+  {
+    "name": "African fish eagle",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.78,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Iconic African raptor"
+  },
+  {
+    "name": "Saker falcon",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.8,
+    "I": 0.58,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Steppe pursuit predator"
+  },
+  {
+    "name": "Ethiopian wolf",
+    "group": "Mammal",
+    "subgroup": "Canid",
+    "S": 0.72,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Rarest canid, ~500 left"
   },
   {
     "name": "Fire ant",
@@ -717,7 +967,7 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "Only insect with true 3D vision (confirmed with 3D glasses)"
+    "notes": "Only insect with true 3D vision"
   },
   {
     "name": "Yellowjacket",
@@ -737,7 +987,7 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "40,000 electroreceptors, hunts blind using only bill"
+    "notes": "40,000 electroreceptors"
   },
   {
     "name": "Barn owl",
@@ -747,7 +997,27 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "Most studied auditory spatial system"
+    "notes": "Best studied auditory system"
+  },
+  {
+    "name": "Golden snub-nosed monkey",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.68,
+    "I": 0.62,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Multi-level social, -25C cold"
+  },
+  {
+    "name": "Iberian lynx",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.75,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Rarest cat, conservation success"
   },
   {
     "name": "Wolverine",
@@ -757,7 +1027,7 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "Manages caches across 1500 km2, defeats traps"
+    "notes": "1500 km2 territory, defeats traps"
   },
   {
     "name": "Rock pigeon",
@@ -767,47 +1037,17 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.62,
     "confidence": "HIGH",
-    "notes": "Monet vs Picasso discrimination, numerical competence matches primates"
+    "notes": "Monet vs Picasso, numerical = primates"
   },
   {
-    "name": "Lemur (ring-tailed)",
-    "group": "Mammal",
-    "subgroup": "Prosimian",
-    "S": 0.68,
-    "I": 0.6,
-    "U": 0.62,
-    "confidence": "MEDIUM",
-    "notes": "Scent-based social communication"
-  },
-  {
-    "name": "Mouse",
-    "group": "Mammal",
-    "subgroup": "Rodent",
-    "S": 0.68,
-    "I": 0.6,
-    "U": 0.62,
-    "confidence": "HIGH",
-    "notes": "Emotional contagion (pain empathy)"
-  },
-  {
-    "name": "European starling",
+    "name": "Snowy owl",
     "group": "Bird",
-    "subgroup": "Songbird",
-    "S": 0.68,
-    "I": 0.6,
-    "U": 0.62,
-    "confidence": "MEDIUM",
-    "notes": "Recursive grammar recognition (controversial), murmuration"
-  },
-  {
-    "name": "Lyrebird",
-    "group": "Bird",
-    "subgroup": "Songbird",
-    "S": 0.68,
-    "I": 0.6,
-    "U": 0.62,
+    "subgroup": "Owl",
+    "S": 0.8,
+    "I": 0.55,
+    "U": 0.58,
     "confidence": "LOW",
-    "notes": "Most complex vocal mimicry in nature"
+    "notes": "Arctic specialist, diurnal"
   },
   {
     "name": "Asian giant hornet",
@@ -817,7 +1057,57 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "Coordinated multi-phase group raids"
+    "notes": "Multi-phase group raids"
+  },
+  {
+    "name": "Lemur",
+    "group": "Mammal",
+    "subgroup": "Prosimian",
+    "S": 0.68,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "Scent communication"
+  },
+  {
+    "name": "Mouse",
+    "group": "Mammal",
+    "subgroup": "Rodent",
+    "S": 0.68,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "HIGH",
+    "notes": "Pain empathy, emotional contagion"
+  },
+  {
+    "name": "Prairie dog",
+    "group": "Mammal",
+    "subgroup": "Rodent",
+    "S": 0.68,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "Language-like alarm calls encoding predator details"
+  },
+  {
+    "name": "European starling",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.68,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "Recursive grammar, murmuration"
+  },
+  {
+    "name": "Lyrebird",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.68,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Most complex vocal mimicry"
   },
   {
     "name": "Squirrel",
@@ -827,7 +1117,27 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.6,
     "confidence": "MEDIUM",
-    "notes": "Deceptive fake caching, thousands of cache sites"
+    "notes": "Deceptive fake caching"
+  },
+  {
+    "name": "Galah",
+    "group": "Bird",
+    "subgroup": "Parrot",
+    "S": 0.65,
+    "I": 0.62,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Social learning, play"
+  },
+  {
+    "name": "Javan hawk-eagle",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.78,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Rare Indonesian endemic"
   },
   {
     "name": "Cow",
@@ -837,7 +1147,7 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.62,
     "confidence": "MEDIUM",
-    "notes": "Excitement when solving problems, best friend bonds"
+    "notes": "Excitement when solving problems"
   },
   {
     "name": "Acorn woodpecker",
@@ -847,17 +1157,27 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.62,
     "confidence": "LOW",
-    "notes": "50,000-acorn granary management"
+    "notes": "50,000-acorn granary"
   },
   {
-    "name": "Budgerigar",
-    "group": "Bird",
-    "subgroup": "Parrot",
-    "S": 0.65,
-    "I": 0.6,
-    "U": 0.62,
-    "confidence": "MEDIUM",
-    "notes": "100+ word vocabulary, grammar-like patterns"
+    "name": "Trap-jaw ant",
+    "group": "Insect",
+    "subgroup": "Social Hymenoptera",
+    "S": 0.62,
+    "I": 0.58,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Fastest movement: 230 km/h mandible"
+  },
+  {
+    "name": "Bullet ant",
+    "group": "Insect",
+    "subgroup": "Social Hymenoptera",
+    "S": 0.62,
+    "I": 0.58,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Individual landmark navigation"
   },
   {
     "name": "Jewel wasp",
@@ -867,7 +1187,27 @@ const SPECIES_DB = [
     "I": 0.62,
     "U": 0.6,
     "confidence": "MEDIUM",
-    "notes": "Targeted neurosurgery on cockroach brain"
+    "notes": "Cockroach brain neurosurgery"
+  },
+  {
+    "name": "Howler monkey",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.65,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "LOW",
+    "notes": "Loudest land animal"
+  },
+  {
+    "name": "Budgerigar",
+    "group": "Bird",
+    "subgroup": "Parrot",
+    "S": 0.65,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "MEDIUM",
+    "notes": "100+ words, grammar patterns"
   },
   {
     "name": "Seal (harbor)",
@@ -877,7 +1217,17 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.6,
     "confidence": "LOW",
-    "notes": "Hoover mimicked human speech, whisker trail-following"
+    "notes": "Hoover mimicked speech"
+  },
+  {
+    "name": "Common kestrel",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.78,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "UV vision for rodent urine trails"
   },
   {
     "name": "Beaver",
@@ -900,14 +1250,34 @@ const SPECIES_DB = [
     "notes": "Giant axons, fast predation"
   },
   {
-    "name": "Ruby-throated hummingbird",
+    "name": "Troodon",
+    "group": "Dinosaur",
+    "subgroup": "Maniraptora",
+    "S": 0.72,
+    "I": 0.58,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Smartest non-avian dinosaur"
+  },
+  {
+    "name": "Clouded leopard",
+    "group": "Mammal",
+    "subgroup": "Felid",
+    "S": 0.72,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Best arboreal big cat"
+  },
+  {
+    "name": "Hummingbird (ruby-throated)",
     "group": "Bird",
     "subgroup": "Hummingbird",
     "S": 0.72,
     "I": 0.55,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "Trapline optimization with temporal memory, Gulf crossing"
+    "notes": "Flower timing memory, Gulf crossing"
   },
   {
     "name": "Anna's hummingbird",
@@ -917,7 +1287,7 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "LOW",
-    "notes": "10G courtship dive, vocal learning"
+    "notes": "10G courtship dive"
   },
   {
     "name": "Orchid mantis",
@@ -927,7 +1297,17 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Aggressive flower mimicry"
+    "notes": "More attractive to pollinators than real flowers"
+  },
+  {
+    "name": "Proboscis monkey",
+    "group": "Mammal",
+    "subgroup": "Primate",
+    "S": 0.65,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Swims between islands"
   },
   {
     "name": "Zebra finch",
@@ -937,7 +1317,7 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.6,
     "confidence": "HIGH",
-    "notes": "Primary model for vocal learning neuroscience"
+    "notes": "Vocal learning neuroscience model"
   },
   {
     "name": "Emperor penguin",
@@ -947,7 +1327,17 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.6,
     "confidence": "LOW",
-    "notes": "Mate recognition in 5000+ colony, huddling rotation"
+    "notes": "Mate call in 5000+ colony"
+  },
+  {
+    "name": "Arctic fox",
+    "group": "Mammal",
+    "subgroup": "Canid",
+    "S": 0.7,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Caches thousands of eggs"
   },
   {
     "name": "Damselfly",
@@ -967,7 +1357,17 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "Caches 100s of items daily, enlarged hippocampus"
+    "notes": "Enlarged hippocampus, caches"
+  },
+  {
+    "name": "Secretary bird",
+    "group": "Bird",
+    "subgroup": "Raptor",
+    "S": 0.72,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Stomps snakes, 5x body weight kicks"
   },
   {
     "name": "Archer fish",
@@ -977,7 +1377,17 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.52,
     "confidence": "HIGH",
-    "notes": "PREDICTION: 44+ human face discrimination, view-invariant recognition, social learning"
+    "notes": "PREDICTION: 44+ human face discrimination, view-invariant"
+  },
+  {
+    "name": "Leopard seal",
+    "group": "Mammal",
+    "subgroup": "Marine mammal",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Plays with prey, offers penguins to divers"
   },
   {
     "name": "Sandhill crane",
@@ -987,7 +1397,17 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "LOW",
-    "notes": "Lifelong pair bonds, teaches migration routes"
+    "notes": "Teaches migration routes"
+  },
+  {
+    "name": "Red-crowned crane",
+    "group": "Bird",
+    "subgroup": "Crane",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Japan cultural, pair dancing"
   },
   {
     "name": "Southern ground hornbill",
@@ -997,7 +1417,27 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "LOW",
-    "notes": "Tool use, 50+ year lifespan, cooperative breeding"
+    "notes": "Tool use, 50+ years"
+  },
+  {
+    "name": "Fur seal",
+    "group": "Mammal",
+    "subgroup": "Marine mammal",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Unihemispheric sleep"
+  },
+  {
+    "name": "Cockatiel",
+    "group": "Bird",
+    "subgroup": "Parrot",
+    "S": 0.62,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "LOW",
+    "notes": "Whistling melodies"
   },
   {
     "name": "Termite",
@@ -1007,67 +1447,7 @@ const SPECIES_DB = [
     "I": 0.6,
     "U": 0.65,
     "confidence": "LOW",
-    "notes": "Colony temperature regulation within 1 degree"
-  },
-  {
-    "name": "Sheep",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "MEDIUM",
-    "notes": "Remember 50+ faces for 2+ years, self-medication"
-  },
-  {
-    "name": "Goat",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "MEDIUM",
-    "notes": "10-month puzzle memory, human emotion recognition"
-  },
-  {
-    "name": "Elephant seal",
-    "group": "Mammal",
-    "subgroup": "Marine mammal",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "LOW",
-    "notes": "Individual vocal recognition with relationship-dependent response"
-  },
-  {
-    "name": "Walrus",
-    "group": "Mammal",
-    "subgroup": "Marine mammal",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "LOW",
-    "notes": "400+ hyper-sensitive whiskers, vocal learning"
-  },
-  {
-    "name": "Chicken",
-    "group": "Bird",
-    "subgroup": "Gamebird",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "MEDIUM",
-    "notes": "Referential alarm calls, self-control, emotional contagion, deception"
-  },
-  {
-    "name": "Carpenter bee",
-    "group": "Insect",
-    "subgroup": "Solitary Hymenoptera",
-    "S": 0.65,
-    "I": 0.55,
-    "U": 0.58,
-    "confidence": "LOW",
-    "notes": "Trapline foraging optimization"
+    "notes": "Colony temperature regulation"
   },
   {
     "name": "Cleaner wrasse",
@@ -1077,7 +1457,7 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "HIGH",
-    "notes": "Mirror test, contingency testing, face recognition, self-model (Sogawa 2026)"
+    "notes": "Mirror test, contingency testing, self-model (Sogawa 2026)"
   },
   {
     "name": "Manta ray",
@@ -1087,7 +1467,87 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.58,
     "confidence": "MEDIUM",
-    "notes": "Largest fish brain, anecdotal mirror behavior, needs formal testing"
+    "notes": "Largest fish brain, anecdotal mirror behavior"
+  },
+  {
+    "name": "Carpenter bee",
+    "group": "Insect",
+    "subgroup": "Solitary Hymenoptera",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Trapline foraging"
+  },
+  {
+    "name": "Sheep",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "MEDIUM",
+    "notes": "50+ faces for 2+ years"
+  },
+  {
+    "name": "Goat",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "MEDIUM",
+    "notes": "10-month puzzle memory"
+  },
+  {
+    "name": "Elephant seal",
+    "group": "Mammal",
+    "subgroup": "Marine mammal",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Voice-based relationship tracking"
+  },
+  {
+    "name": "Walrus",
+    "group": "Mammal",
+    "subgroup": "Marine mammal",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "400+ whiskers, vocal learning"
+  },
+  {
+    "name": "Chicken",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "MEDIUM",
+    "notes": "Referential calls, emotional contagion, deception"
+  },
+  {
+    "name": "Coati",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Social bands, prehensile nose"
+  },
+  {
+    "name": "Mongoose",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Cooperative breeding, escort behavior"
   },
   {
     "name": "Tarsier",
@@ -1097,7 +1557,17 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Largest eyes relative to body, ultrasonic communication"
+    "notes": "Largest eyes relative to body"
+  },
+  {
+    "name": "Little owl",
+    "group": "Bird",
+    "subgroup": "Owl",
+    "S": 0.72,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Athena's owl"
   },
   {
     "name": "Burrowing owl",
@@ -1107,7 +1577,7 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Uses dung to bait insect prey"
+    "notes": "Dung baiting, colonial"
   },
   {
     "name": "Heron (great blue)",
@@ -1120,6 +1590,46 @@ const SPECIES_DB = [
     "notes": "Bait fishing = tool use"
   },
   {
+    "name": "Aye-aye",
+    "group": "Mammal",
+    "subgroup": "Prosimian",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Percussive foraging"
+  },
+  {
+    "name": "Kookaburra",
+    "group": "Bird",
+    "subgroup": "Kingfisher",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Cooperative breeding, laughing call"
+  },
+  {
+    "name": "European robin",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "MEDIUM",
+    "notes": "Magnetic compass in eye"
+  },
+  {
+    "name": "Common myna",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.65,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Vocal mimicry, urban adaptability"
+  },
+  {
     "name": "Robber fly",
     "group": "Insect",
     "subgroup": "Diptera",
@@ -1130,6 +1640,36 @@ const SPECIES_DB = [
     "notes": "Convergent aerial predator"
   },
   {
+    "name": "Common kingfisher",
+    "group": "Bird",
+    "subgroup": "Kingfisher",
+    "S": 0.72,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Compensates for refraction"
+  },
+  {
+    "name": "Archaeopteryx",
+    "group": "Dinosaur",
+    "subgroup": "Avialae",
+    "S": 0.68,
+    "I": 0.55,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "78% toward bird brain"
+  },
+  {
+    "name": "Komodo dragon",
+    "group": "Reptile",
+    "subgroup": "Monitor",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "MEDIUM",
+    "notes": "Play, individual recognition"
+  },
+  {
     "name": "Giraffe",
     "group": "Mammal",
     "subgroup": "Ungulate",
@@ -1137,7 +1677,7 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Recently discovered social complexity, grandmother bonds"
+    "notes": "Recently discovered social complexity"
   },
   {
     "name": "Kangaroo",
@@ -1147,7 +1687,7 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Gaze alternation with humans (previously thought dog/primate only)"
+    "notes": "Gaze alternation with humans"
   },
   {
     "name": "Rabbit",
@@ -1157,17 +1697,27 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "MEDIUM",
-    "notes": "Play behavior (binkying), near-panoramic vision"
+    "notes": "Play (binkying), panoramic vision"
   },
   {
-    "name": "Song sparrow",
+    "name": "Jamaican streamertail",
     "group": "Bird",
-    "subgroup": "Songbird",
-    "S": 0.62,
-    "I": 0.55,
+    "subgroup": "Hummingbird",
+    "S": 0.68,
+    "I": 0.52,
     "U": 0.55,
-    "confidence": "MEDIUM",
-    "notes": "Dear enemy recognition, song matching"
+    "confidence": "LOW",
+    "notes": "Jamaica national bird"
+  },
+  {
+    "name": "Lovebird",
+    "group": "Bird",
+    "subgroup": "Parrot",
+    "S": 0.6,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Pair bonding"
   },
   {
     "name": "Grouper (coral)",
@@ -1177,7 +1727,207 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.55,
     "confidence": "HIGH",
-    "notes": "PREDICTION: referential gestures (Nature Comms 2013), cooperative hunting with moray eels"
+    "notes": "PREDICTION: referential gestures (Nature Comms 2013)"
+  },
+  {
+    "name": "Tarantula hawk wasp",
+    "group": "Insect",
+    "subgroup": "Solitary Hymenoptera",
+    "S": 0.62,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Hunts tarantulas, most painful sting"
+  },
+  {
+    "name": "Song sparrow",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "MEDIUM",
+    "notes": "Dear enemy recognition"
+  },
+  {
+    "name": "Nightingale",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "200+ song types"
+  },
+  {
+    "name": "American bison",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.5,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Collective movement decisions"
+  },
+  {
+    "name": "European bison",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.5,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Back from 12 individuals"
+  },
+  {
+    "name": "Asian water monitor",
+    "group": "Reptile",
+    "subgroup": "Monitor",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Counting, urban specialist"
+  },
+  {
+    "name": "Indian peafowl",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Elaborate display, India national"
+  },
+  {
+    "name": "King penguin",
+    "group": "Bird",
+    "subgroup": "Penguin",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Vocal recognition, deep diving"
+  },
+  {
+    "name": "Green woodpecker",
+    "group": "Bird",
+    "subgroup": "Woodpecker",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Ground-feeding ant specialist"
+  },
+  {
+    "name": "Pileated woodpecker",
+    "group": "Bird",
+    "subgroup": "Woodpecker",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Largest N American woodpecker"
+  },
+  {
+    "name": "Blue crane",
+    "group": "Bird",
+    "subgroup": "Crane",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "South Africa national"
+  },
+  {
+    "name": "Black crowned crane",
+    "group": "Bird",
+    "subgroup": "Crane",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Nigeria national"
+  },
+  {
+    "name": "Rhinoceros hornbill",
+    "group": "Bird",
+    "subgroup": "Hornbill",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Malaysia national, sealed nest"
+  },
+  {
+    "name": "Badger",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "100+ year old sett systems"
+  },
+  {
+    "name": "Deinonychus",
+    "group": "Dinosaur",
+    "subgroup": "Dromaeosauridae",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Best pack hunting evidence"
+  },
+  {
+    "name": "Barn swallow",
+    "group": "Bird",
+    "subgroup": "Swallow",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "6000+ mile migration"
+  },
+  {
+    "name": "Tyrannosaurus rex",
+    "group": "Dinosaur",
+    "subgroup": "Tyrannosauridae",
+    "S": 0.72,
+    "I": 0.5,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "NOT baboon-smart (Caspar 2024)"
+  },
+  {
+    "name": "Saltwater crocodile",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.65,
+    "I": 0.5,
+    "U": 0.55,
+    "confidence": "MEDIUM",
+    "notes": "Stick-lure tool use, maternal care"
+  },
+  {
+    "name": "Harp seal",
+    "group": "Mammal",
+    "subgroup": "Marine mammal",
+    "S": 0.65,
+    "I": 0.5,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Pup recognition by smell"
+  },
+  {
+    "name": "Northern cardinal",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Pair duetting"
   },
   {
     "name": "Kakapo",
@@ -1187,7 +1937,7 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "LOW",
-    "notes": "Critically endangered (247 alive), nocturnal flightless"
+    "notes": "247 alive, every one named"
   },
   {
     "name": "Canary",
@@ -1197,7 +1947,37 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.55,
     "confidence": "MEDIUM",
-    "notes": "Seasonal neurogenesis (foundational neuroscience discovery)"
+    "notes": "Seasonal neurogenesis"
+  },
+  {
+    "name": "Oriental magpie-robin",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Bangladesh national bird"
+  },
+  {
+    "name": "Rufous hornero",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Argentina national, mud oven nests"
+  },
+  {
+    "name": "Velociraptor",
+    "group": "Dinosaur",
+    "subgroup": "Dromaeosauridae",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Killing claw precision"
   },
   {
     "name": "Deer",
@@ -1207,7 +1987,77 @@ const SPECIES_DB = [
     "I": 0.5,
     "U": 0.52,
     "confidence": "LOW",
-    "notes": "Switches to nocturnal during hunting season"
+    "notes": "Nocturnal switch during hunting season"
+  },
+  {
+    "name": "Zebra",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Unique stripe patterns = ID"
+  },
+  {
+    "name": "Moose",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Largest deer, dives for plants"
+  },
+  {
+    "name": "Herring gull",
+    "group": "Bird",
+    "subgroup": "Seabird",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Rain-mimicry foot-stamping, shellfish dropping"
+  },
+  {
+    "name": "White-throated dipper",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Only aquatic passerine"
+  },
+  {
+    "name": "Bee-eater",
+    "group": "Bird",
+    "subgroup": "Roller",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "De-stings bees before eating"
+  },
+  {
+    "name": "Andean condor",
+    "group": "Bird",
+    "subgroup": "Vulture",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Largest flying bird by combined measure"
+  },
+  {
+    "name": "Nile monitor",
+    "group": "Reptile",
+    "subgroup": "Monitor",
+    "S": 0.65,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Cooperative croc nest raiding"
   },
   {
     "name": "Opossum",
@@ -1217,7 +2067,7 @@ const SPECIES_DB = [
     "I": 0.5,
     "U": 0.52,
     "confidence": "LOW",
-    "notes": "Death feigning, oldest marsupial lineage in N America"
+    "notes": "Death feigning"
   },
   {
     "name": "Tasmanian devil",
@@ -1230,6 +2080,36 @@ const SPECIES_DB = [
     "notes": "Social complexity underestimated"
   },
   {
+    "name": "Cassowary",
+    "group": "Bird",
+    "subgroup": "Ratite",
+    "S": 0.65,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Infrasound communication, dangerous"
+  },
+  {
+    "name": "Kiwi",
+    "group": "Bird",
+    "subgroup": "Ratite",
+    "S": 0.65,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Olfaction-dominant, nostrils at bill tip"
+  },
+  {
+    "name": "Common cuckoo",
+    "group": "Bird",
+    "subgroup": "Cuckoo",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.5,
+    "confidence": "MEDIUM",
+    "notes": "Brood parasitism, egg mimicry"
+  },
+  {
     "name": "Adelie penguin",
     "group": "Bird",
     "subgroup": "Penguin",
@@ -1240,24 +2120,24 @@ const SPECIES_DB = [
     "notes": "Pebble theft"
   },
   {
-    "name": "Common cuckoo",
-    "group": "Bird",
-    "subgroup": "Cuckoo",
-    "S": 0.65,
-    "I": 0.52,
-    "U": 0.5,
-    "confidence": "MEDIUM",
-    "notes": "Brood parasitism with host-matching egg mimicry"
-  },
-  {
-    "name": "Fruit fly (Drosophila)",
+    "name": "Fruit fly",
     "group": "Insect",
     "subgroup": "Diptera",
     "S": 0.55,
     "I": 0.58,
     "U": 0.52,
     "confidence": "HIGH",
-    "notes": "Selective attention (20-30 Hz), connectome nearly complete"
+    "notes": "Selective attention 20-30 Hz, consciousness hypothesis"
+  },
+  {
+    "name": "Reindeer",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "UV vision, 5000 km migration"
   },
   {
     "name": "Echidna",
@@ -1267,7 +2147,157 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.5,
     "confidence": "LOW",
-    "notes": "Largest relative prefrontal cortex of ANY mammal"
+    "notes": "Largest relative prefrontal cortex"
+  },
+  {
+    "name": "Common swift",
+    "group": "Bird",
+    "subgroup": "Swift",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Sleeps while flying, 10 months airborne"
+  },
+  {
+    "name": "Perentie",
+    "group": "Reptile",
+    "subgroup": "Monitor",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Bipedal surveillance"
+  },
+  {
+    "name": "American alligator",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Most sensitive touch (jaw ISOs)"
+  },
+  {
+    "name": "Hippopotamus",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Underwater vocal communication"
+  },
+  {
+    "name": "Ostrich",
+    "group": "Bird",
+    "subgroup": "Ratite",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Largest eyes of any land animal"
+  },
+  {
+    "name": "Pelican (great white)",
+    "group": "Bird",
+    "subgroup": "Waterbird",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Cooperative group fishing"
+  },
+  {
+    "name": "Leaf-cutter bee",
+    "group": "Insect",
+    "subgroup": "Solitary Hymenoptera",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Precise circular leaf-cutting"
+  },
+  {
+    "name": "Giant panda",
+    "group": "Mammal",
+    "subgroup": "Bear",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Bamboo specialist, pseudothumb"
+  },
+  {
+    "name": "Killdeer",
+    "group": "Bird",
+    "subgroup": "Shorebird",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "MEDIUM",
+    "notes": "Broken-wing display = flexible deception"
+  },
+  {
+    "name": "Resplendent quetzal",
+    "group": "Bird",
+    "subgroup": "Trogon",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Sacred to Maya/Aztec, Guatemala national"
+  },
+  {
+    "name": "American robin",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Head-cocking for earthworms"
+  },
+  {
+    "name": "Andean cock-of-the-rock",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Peru national, elaborate lek"
+  },
+  {
+    "name": "Pteranodon",
+    "group": "Dinosaur",
+    "subgroup": "Pterosauria",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Flying reptile, not a dinosaur"
+  },
+  {
+    "name": "Markhor",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Spiral horns, cliff specialist"
+  },
+  {
+    "name": "Okapi",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Closest giraffe relative"
   },
   {
     "name": "Naked mole-rat",
@@ -1277,7 +2307,37 @@ const SPECIES_DB = [
     "I": 0.52,
     "U": 0.6,
     "confidence": "MEDIUM",
-    "notes": "Only eusocial mammal, colony dialects"
+    "notes": "Only eusocial mammal"
+  },
+  {
+    "name": "Pelican (brown)",
+    "group": "Bird",
+    "subgroup": "Waterbird",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Plunge-diving"
+  },
+  {
+    "name": "Gaur",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Largest living bovine"
+  },
+  {
+    "name": "Chital deer",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Follows langurs for fruit"
   },
   {
     "name": "Cockroach",
@@ -1287,17 +2347,27 @@ const SPECIES_DB = [
     "I": 0.5,
     "U": 0.5,
     "confidence": "MEDIUM",
-    "notes": "Central complex as command hub (wasp venom evidence)"
+    "notes": "Central complex = command hub"
   },
   {
-    "name": "Greater flamingo",
-    "group": "Bird",
-    "subgroup": "Flamingo",
+    "name": "Llama",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
     "S": 0.62,
     "I": 0.48,
     "U": 0.52,
     "confidence": "LOW",
-    "notes": "Friendships lasting decades"
+    "notes": "Guard llamas protect sheep"
+  },
+  {
+    "name": "Capybara",
+    "group": "Mammal",
+    "subgroup": "Rodent",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Largest rodent, highly social"
   },
   {
     "name": "Greylag goose",
@@ -1307,7 +2377,47 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.52,
     "confidence": "MEDIUM",
-    "notes": "Lorenz's species, triadic awareness, grief"
+    "notes": "Triadic awareness, grief"
+  },
+  {
+    "name": "Flamingo",
+    "group": "Bird",
+    "subgroup": "Flamingo",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Friendships lasting decades"
+  },
+  {
+    "name": "Mute swan",
+    "group": "Bird",
+    "subgroup": "Waterbird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Denmark national"
+  },
+  {
+    "name": "Whooper swan",
+    "group": "Bird",
+    "subgroup": "Waterbird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "LOW",
+    "notes": "Finland national"
+  },
+  {
+    "name": "Turkey vulture",
+    "group": "Bird",
+    "subgroup": "Vulture",
+    "S": 0.7,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Extraordinary olfaction for a bird"
   },
   {
     "name": "Mole (star-nosed)",
@@ -1317,7 +2427,47 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "Fastest foraging decision (120 ms), underwater smelling"
+    "notes": "120 ms foraging decision"
+  },
+  {
+    "name": "Cuban crocodile",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Pack hunting, highest cognitive rep"
+  },
+  {
+    "name": "Red panda",
+    "group": "Mammal",
+    "subgroup": "Carnivore",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Arboreal specialist"
+  },
+  {
+    "name": "Alpaca",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Communal dung piles, spitting"
+  },
+  {
+    "name": "Pika",
+    "group": "Mammal",
+    "subgroup": "Lagomorph",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Hay-making food preservation"
   },
   {
     "name": "Elephant shrew",
@@ -1327,7 +2477,17 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.5,
     "confidence": "LOW",
-    "notes": "Builds and maintains escape trail networks"
+    "notes": "Escape trail networks"
+  },
+  {
+    "name": "Emu",
+    "group": "Bird",
+    "subgroup": "Ratite",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Male-only parental care"
   },
   {
     "name": "Turkey",
@@ -1340,6 +2500,56 @@ const SPECIES_DB = [
     "notes": "Male display coalitions"
   },
   {
+    "name": "Himalayan monal",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Nepal national bird"
+  },
+  {
+    "name": "Ring-necked pheasant",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Male display"
+  },
+  {
+    "name": "White stork",
+    "group": "Bird",
+    "subgroup": "Waterbird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Nest fidelity for decades"
+  },
+  {
+    "name": "Hoopoe",
+    "group": "Bird",
+    "subgroup": "Hoopoe",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Israel national bird"
+  },
+  {
+    "name": "Sri Lanka junglefowl",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Sri Lanka national"
+  },
+  {
     "name": "Mud dauber",
     "group": "Insect",
     "subgroup": "Solitary Hymenoptera",
@@ -1347,7 +2557,57 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.5,
     "confidence": "LOW",
-    "notes": "Nest construction with spatial memory"
+    "notes": "Nest construction"
+  },
+  {
+    "name": "Wombat",
+    "group": "Mammal",
+    "subgroup": "Marsupial",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Cube-shaped feces for territory marking"
+  },
+  {
+    "name": "Hyrax",
+    "group": "Mammal",
+    "subgroup": "Hyrax",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Closest relative to elephants, vocal syntax"
+  },
+  {
+    "name": "Rufous-bellied thrush",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Brazil national bird"
+  },
+  {
+    "name": "Clay-colored thrush",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Costa Rica national bird"
+  },
+  {
+    "name": "Tegu",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "MEDIUM",
+    "notes": "House-trainable, seasonal endothermy"
   },
   {
     "name": "Hoverfly",
@@ -1367,7 +2627,27 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "First animal to navigate by Milky Way"
+    "notes": "Navigates by Milky Way"
+  },
+  {
+    "name": "Atlantic puffin",
+    "group": "Bird",
+    "subgroup": "Seabird",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "First seabird tool use (stick scratching)"
+  },
+  {
+    "name": "Lilac-breasted roller",
+    "group": "Bird",
+    "subgroup": "Roller",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Kenya national"
   },
   {
     "name": "Hammerhead shark",
@@ -1377,17 +2657,7 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Enhanced electroreception via cephalofoil, unusual schooling"
-  },
-  {
-    "name": "Arctic tern",
-    "group": "Bird",
-    "subgroup": "Seabird",
-    "S": 0.65,
-    "I": 0.45,
-    "U": 0.48,
-    "confidence": "LOW",
-    "notes": "71,000 km annual migration (longest animal)"
+    "notes": "Enhanced electroreception via cephalofoil"
   },
   {
     "name": "Monarch butterfly",
@@ -1397,7 +2667,17 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "3000+ mile time-compensated sun compass migration"
+    "notes": "Time-compensated sun compass migration"
+  },
+  {
+    "name": "Arctic tern",
+    "group": "Bird",
+    "subgroup": "Seabird",
+    "S": 0.65,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "71,000 km annual migration"
   },
   {
     "name": "Electric eel",
@@ -1407,17 +2687,27 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.45,
     "confidence": "LOW",
-    "notes": "Electrogenesis for multiple functions, remote-controls prey"
+    "notes": "Electrogenesis, remote-controls prey"
   },
   {
-    "name": "Cichlid (Midas/Oscar)",
+    "name": "Cichlid (Oscar)",
     "group": "Fish",
     "subgroup": "Cichlidae",
     "S": 0.58,
     "I": 0.5,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "Reported play behavior, strong personalities, individual human recognition"
+    "notes": "Reported play, strong personalities"
+  },
+  {
+    "name": "Tiger beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.68,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Runs faster than it can see"
   },
   {
     "name": "Great white shark",
@@ -1427,7 +2717,37 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Extraordinary sensing, breach attack planning"
+    "notes": "Extraordinary sensing, breach planning"
+  },
+  {
+    "name": "King cobra",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Only nest-building snake"
+  },
+  {
+    "name": "Wildebeest",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "1.5M individual migration"
+  },
+  {
+    "name": "Springbok",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Pronking fitness signal"
   },
   {
     "name": "Porcupine",
@@ -1437,7 +2757,7 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.48,
     "confidence": "LOW",
-    "notes": "Understudied, basic spatial memory"
+    "notes": "Understudied"
   },
   {
     "name": "Hedgehog",
@@ -1450,16 +2770,6 @@ const SPECIES_DB = [
     "notes": "Self-anointing with toxins"
   },
   {
-    "name": "Mourning dove",
-    "group": "Bird",
-    "subgroup": "Pigeon",
-    "S": 0.62,
-    "I": 0.45,
-    "U": 0.48,
-    "confidence": "LOW",
-    "notes": "Pair bonding, understudied"
-  },
-  {
     "name": "Mallard duck",
     "group": "Bird",
     "subgroup": "Waterbird",
@@ -1467,7 +2777,57 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "Ducklings learn abstract same/different (2016 Science)"
+    "notes": "Ducklings learn abstract same/different"
+  },
+  {
+    "name": "Mourning dove",
+    "group": "Bird",
+    "subgroup": "Pigeon",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Pair bonding"
+  },
+  {
+    "name": "Caiman",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Social hierarchy, maternal care"
+  },
+  {
+    "name": "Mugger crocodile",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Stick-lure tool use"
+  },
+  {
+    "name": "Yak",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Extreme altitude specialist"
+  },
+  {
+    "name": "Tapir",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Prehensile nose, seed disperser"
   },
   {
     "name": "Wrasse (Napoleon)",
@@ -1477,27 +2837,17 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.48,
     "confidence": "LOW",
-    "notes": "Cooperative hunting with groupers, individual human recognition"
+    "notes": "Cooperative hunting, human recognition"
   },
   {
-    "name": "Shrew",
-    "group": "Mammal",
-    "subgroup": "Insectivore",
-    "S": 0.6,
-    "I": 0.45,
+    "name": "Crimson sunbird",
+    "group": "Bird",
+    "subgroup": "Songbird",
+    "S": 0.58,
+    "I": 0.48,
     "U": 0.48,
     "confidence": "LOW",
-    "notes": "Some species echolocate, must eat constantly"
-  },
-  {
-    "name": "Quail (Japanese)",
-    "group": "Bird",
-    "subgroup": "Gamebird",
-    "S": 0.6,
-    "I": 0.45,
-    "U": 0.48,
-    "confidence": "MEDIUM",
-    "notes": "Major research model"
+    "notes": "Singapore national bird"
   },
   {
     "name": "Grasshopper/Locust",
@@ -1507,7 +2857,57 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "Phase polyphenism: two different brains"
+    "notes": "Phase polyphenism: two brains"
+  },
+  {
+    "name": "Shrew",
+    "group": "Mammal",
+    "subgroup": "Insectivore",
+    "S": 0.6,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Some echolocate, extreme metabolism"
+  },
+  {
+    "name": "Nicobar pigeon",
+    "group": "Bird",
+    "subgroup": "Pigeon",
+    "S": 0.6,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Closest living dodo relative"
+  },
+  {
+    "name": "Quail",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.6,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "MEDIUM",
+    "notes": "Research model"
+  },
+  {
+    "name": "Grey peacock-pheasant",
+    "group": "Bird",
+    "subgroup": "Gamebird",
+    "S": 0.6,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Myanmar national"
+  },
+  {
+    "name": "Chinchilla",
+    "group": "Mammal",
+    "subgroup": "Rodent",
+    "S": 0.6,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Densest fur, social"
   },
   {
     "name": "Pufferfish",
@@ -1517,7 +2917,7 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.48,
     "confidence": "MEDIUM",
-    "notes": "Geometric sand circle construction over 7-9 days"
+    "notes": "Geometric sand circle construction"
   },
   {
     "name": "Hawk moth",
@@ -1537,27 +2937,57 @@ const SPECIES_DB = [
     "I": 0.48,
     "U": 0.45,
     "confidence": "MEDIUM",
-    "notes": "Social hierarchy, tool use, transitive inference, audience effects"
+    "notes": "Social hierarchy, transitive inference"
   },
   {
-    "name": "Tuskfish (wrasse)",
+    "name": "Tuskfish",
     "group": "Fish",
     "subgroup": "Labridae",
     "S": 0.58,
     "I": 0.48,
     "U": 0.45,
     "confidence": "MEDIUM",
-    "notes": "Tool use: carries clams to anvil rocks"
+    "notes": "Tool use: anvil for shellfish"
   },
   {
-    "name": "Assassin bug",
-    "group": "Insect",
-    "subgroup": "Hemiptera",
+    "name": "Scarlet ibis",
+    "group": "Bird",
+    "subgroup": "Waterbird",
     "S": 0.58,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Trinidad & Tobago national"
+  },
+  {
+    "name": "Cuban trogon",
+    "group": "Bird",
+    "subgroup": "Trogon",
+    "S": 0.58,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Cuba national"
+  },
+  {
+    "name": "Sacred scarab",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.6,
     "I": 0.45,
     "U": 0.45,
     "confidence": "LOW",
-    "notes": "Spider web plucking with adjustable mimicry"
+    "notes": "Sun compass, sacred to Egypt"
+  },
+  {
+    "name": "Panther chameleon",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.68,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Independent eyes, color communication"
   },
   {
     "name": "Moray eel",
@@ -1567,17 +2997,87 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.45,
     "confidence": "MEDIUM",
-    "notes": "Cooperative hunting partner, responds to grouper signals"
+    "notes": "Cooperative hunting with groupers"
   },
   {
-    "name": "Painted lady butterfly",
+    "name": "Assassin bug",
+    "group": "Insect",
+    "subgroup": "Hemiptera",
+    "S": 0.58,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Web plucking, adjustable mimicry"
+  },
+  {
+    "name": "Arabian oryx",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Detects rain from 50 km"
+  },
+  {
+    "name": "Saiga antelope",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Bizarre nose, critically endangered"
+  },
+  {
+    "name": "Gharial",
+    "group": "Reptile",
+    "subgroup": "Crocodilian",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Acoustic communication via ghara"
+  },
+  {
+    "name": "Painted lady",
     "group": "Insect",
     "subgroup": "Lepidoptera",
     "S": 0.6,
     "I": 0.42,
     "U": 0.45,
     "confidence": "LOW",
-    "notes": "Longest insect migration (~9000 miles)"
+    "notes": "Longest insect migration"
+  },
+  {
+    "name": "White rhinoceros",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Dung middens, poor vision"
+  },
+  {
+    "name": "Indian rhinoceros",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Dung communication"
+  },
+  {
+    "name": "Black-tailed godwit",
+    "group": "Bird",
+    "subgroup": "Shorebird",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Netherlands national"
   },
   {
     "name": "Cricket",
@@ -1587,7 +3087,17 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.44,
     "confidence": "MEDIUM",
-    "notes": "Winner/loser effects as mood-like states"
+    "notes": "Winner/loser mood states"
+  },
+  {
+    "name": "Manatee",
+    "group": "Mammal",
+    "subgroup": "Sirenian",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Touch-sensitive, gentle"
   },
   {
     "name": "C. elegans",
@@ -1597,7 +3107,7 @@ const SPECIES_DB = [
     "I": 0.5,
     "U": 0.55,
     "confidence": "HIGH",
-    "notes": "302 neurons fully mapped, 25 innexin genes"
+    "notes": "302 neurons mapped"
   },
   {
     "name": "Mudskipper",
@@ -1607,7 +3117,27 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Lives on land and water, builds mud towers"
+    "notes": "Land+water, builds mud towers"
+  },
+  {
+    "name": "Quokka",
+    "group": "Mammal",
+    "subgroup": "Marsupial",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Habituated to humans"
+  },
+  {
+    "name": "Dormouse",
+    "group": "Mammal",
+    "subgroup": "Rodent",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Hibernates 6+ months"
   },
   {
     "name": "Reef shark",
@@ -1617,7 +3147,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Social hierarchy, dive boat association learning"
+    "notes": "Social hierarchy"
   },
   {
     "name": "Bull shark",
@@ -1627,7 +3157,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "VERY LOW",
-    "notes": "Freshwater-saltwater flexibility"
+    "notes": "Freshwater flexibility"
   },
   {
     "name": "New Zealand wrybill",
@@ -1647,7 +3177,17 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Group hunting with turn-taking, color signaling"
+    "notes": "Group hunting with turn-taking"
+  },
+  {
+    "name": "Spinosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Spinosauridae",
+    "S": 0.65,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Semi-aquatic, pressure sensors"
   },
   {
     "name": "Tuna (bluefin)",
@@ -1657,7 +3197,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Endothermic brain, severely understudied cognition"
+    "notes": "Endothermic brain"
   },
   {
     "name": "Stickleback",
@@ -1667,7 +3207,7 @@ const SPECIES_DB = [
     "I": 0.45,
     "U": 0.42,
     "confidence": "HIGH",
-    "notes": "Major behavioral ecology model, well-documented personalities"
+    "notes": "Bold/shy personalities, social learning"
   },
   {
     "name": "Housefly",
@@ -1680,6 +3220,46 @@ const SPECIES_DB = [
     "notes": "Pre-computed escape trajectories"
   },
   {
+    "name": "Burying beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Biparental care, adjusts brood to resource"
+  },
+  {
+    "name": "Giant anteater",
+    "group": "Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.6,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "60 cm tongue, 35K insects/day"
+  },
+  {
+    "name": "Rattlesnake",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.62,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "IR imaging, graduated rattle warning"
+  },
+  {
+    "name": "Dugong",
+    "group": "Mammal",
+    "subgroup": "Sirenian",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Seagrass grazer, 70+ years"
+  },
+  {
     "name": "Sawfish",
     "group": "Fish",
     "subgroup": "Pristidae",
@@ -1687,7 +3267,7 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.38,
     "confidence": "VERY LOW",
-    "notes": "Electroreceptive saw doubles as weapon, critically endangered"
+    "notes": "Electroreceptive saw, critically endangered"
   },
   {
     "name": "Diving beetle",
@@ -1697,7 +3277,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.42,
     "confidence": "VERY LOW",
-    "notes": "Dual-environment (aquatic + aerial)"
+    "notes": "Dual-environment"
   },
   {
     "name": "Katydid",
@@ -1707,17 +3287,17 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Acoustic specialists, leaf mimicry"
+    "notes": "Acoustic specialist, leaf mimicry"
   },
   {
-    "name": "Bark beetle",
-    "group": "Insect",
-    "subgroup": "Coleoptera",
-    "S": 0.55,
-    "I": 0.42,
+    "name": "Numbat",
+    "group": "Mammal",
+    "subgroup": "Marsupial",
+    "S": 0.58,
+    "I": 0.4,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Pheromone-coordinated mass attacks"
+    "notes": "Only diurnal marsupial"
   },
   {
     "name": "Clownfish",
@@ -1727,7 +3307,7 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.42,
     "confidence": "MEDIUM",
-    "notes": "Sequential hermaphroditism driven by social hierarchy, anemone symbiosis"
+    "notes": "Social hierarchy drives sex change"
   },
   {
     "name": "Piranha",
@@ -1737,7 +3317,17 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Group hunting coordination, vocal communication"
+    "notes": "Group hunting, vocal communication"
+  },
+  {
+    "name": "Bark beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Pheromone mass attacks"
   },
   {
     "name": "Pike",
@@ -1747,7 +3337,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Learns to avoid lures after capture"
+    "notes": "Lure avoidance learning"
   },
   {
     "name": "Salmon (Atlantic)",
@@ -1757,7 +3347,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Extraordinary olfactory navigation"
+    "notes": "Olfactory navigation"
   },
   {
     "name": "Stingray",
@@ -1767,17 +3357,57 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "MEDIUM",
-    "notes": "Problem solving (Kuba 2010), water jet tool use"
+    "notes": "Problem solving (Kuba 2010)"
   },
   {
-    "name": "Trout (rainbow)",
+    "name": "Indian cobra",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.58,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Hood threat display"
+  },
+  {
+    "name": "Koala",
+    "group": "Mammal",
+    "subgroup": "Marsupial",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Smallest brain-to-body ratio of any mammal"
+  },
+  {
+    "name": "Green iguana",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Parietal third eye"
+  },
+  {
+    "name": "Trout",
     "group": "Fish",
     "subgroup": "Salmonidae",
     "S": 0.55,
     "I": 0.42,
     "U": 0.4,
     "confidence": "MEDIUM",
-    "notes": "Enrichment improves cognitive flexibility"
+    "notes": "Cognitive flexibility trainable"
+  },
+  {
+    "name": "Stag beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Opponent size assessment before combat"
   },
   {
     "name": "Swordfish",
@@ -1787,7 +3417,7 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.38,
     "confidence": "VERY LOW",
-    "notes": "Brain-heating organ for visual processing"
+    "notes": "Brain-heating organ"
   },
   {
     "name": "Lobster",
@@ -1797,7 +3427,27 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Social hierarchy, serotonin system"
+    "notes": "Social hierarchy, serotonin"
+  },
+  {
+    "name": "Parasaurolophus",
+    "group": "Dinosaur",
+    "subgroup": "Hadrosauridae",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Built-in resonating crest"
+  },
+  {
+    "name": "Boa constrictor",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Monitors prey heartbeat"
   },
   {
     "name": "Firefly",
@@ -1807,17 +3457,27 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "Predatory flash mimicry = deception"
+    "notes": "Predatory flash mimicry"
   },
   {
-    "name": "Bombardier beetle",
-    "group": "Insect",
-    "subgroup": "Coleoptera",
+    "name": "Gecko (tokay)",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Vocal 'tokay' call"
+  },
+  {
+    "name": "Bearded dragon",
+    "group": "Reptile",
+    "subgroup": "Lizard",
     "S": 0.55,
     "I": 0.4,
     "U": 0.4,
-    "confidence": "VERY LOW",
-    "notes": "Precision-aimed chemical defense spray"
+    "confidence": "MEDIUM",
+    "notes": "First reptile social learning (2015)"
   },
   {
     "name": "Triggerfish",
@@ -1827,7 +3487,17 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "3D nest defense zone, individual diver memory"
+    "notes": "3D nest defense, diver memory"
+  },
+  {
+    "name": "Bombardier beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Precision chemical spray"
   },
   {
     "name": "Betta",
@@ -1837,7 +3507,7 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.4,
     "confidence": "MEDIUM",
-    "notes": "Audience effects, transitive inference, numerical discrimination"
+    "notes": "Audience effects, transitive inference"
   },
   {
     "name": "Goby (cleaner)",
@@ -1857,7 +3527,7 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Monogamous pair bonding, daily greeting dance, independent eyes"
+    "notes": "Pair bonding, daily dance, independent eyes"
   },
   {
     "name": "Blenny (fang)",
@@ -1867,17 +3537,7 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.4,
     "confidence": "LOW",
-    "notes": "False cleaner deception, opioid venom"
-  },
-  {
-    "name": "Mosquito",
-    "group": "Insect",
-    "subgroup": "Diptera",
-    "S": 0.6,
-    "I": 0.38,
-    "U": 0.38,
-    "confidence": "MEDIUM",
-    "notes": "Multi-modal sequential host tracking"
+    "notes": "False cleaner deception"
   },
   {
     "name": "Barracuda",
@@ -1887,7 +3547,7 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.38,
     "confidence": "LOW",
-    "notes": "Visual ambush predator, curiosity toward divers"
+    "notes": "Visual ambush predator"
   },
   {
     "name": "Nurse shark",
@@ -1900,14 +3560,24 @@ const SPECIES_DB = [
     "notes": "Social resting piles"
   },
   {
-    "name": "Human (dreaming)",
-    "group": "Mammal",
-    "subgroup": "Great Ape",
-    "S": 0.3,
-    "I": 0.7,
-    "U": 0.4,
-    "confidence": "HIGH",
-    "notes": "Reduced external, enhanced internal sensing"
+    "name": "Mosquito",
+    "group": "Insect",
+    "subgroup": "Diptera",
+    "S": 0.6,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "MEDIUM",
+    "notes": "Multi-modal host tracking"
+  },
+  {
+    "name": "Whirligig beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.6,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Split eyes: air+water simultaneously"
   },
   {
     "name": "Antlion larva",
@@ -1917,7 +3587,17 @@ const SPECIES_DB = [
     "I": 0.4,
     "U": 0.42,
     "confidence": "LOW",
-    "notes": "Optimized pit construction, hunger-adjusted"
+    "notes": "Optimized pit construction"
+  },
+  {
+    "name": "Human (dreaming)",
+    "group": "Mammal",
+    "subgroup": "Great Ape",
+    "S": 0.3,
+    "I": 0.7,
+    "U": 0.4,
+    "confidence": "HIGH",
+    "notes": "Reduced external sensing"
   },
   {
     "name": "Salmon (Pacific)",
@@ -1927,7 +3607,7 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.38,
     "confidence": "LOW",
-    "notes": "Semelparous, similar to Atlantic"
+    "notes": "Semelparous migration"
   },
   {
     "name": "Catfish",
@@ -1938,6 +3618,26 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "LOW",
     "notes": "175,000+ taste buds covering body"
+  },
+  {
+    "name": "Tsetse fly",
+    "group": "Insect",
+    "subgroup": "Diptera",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Viviparous fly"
+  },
+  {
+    "name": "Green mamba",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Arboreal, fast neurotoxin"
   },
   {
     "name": "Hermit crab",
@@ -1957,7 +3657,27 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.4,
     "confidence": "MEDIUM",
-    "notes": "Anxiety-like behavior, social defeat stress"
+    "notes": "Anxiety-like behavior"
+  },
+  {
+    "name": "Tuatara",
+    "group": "Reptile",
+    "subgroup": "Tuatara",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "MEDIUM",
+    "notes": "250M year lineage, functional third eye"
+  },
+  {
+    "name": "Bass",
+    "group": "Fish",
+    "subgroup": "Centrarchidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.38,
+    "confidence": "MEDIUM",
+    "notes": "Single-trial lure avoidance"
   },
   {
     "name": "Water strider",
@@ -1967,17 +3687,37 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.4,
     "confidence": "VERY LOW",
-    "notes": "Surface wave communication and hunting"
+    "notes": "Surface wave communication"
   },
   {
-    "name": "Bass (largemouth)",
-    "group": "Fish",
-    "subgroup": "Centrarchidae",
+    "name": "Hercules beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
     "S": 0.55,
-    "I": 0.4,
-    "U": 0.38,
-    "confidence": "MEDIUM",
-    "notes": "Single-trial lure avoidance learning"
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Strongest animal relative to weight"
+  },
+  {
+    "name": "Armadillo",
+    "group": "Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Identical quadruplets"
+  },
+  {
+    "name": "Blue-tongued skink",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "UV tongue display"
   },
   {
     "name": "Guppy",
@@ -1987,7 +3727,17 @@ const SPECIES_DB = [
     "I": 0.42,
     "U": 0.38,
     "confidence": "HIGH",
-    "notes": "Numerical discrimination, mate choice copying, brain size varies with ecology"
+    "notes": "Numerical discrimination, mate copying"
+  },
+  {
+    "name": "Galapagos tortoise",
+    "group": "Reptile",
+    "subgroup": "Tortoise",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "9-year memory, lives 175 years"
   },
   {
     "name": "Parrotfish",
@@ -1997,17 +3747,27 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.38,
     "confidence": "LOW",
-    "notes": "Mucus cocoon sleeping strategy, sequential hermaphroditism"
+    "notes": "Mucus cocoon sleeping"
   },
   {
-    "name": "Cod (Atlantic)",
+    "name": "Cod",
     "group": "Fish",
     "subgroup": "Gadidae",
     "S": 0.55,
     "I": 0.38,
     "U": 0.38,
     "confidence": "LOW",
-    "notes": "Net avoidance learning, spawning site fidelity"
+    "notes": "Net avoidance learning"
+  },
+  {
+    "name": "Gila monster",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Venomous lizard"
   },
   {
     "name": "Earwig",
@@ -2017,7 +3777,27 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.4,
     "confidence": "VERY LOW",
-    "notes": "Maternal care unusual for non-social insects"
+    "notes": "Maternal care"
+  },
+  {
+    "name": "Triceratops",
+    "group": "Dinosaur",
+    "subgroup": "Ceratopsidae",
+    "S": 0.58,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Horn+frill display"
+  },
+  {
+    "name": "Anole",
+    "group": "Reptile",
+    "subgroup": "Lizard",
+    "S": 0.52,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "MEDIUM",
+    "notes": "First lizard problem-solving (2012)"
   },
   {
     "name": "Whale shark",
@@ -2027,10 +3807,10 @@ const SPECIES_DB = [
     "I": 0.35,
     "U": 0.35,
     "confidence": "LOW",
-    "notes": "Gentle giant, almost no cognitive data"
+    "notes": "Gentle giant"
   },
   {
-    "name": "Orb weaver spider",
+    "name": "Orb weaver",
     "group": "Arachnid",
     "subgroup": "Araneae",
     "S": 0.55,
@@ -2040,6 +3820,26 @@ const SPECIES_DB = [
     "notes": "Web as extended cognition"
   },
   {
+    "name": "Leatherback turtle",
+    "group": "Reptile",
+    "subgroup": "Sea turtle",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Deepest-diving reptile, 12000 km migration"
+  },
+  {
+    "name": "Ball python",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Bold/shy personality"
+  },
+  {
     "name": "Cicada",
     "group": "Insect",
     "subgroup": "Hemiptera",
@@ -2047,17 +3847,17 @@ const SPECIES_DB = [
     "I": 0.35,
     "U": 0.38,
     "confidence": "VERY LOW",
-    "notes": "Prime-number cycles (genetic), chorus synchronization"
+    "notes": "Prime-number cycles"
   },
   {
-    "name": "Ladybug",
-    "group": "Insect",
-    "subgroup": "Coleoptera",
-    "S": 0.52,
+    "name": "Pangolin",
+    "group": "Mammal",
+    "subgroup": "Pangolin",
+    "S": 0.55,
     "I": 0.35,
     "U": 0.38,
-    "confidence": "LOW",
-    "notes": "Aggregation site fidelity"
+    "confidence": "VERY LOW",
+    "notes": "Most trafficked mammal"
   },
   {
     "name": "Goldfish",
@@ -2080,6 +3880,36 @@ const SPECIES_DB = [
     "notes": "Long-lived, spatial memory"
   },
   {
+    "name": "Ladybug",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.52,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Aggregation site fidelity"
+  },
+  {
+    "name": "Jewel beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "IR fire detection from 80 km"
+  },
+  {
+    "name": "Longhorn beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Detects stressed trees long-range"
+  },
+  {
     "name": "Scorpion",
     "group": "Arachnid",
     "subgroup": "Scorpiones",
@@ -2087,7 +3917,7 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.35,
     "confidence": "LOW",
-    "notes": "UV fluorescence, pectines"
+    "notes": "UV fluorescence"
   },
   {
     "name": "Zebrafish",
@@ -2097,7 +3927,17 @@ const SPECIES_DB = [
     "I": 0.38,
     "U": 0.35,
     "confidence": "HIGH",
-    "notes": "Best neural data of any fish, connectome in progress"
+    "notes": "Best neural data, connectome in progress"
+  },
+  {
+    "name": "Corn snake",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.52,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "MEDIUM",
+    "notes": "Maze learning model"
   },
   {
     "name": "Herring",
@@ -2107,7 +3947,17 @@ const SPECIES_DB = [
     "I": 0.35,
     "U": 0.35,
     "confidence": "LOW",
-    "notes": "Detect predator ultrasound, bubble communication"
+    "notes": "Predator ultrasound detection"
+  },
+  {
+    "name": "Colorado potato beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.52,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "LOW",
+    "notes": "Fastest insecticide resistance"
   },
   {
     "name": "Lungfish",
@@ -2117,7 +3967,27 @@ const SPECIES_DB = [
     "I": 0.35,
     "U": 0.35,
     "confidence": "VERY LOW",
-    "notes": "Aestivation survival, closest fish relative to tetrapods"
+    "notes": "Aestivation, closest fish to tetrapods"
+  },
+  {
+    "name": "Red-eared slider",
+    "group": "Reptile",
+    "subgroup": "Turtle",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "MEDIUM",
+    "notes": "Most studied turtle"
+  },
+  {
+    "name": "Caddisfly larva",
+    "group": "Insect",
+    "subgroup": "Trichoptera",
+    "S": 0.48,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Builds cases from found materials"
   },
   {
     "name": "Sturgeon",
@@ -2127,7 +3997,17 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.32,
     "confidence": "VERY LOW",
-    "notes": "Lives 100+ years, site fidelity across decades"
+    "notes": "Lives 100+ years"
+  },
+  {
+    "name": "Sloth",
+    "group": "Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.5,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "LOW",
+    "notes": "Slowest mammal"
   },
   {
     "name": "Fig wasp",
@@ -2137,7 +4017,17 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.35,
     "confidence": "VERY LOW",
-    "notes": "Extreme specialist, short-lived"
+    "notes": "Extreme specialist"
+  },
+  {
+    "name": "Painted turtle",
+    "group": "Reptile",
+    "subgroup": "Turtle",
+    "S": 0.48,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "LOW",
+    "notes": "Freeze tolerance"
   },
   {
     "name": "Stick insect",
@@ -2147,7 +4037,7 @@ const SPECIES_DB = [
     "I": 0.3,
     "U": 0.35,
     "confidence": "VERY LOW",
-    "notes": "Extreme camouflage specialists"
+    "notes": "Extreme camouflage"
   },
   {
     "name": "Flea",
@@ -2157,7 +4047,27 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.32,
     "confidence": "VERY LOW",
-    "notes": "Extraordinary jumping, narrow behavioral repertoire"
+    "notes": "Extraordinary jumping"
+  },
+  {
+    "name": "Weevil",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.5,
+    "I": 0.32,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "Precision acorn drilling"
+  },
+  {
+    "name": "Darkling beetle",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.5,
+    "I": 0.32,
+    "U": 0.32,
+    "confidence": "MEDIUM",
+    "notes": "Mealworm research model"
   },
   {
     "name": "Silk moth",
@@ -2167,7 +4077,7 @@ const SPECIES_DB = [
     "I": 0.3,
     "U": 0.32,
     "confidence": "MEDIUM",
-    "notes": "Most sensitive olfactory detection known"
+    "notes": "Most sensitive olfaction known"
   },
   {
     "name": "Elephant shark",
@@ -2187,7 +4097,7 @@ const SPECIES_DB = [
     "I": 0.3,
     "U": 0.35,
     "confidence": "LOW",
-    "notes": "Pinhole eyes, ancient lineage"
+    "notes": "Pinhole eyes, ancient"
   },
   {
     "name": "Anglerfish",
@@ -2197,7 +4107,7 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.32,
     "confidence": "VERY LOW",
-    "notes": "Bioluminescent lure manipulation"
+    "notes": "Bioluminescent lure"
   },
   {
     "name": "Coelacanth",
@@ -2217,7 +4127,17 @@ const SPECIES_DB = [
     "I": 0.32,
     "U": 0.3,
     "confidence": "MEDIUM",
-    "notes": "Most ancient vertebrate lineage, pheromone navigation"
+    "notes": "Most ancient vertebrate lineage"
+  },
+  {
+    "name": "Glowworm",
+    "group": "Insect",
+    "subgroup": "Coleoptera",
+    "S": 0.48,
+    "I": 0.3,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Bioluminescent fishing traps"
   },
   {
     "name": "Leech",
@@ -2230,14 +4150,14 @@ const SPECIES_DB = [
     "notes": "Well-studied nervous system"
   },
   {
-    "name": "Physarum (slime mold)",
+    "name": "Physarum",
     "group": "Protist",
     "subgroup": "Myxomycete",
     "S": 0.3,
     "I": 0.25,
     "U": 0.55,
     "confidence": "MEDIUM",
-    "notes": "Maze solving, network optimization"
+    "notes": "Maze solving"
   },
   {
     "name": "Earthworm",
@@ -2247,7 +4167,7 @@ const SPECIES_DB = [
     "I": 0.3,
     "U": 0.32,
     "confidence": "LOW",
-    "notes": "Segmental ganglia, T-maze learning"
+    "notes": "T-maze learning"
   },
   {
     "name": "Silverfish",
@@ -2257,7 +4177,17 @@ const SPECIES_DB = [
     "I": 0.28,
     "U": 0.3,
     "confidence": "VERY LOW",
-    "notes": "Among oldest living insect designs (~400M years)"
+    "notes": "400M year old design"
+  },
+  {
+    "name": "Brachiosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Sauropoda",
+    "S": 0.5,
+    "I": 0.25,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Tiny brain for enormous body"
   },
   {
     "name": "Box jellyfish",
@@ -2267,17 +4197,27 @@ const SPECIES_DB = [
     "I": 0.15,
     "U": 0.25,
     "confidence": "MEDIUM",
-    "notes": "24 eyes, 4 independent rhopalia"
+    "notes": "24 eyes, 4 rhopalia"
   },
   {
-    "name": "Mayfly (adult)",
+    "name": "Mayfly",
     "group": "Insect",
     "subgroup": "Ephemeroptera",
     "S": 0.48,
     "I": 0.25,
     "U": 0.28,
     "confidence": "VERY LOW",
-    "notes": "Shortest adult lifespan, entire life = mate and die"
+    "notes": "Entire adult life = mate and die"
+  },
+  {
+    "name": "Stegosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Stegosauridae",
+    "S": 0.5,
+    "I": 0.22,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Famous tiny brain"
   },
   {
     "name": "Hagfish",
@@ -2287,7 +4227,7 @@ const SPECIES_DB = [
     "I": 0.25,
     "U": 0.28,
     "confidence": "VERY LOW",
-    "notes": "Slime defense, body knotting, among oldest vertebrates"
+    "notes": "Slime defense, body knotting"
   },
   {
     "name": "Planarian",
@@ -2307,7 +4247,7 @@ const SPECIES_DB = [
     "I": 0.55,
     "U": 0.4,
     "confidence": "HIGH",
-    "notes": "Minimal sensing, some integration maintained"
+    "notes": "Minimal sensing"
   },
   {
     "name": "Paramecium",
@@ -2327,7 +4267,7 @@ const SPECIES_DB = [
     "I": 0.18,
     "U": 0.22,
     "confidence": "LOW",
-    "notes": "Electrical signaling, resource allocation"
+    "notes": "Electrical signaling"
   },
   {
     "name": "Starfish",
@@ -2337,7 +4277,7 @@ const SPECIES_DB = [
     "I": 0.15,
     "U": 0.18,
     "confidence": "LOW",
-    "notes": "Radial nerve, no central brain"
+    "notes": "Radial nerve, no brain"
   },
   {
     "name": "Human (anesthesia)",
@@ -2347,7 +4287,7 @@ const SPECIES_DB = [
     "I": 0.1,
     "U": 0.1,
     "confidence": "HIGH",
-    "notes": "Sensors intact, integration/unity collapsed"
+    "notes": "Integration/unity collapsed"
   },
   {
     "name": "Euglena",
@@ -2367,7 +4307,7 @@ const SPECIES_DB = [
     "I": 0.12,
     "U": 0.18,
     "confidence": "MEDIUM",
-    "notes": "Diffuse nerve net, sleep-like states"
+    "notes": "Sleep-like states"
   },
   {
     "name": "Sea urchin",
@@ -2407,7 +4347,7 @@ const SPECIES_DB = [
     "I": 0.1,
     "U": 0.12,
     "confidence": "MEDIUM",
-    "notes": "Touch response, habituation learning"
+    "notes": "Touch response, habituation"
   },
   {
     "name": "Venus flytrap",
@@ -2457,7 +4397,7 @@ const SPECIES_DB = [
     "I": 0.05,
     "U": 0.08,
     "confidence": "LOW",
-    "notes": "Heliotropism, circadian anticipation"
+    "notes": "Heliotropism"
   },
   {
     "name": "Oak tree",
@@ -2477,7 +4417,7 @@ const SPECIES_DB = [
     "I": 0.05,
     "U": 0.08,
     "confidence": "LOW",
-    "notes": "Colonial, minimal nervous system"
+    "notes": "Colonial"
   },
   {
     "name": "Sponge",

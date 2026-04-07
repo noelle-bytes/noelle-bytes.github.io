@@ -6,10 +6,6 @@
   <title>SIU Calculator - Score Any Organism</title>
   <meta name="description" content="Interactive calculator for the SIU awareness framework. Score any organism's awareness using Sensing, Integration, and Unity.">
   <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0a0a0f">
-  <link rel="apple-touch-icon" href="icon-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 
@@ -210,13 +206,6 @@ presets.forEach(p => {
 });
 
 update();
-</script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
-    .then(() => console.log('SIU offline ready'))
-    .catch(err => console.log('SW error:', err));
-}
 </script>
 </body>
 </html>
