@@ -240,4 +240,5 @@ footer a { color: var(--accent); text-decoration: none; }
   section { padding: 36px 0; }
   nav .links { gap: 16px; }
   .slider-row { flex-wrap: wrap; }
+  .calc-grid { grid-template-columns: 1fr !important; }
 }
