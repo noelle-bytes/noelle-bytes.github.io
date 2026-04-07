@@ -1,24 +1,21 @@
 {
-  "name": "SIU Awareness Calculator",
+  "name": "SIU Framework",
   "short_name": "SIU",
-  "description": "Score any organism's awareness using the Sensing-Integration-Unity framework. 249 species database. Works offline.",
-  "start_url": "/index.html",
+  "description": "Quantifying awareness across all living organisms",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0f",
-  "theme_color": "#0a0a0f",
-  "orientation": "any",
+  "background_color": "#0f1219",
+  "theme_color": "#38bdf8",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
+      "type": "image/png"
     }
   ]
 }
