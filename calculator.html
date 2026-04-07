@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIU Calculator - Score Any Organism</title>
-  <meta name="description" content="Interactive calculator for the SIU awareness framework. Score any organism's awareness using Sensing, Integration, and Unity.">
+  <title>SIU Calculator</title>
+  <meta name="description" content="Interactive SIU awareness calculator. Set Sensing, Integration, and Unity values to score any organism's awareness.">
   <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0a0a0f">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 
@@ -23,83 +27,87 @@
 
 <div class="container">
 
-  <div class="hero" style="padding-bottom: 36px">
-    <h1>Score any organism</h1>
-    <p class="subtitle">Adjust the three parameters. The framework does the rest.</p>
+  <div class="hero">
+    <h1>SIU Calculator</h1>
+    <p class="subtitle">Set parameters for any organism. Results update in real time. See the <a href="methodology.html">full scoring rubric</a> for guidance on setting values.</p>
   </div>
 
-  <section style="padding-top: 36px">
+  <div style="display: grid; grid-template-columns: 1fr; gap: 24px;">
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;" class="calc-grid">
-      <div style="min-width: 0;">
-        <h2>Parameters</h2>
-
-        <div class="slider-row">
-          <span class="slider-label">S</span>
-          <input type="range" id="s-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="s-value">0.50</span>
-        </div>
-        <p class="slider-desc">Sensing: how much can it detect? Modality count, receptor quality, bandwidth.</p>
-
-        <div class="slider-row">
-          <span class="slider-label">I</span>
-          <input type="range" id="i-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="i-value">0.50</span>
-        </div>
-        <p class="slider-desc">Integration: how well do signals talk to each other? Cross-modal binding, neural connectivity.</p>
-
-        <div class="slider-row">
-          <span class="slider-label">U</span>
-          <input type="range" id="u-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="u-value">0.50</span>
-        </div>
-        <p class="slider-desc">Unity: is there a unified self? Self-model, coherent behavior, mirror test evidence.</p>
-
-        <div class="caveat" style="margin-top: 32px">
-          <div class="caveat-title">Quick Scoring Guide</div>
-          <p><strong>0.00-0.15</strong> &mdash; Absent or vestigial. Sponge, plant, bacterium.<br>
-          <strong>0.15-0.35</strong> &mdash; Basic. Simple nerve net, reflexive.<br>
-          <strong>0.35-0.55</strong> &mdash; Moderate. Some learning, behavioral flexibility.<br>
-          <strong>0.55-0.75</strong> &mdash; Strong. Complex social behavior, problem solving.<br>
-          <strong>0.75-0.95</strong> &mdash; Exceptional. Tool use, self-recognition, planning.</p>
-          <p style="margin-top: 12px;"><a href="methodology.html" style="color: var(--accent); font-family: var(--mono); font-size: 13px;">Full scoring rubric with step-by-step instructions &rarr;</a></p>
-        </div>
-      </div>
-
-      <div style="min-width: 0;">
-        <h2>Result</h2>
-        <div class="card" style="text-align: center; padding: 32px 24px;">
-          <div class="result-label">SIU Score</div>
-          <div class="result-big" id="result-score">12.5%</div>
-          <div id="result-tier" style="margin: 12px 0 24px;">
-            <span class="tier-badge tier-subconscious">Subconscious</span>
+    <div>
+      <h2>Parameters</h2>
+      <div class="card">
+        <div style="margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <label><strong>S</strong> &mdash; Sensing</label>
+            <span style="font-family: var(--mono); font-size: 20px;" id="s-val">85</span>
           </div>
-          <div class="result-label">% of Human Waking Awareness</div>
-          <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;" id="result-pct-human">16.3%</div>
+          <input type="range" id="s-slider" min="0" max="100" value="85" style="width:100%; margin-top: 8px;">
+          <p style="font-size: 12px; color: var(--text-dim); margin-top: 4px;">Sensory modalities, receptor density, range, resolution. Includes external and internal sensing (interoception).</p>
         </div>
 
-        <div class="card" style="margin-top: 16px;">
-          <div class="result-label" style="margin-bottom: 12px;">Nearest Scored Organisms</div>
-          <div id="nearest-organisms" style="font-size: 14px; color: var(--text-dim);"></div>
+        <div style="margin-bottom: 24px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <label><strong>I</strong> &mdash; Integration</label>
+            <span style="font-family: var(--mono); font-size: 20px;" id="i-val">95</span>
+          </div>
+          <input type="range" id="i-slider" min="0" max="100" value="95" style="width:100%; margin-top: 8px;">
+          <p style="font-size: 12px; color: var(--text-dim); margin-top: 4px;">How sensory streams are bound. Cross-modal binding, temporal integration, learning, prediction, behavioral flexibility.</p>
         </div>
 
-        <div class="card" style="margin-top: 16px;">
-          <div class="result-label" style="margin-bottom: 12px;">All Formulas</div>
-          <table id="formula-table" style="font-size: 13px;">
-            <tr><td>A = S &times; I (Simple)</td><td class="num" id="f-si">--</td></tr>
-            <tr><td>A = S &times; I &times; U (Standard)</td><td class="num" id="f-siu">--</td></tr>
-            <tr><td>A = S &times; I&sup2; &times; U (Precise)</td><td class="num" id="f-precise">--</td></tr>
-          </table>
+        <div style="margin-bottom: 8px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline;">
+            <label><strong>U</strong> &mdash; Unity</label>
+            <span style="font-family: var(--mono); font-size: 20px;" id="u-val">95</span>
+          </div>
+          <input type="range" id="u-slider" min="0" max="100" value="95" style="width:100%; margin-top: 8px;">
+          <p style="font-size: 12px; color: var(--text-dim); margin-top: 4px;">Unified field of experience. Global workspace coherence. Distinguishes waking from anesthesia, sleep stages, dissociative states.</p>
         </div>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <h2>Quick Presets</h2>
+        <div class="filter-row" id="presets"></div>
+      </div>
+
+      <div class="caveat" style="margin-top: 16px;">
+        <div class="caveat-title">Quick Scoring Guide</div>
+        <p><strong>0.00-0.15</strong> &mdash; Minimal or absent. Sponge, plant, bacterium.<br>
+        <strong>0.15-0.35</strong> &mdash; Basic. Simple nerve net, reflexive.<br>
+        <strong>0.35-0.55</strong> &mdash; Moderate. Some learning, behavioral flexibility.<br>
+        <strong>0.55-0.75</strong> &mdash; Strong. Complex social behavior, problem solving.<br>
+        <strong>0.75-0.95</strong> &mdash; Exceptional. Tool use, self-recognition, planning.</p>
+        <p style="margin-top: 8px;">See the <a href="methodology.html">full methodology</a> for detailed rubrics with concrete criteria at each level.</p>
       </div>
     </div>
 
-    <div style="margin-top: 40px">
-      <h2>Quick Presets</h2>
-      <div class="filter-row" id="presets"></div>
-    </div>
+    <div style="min-width: 0;">
+      <h2>Result</h2>
+      <div class="card" style="text-align: center; padding: 32px 24px;">
+        <div class="result-label">SIU Score</div>
+        <div class="result-big" id="result-score">76.7%</div>
+        <div id="result-tier" style="margin: 12px 0 24px;">
+          <span class="tier-badge tier-selfaware">Self-Aware</span>
+        </div>
+        <div class="result-label">% of Human Waking Awareness</div>
+        <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;" id="result-pct-human">100.0%</div>
+      </div>
 
-  </section>
+      <div class="card" style="margin-top: 16px;">
+        <div class="result-label" style="margin-bottom: 12px;">Nearest Scored Organisms</div>
+        <div id="nearest-organisms" style="font-size: 14px; color: var(--text-dim);"></div>
+      </div>
+
+      <div class="card" style="margin-top: 16px;">
+        <div class="result-label" style="margin-bottom: 12px;">All Formulas</div>
+        <table id="formula-table" style="font-size: 13px;">
+          <tr><td>A = S &times; I (Simple)</td><td class="num" id="f-si">--</td></tr>
+          <tr><td>A = S &times; I &times; U (Standard)</td><td class="num" id="f-siu">--</td></tr>
+          <tr><td>A = S &times; I&sup2; &times; U (Precise)</td><td class="num" id="f-precise">--</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
 
 </div>
 
@@ -143,41 +151,43 @@ function update() {
   const i = parseInt(document.getElementById('i-slider').value) / 100;
   const u = parseInt(document.getElementById('u-slider').value) / 100;
 
-  document.getElementById('s-value').textContent = s.toFixed(2);
-  document.getElementById('i-value').textContent = i.toFixed(2);
-  document.getElementById('u-value').textContent = u.toFixed(2);
+  document.getElementById('s-val').textContent = Math.round(s * 100);
+  document.getElementById('i-val').textContent = Math.round(i * 100);
+  document.getElementById('u-val').textContent = Math.round(u * 100);
 
+  const si = s * i;
   const siu = s * i * u;
+  const precise = s * i * i * u;
+
   const pctHuman = (siu / H_SIU) * 100;
-  const tier = getTier(pctHuman);
 
   document.getElementById('result-score').textContent = (siu * 100).toFixed(1) + '%';
-  document.getElementById('result-score').style.color =
-    `var(--${tier.cls.replace('tier-', 'tier-')})`;
-  document.getElementById('result-tier').innerHTML =
-    `<span class="tier-badge ${tier.cls}">${tier.name}</span>`;
   document.getElementById('result-pct-human').textContent = pctHuman.toFixed(1) + '%';
 
-  // Formula variants
-  document.getElementById('f-si').textContent = (s * i * 100).toFixed(1) + '%';
+  const tier = getTier(pctHuman);
+  document.getElementById('result-tier').innerHTML =
+    `<span class="tier-badge ${tier.cls}">${tier.name}</span>`;
+
+  document.getElementById('f-si').textContent = (si * 100).toFixed(1) + '%';
   document.getElementById('f-siu').textContent = (siu * 100).toFixed(1) + '%';
-  document.getElementById('f-precise').textContent = (s * i * i * u * 100).toFixed(2) + '%';
+  document.getElementById('f-precise').textContent = (precise * 100).toFixed(1) + '%';
 
-  // Nearest organisms
-  const scored = SPECIES_DB.map(sp => ({
-    name: sp.name,
-    siu: sp.S * sp.I * sp.U,
-    dist: Math.abs(sp.S * sp.I * sp.U - siu)
-  })).sort((a, b) => a.dist - b.dist).slice(0, 5);
+  // Nearest organisms from database
+  if (typeof SPECIES !== 'undefined') {
+    const scored = SPECIES.map(sp => {
+      const spSiu = (sp.S / 100) * (sp.I / 100) * (sp.U / 100);
+      return { name: sp.name, siu: spSiu, diff: Math.abs(spSiu - siu) };
+    }).sort((a, b) => a.diff - b.diff).slice(0, 5);
 
-  document.getElementById('nearest-organisms').innerHTML = scored.map(sp => {
-    const spPct = (sp.siu / H_SIU * 100).toFixed(1);
-    const spTier = getTier(sp.siu / H_SIU * 100);
-    return `<div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border);">
-      <span>${sp.name}</span>
-      <span style="font-family: var(--mono); font-size: 12px;">${spPct}% <span class="tier-badge ${spTier.cls}" style="font-size: 9px; padding: 1px 6px;">${spTier.name}</span></span>
-    </div>`;
-  }).join('');
+    document.getElementById('nearest-organisms').innerHTML = scored.map(sp => {
+      const spPct = ((sp.siu / H_SIU) * 100).toFixed(1);
+      const spTier = getTier(parseFloat(spPct));
+      return `<div style="margin-bottom: 6px;">
+        <strong>${sp.name}</strong>
+        <span style="float: right; font-family: var(--mono); font-size: 12px;">${spPct}% <span class="tier-badge ${spTier.cls}" style="font-size: 9px; padding: 1px 6px;">${spTier.name}</span></span>
+      </div>`;
+    }).join('');
+  }
 }
 
 // Preset buttons
@@ -206,6 +216,14 @@ presets.forEach(p => {
 });
 
 update();
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => console.log('SIU offline ready'))
+    .catch(err => console.log('SW error:', err));
+}
 </script>
 </body>
 </html>
