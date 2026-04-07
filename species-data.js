@@ -10,6 +10,16 @@ const SPECIES_DB = [
     "notes": "Baseline reference"
   },
   {
+    "name": "Homo neanderthalensis",
+    "group": "Extinct Mammal",
+    "subgroup": "Great Ape",
+    "S": 0.82,
+    "I": 0.9,
+    "U": 0.88,
+    "confidence": "LOW",
+    "notes": "Larger brain than H. sapiens. Art. Burial. Tool manufacture. Language debated."
+  },
+  {
     "name": "Chimpanzee",
     "group": "Mammal",
     "subgroup": "Great Ape",
@@ -50,6 +60,16 @@ const SPECIES_DB = [
     "notes": "Name whistles, mirror test, sponge tools"
   },
   {
+    "name": "Denisovan",
+    "group": "Extinct Mammal",
+    "subgroup": "Great Ape",
+    "S": 0.8,
+    "I": 0.85,
+    "U": 0.85,
+    "confidence": "VERY LOW",
+    "notes": "Known mostly from DNA. Interbred with H. sapiens. Adapted to high altitude (Tibet)."
+  },
+  {
     "name": "Gorilla",
     "group": "Mammal",
     "subgroup": "Great Ape",
@@ -88,6 +108,26 @@ const SPECIES_DB = [
     "U": 0.84,
     "confidence": "HIGH",
     "notes": "Mirror test, body awareness"
+  },
+  {
+    "name": "Woolly mammoth",
+    "group": "Extinct Mammal",
+    "subgroup": "Proboscidea",
+    "S": 0.78,
+    "I": 0.82,
+    "U": 0.82,
+    "confidence": "LOW",
+    "notes": "Bracketed by elephants. Herding, migration, likely mourning. Tool use inferred from elephant cognition."
+  },
+  {
+    "name": "Homo erectus",
+    "group": "Extinct Mammal",
+    "subgroup": "Great Ape",
+    "S": 0.78,
+    "I": 0.8,
+    "U": 0.8,
+    "confidence": "LOW",
+    "notes": "Fire use. Acheulean tools. Migrated across continents. 1.9M years as species."
   },
   {
     "name": "New Caledonian crow",
@@ -260,6 +300,16 @@ const SPECIES_DB = [
     "notes": "Probability reasoning, neophilia"
   },
   {
+    "name": "Homo floresiensis",
+    "group": "Extinct Mammal",
+    "subgroup": "Great Ape",
+    "S": 0.75,
+    "I": 0.72,
+    "U": 0.72,
+    "confidence": "LOW",
+    "notes": "'Hobbit.' 1m tall. Made stone tools. Hunted Stegodon. Small brain but complex behavior."
+  },
+  {
     "name": "Honeybee",
     "group": "Insect",
     "subgroup": "Social Hymenoptera",
@@ -288,6 +338,26 @@ const SPECIES_DB = [
     "U": 0.72,
     "confidence": "MEDIUM",
     "notes": "Counts rivals by roars"
+  },
+  {
+    "name": "Cave lion",
+    "group": "Extinct Mammal",
+    "subgroup": "Felidae",
+    "S": 0.78,
+    "I": 0.68,
+    "U": 0.72,
+    "confidence": "LOW",
+    "notes": "Bracketed by modern lions. Cave paintings show mane variation. Pack hunting likely."
+  },
+  {
+    "name": "American lion (Panthera atrox)",
+    "group": "Extinct Mammal",
+    "subgroup": "Felidae",
+    "S": 0.78,
+    "I": 0.68,
+    "U": 0.72,
+    "confidence": "VERY LOW",
+    "notes": "25% larger than modern lion. Pack hunting from tar pit evidence."
   },
   {
     "name": "Rhesus macaque",
@@ -380,6 +450,16 @@ const SPECIES_DB = [
     "notes": "Latch opening, 3-year memory"
   },
   {
+    "name": "Dire wolf",
+    "group": "Extinct Mammal",
+    "subgroup": "Canidae",
+    "S": 0.75,
+    "I": 0.68,
+    "U": 0.7,
+    "confidence": "LOW",
+    "notes": "Pack hunting. Social. Bracketed by modern wolves. La Brea evidence."
+  },
+  {
     "name": "Dragonfly",
     "group": "Insect",
     "subgroup": "Odonata",
@@ -388,6 +468,16 @@ const SPECIES_DB = [
     "U": 0.65,
     "confidence": "MEDIUM",
     "notes": "95% hunting success, predictive interception"
+  },
+  {
+    "name": "Cave hyena",
+    "group": "Extinct Mammal",
+    "subgroup": "Hyaenidae",
+    "S": 0.72,
+    "I": 0.7,
+    "U": 0.7,
+    "confidence": "LOW",
+    "notes": "Bracketed by spotted hyena. Den accumulations show social behavior."
   },
   {
     "name": "Desert ant",
@@ -670,6 +760,16 @@ const SPECIES_DB = [
     "notes": "Reciprocal altruism"
   },
   {
+    "name": "Australopithecus",
+    "group": "Extinct Mammal",
+    "subgroup": "Primate",
+    "S": 0.72,
+    "I": 0.65,
+    "U": 0.68,
+    "confidence": "LOW",
+    "notes": "Bipedal. Stone tool use (Oldowan). Lucy. 3-4 million years ago."
+  },
+  {
     "name": "Peregrine falcon",
     "group": "Bird",
     "subgroup": "Raptor",
@@ -678,6 +778,16 @@ const SPECIES_DB = [
     "U": 0.62,
     "confidence": "MEDIUM",
     "notes": "Fastest animal, 390 km/h"
+  },
+  {
+    "name": "Haast's eagle",
+    "group": "Extinct Bird",
+    "subgroup": "Accipitridae",
+    "S": 0.85,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "VERY LOW",
+    "notes": "Largest eagle ever. Hunted moa (200 kg prey). Aerial predation."
   },
   {
     "name": "Canada jay",
@@ -698,6 +808,16 @@ const SPECIES_DB = [
     "U": 0.65,
     "confidence": "MEDIUM",
     "notes": "Object permanence, voice recognition"
+  },
+  {
+    "name": "Saber-toothed cat (Smilodon)",
+    "group": "Extinct Mammal",
+    "subgroup": "Felidae",
+    "S": 0.78,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "LOW",
+    "notes": "Pack hunting debated (La Brea tar pits = groups). Ambush specialist with social care of injured."
   },
   {
     "name": "Weaver ant",
@@ -788,6 +908,16 @@ const SPECIES_DB = [
     "U": 0.65,
     "confidence": "LOW",
     "notes": "9+ distinct calls, cooperative hunting"
+  },
+  {
+    "name": "Cave bear",
+    "group": "Extinct Mammal",
+    "subgroup": "Ursidae",
+    "S": 0.72,
+    "I": 0.62,
+    "U": 0.65,
+    "confidence": "LOW",
+    "notes": "Bracketed by brown bears. Hibernation in caves. Social denning."
   },
   {
     "name": "Gyrfalcon",
@@ -948,6 +1078,16 @@ const SPECIES_DB = [
     "U": 0.62,
     "confidence": "LOW",
     "notes": "Rarest canid, ~500 left"
+  },
+  {
+    "name": "Giant short-faced bear (Arctodus)",
+    "group": "Extinct Mammal",
+    "subgroup": "Ursidae",
+    "S": 0.72,
+    "I": 0.6,
+    "U": 0.62,
+    "confidence": "VERY LOW",
+    "notes": "Tallest bear ever. Fast runner. Likely kleptoparasitic (stole kills)."
   },
   {
     "name": "Fire ant",
@@ -1290,6 +1430,26 @@ const SPECIES_DB = [
     "notes": "10G courtship dive"
   },
   {
+    "name": "Thylacosmilus",
+    "group": "Extinct Mammal",
+    "subgroup": "Sparassodonta",
+    "S": 0.72,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "VERY LOW",
+    "notes": "Saber-toothed marsupial. Convergent with Smilodon but marsupial."
+  },
+  {
+    "name": "Thylacoleo (marsupial lion)",
+    "group": "Extinct Mammal",
+    "subgroup": "Diprotodontia",
+    "S": 0.72,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "VERY LOW",
+    "notes": "Strongest bite force relative to body of any mammal. Arboreal ambush."
+  },
+  {
     "name": "Orchid mantis",
     "group": "Insect",
     "subgroup": "Mantodea",
@@ -1370,6 +1530,16 @@ const SPECIES_DB = [
     "notes": "Stomps snakes, 5x body weight kicks"
   },
   {
+    "name": "Terror bird (Phorusrhacos)",
+    "group": "Extinct Bird",
+    "subgroup": "Phorusrhacidae",
+    "S": 0.72,
+    "I": 0.55,
+    "U": 0.55,
+    "confidence": "VERY LOW",
+    "notes": "2.5m tall flightless predator. Hatchet-strike skull. Apex predator of S. America."
+  },
+  {
     "name": "Archer fish",
     "group": "Fish",
     "subgroup": "Toxotidae",
@@ -1448,6 +1618,16 @@ const SPECIES_DB = [
     "U": 0.65,
     "confidence": "LOW",
     "notes": "Colony temperature regulation"
+  },
+  {
+    "name": "Meganeura",
+    "group": "Extinct Insect",
+    "subgroup": "Carboniferous dragonfly",
+    "S": 0.82,
+    "I": 0.5,
+    "U": 0.52,
+    "confidence": "VERY LOW",
+    "notes": "70cm wingspan dragonfly. Largest insect ever. Carboniferous O2 levels enabled size."
   },
   {
     "name": "Cleaner wrasse",
@@ -1708,6 +1888,16 @@ const SPECIES_DB = [
     "U": 0.55,
     "confidence": "LOW",
     "notes": "Jamaica national bird"
+  },
+  {
+    "name": "Megalania",
+    "group": "Extinct Reptile",
+    "subgroup": "Pleistocene monitor",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "7m monitor lizard. Australia. Bracketed by Komodo dragon but larger. Ambush predator."
   },
   {
     "name": "Lovebird",
@@ -2010,6 +2200,16 @@ const SPECIES_DB = [
     "notes": "Largest deer, dives for plants"
   },
   {
+    "name": "Utahraptor",
+    "group": "Dinosaur",
+    "subgroup": "Dromaeosauridae",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Largest dromaeosaurid. Pack hunting likely. Killing claw."
+  },
+  {
     "name": "Herring gull",
     "group": "Bird",
     "subgroup": "Seabird",
@@ -2048,6 +2248,16 @@ const SPECIES_DB = [
     "U": 0.52,
     "confidence": "LOW",
     "notes": "Largest flying bird by combined measure"
+  },
+  {
+    "name": "Irish elk (Megaloceros)",
+    "group": "Extinct Mammal",
+    "subgroup": "Cervidae",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.52,
+    "confidence": "VERY LOW",
+    "notes": "3.5m antler span. Display structure implies social assessment. Herding."
   },
   {
     "name": "Nile monitor",
@@ -2118,6 +2328,16 @@ const SPECIES_DB = [
     "U": 0.52,
     "confidence": "LOW",
     "notes": "Pebble theft"
+  },
+  {
+    "name": "Microraptor",
+    "group": "Dinosaur",
+    "subgroup": "Dromaeosauridae",
+    "S": 0.65,
+    "I": 0.52,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Four-winged glider. Iridescent plumage (fossil melanosomes). Arboreal."
   },
   {
     "name": "Fruit fly",
@@ -2290,6 +2510,16 @@ const SPECIES_DB = [
     "notes": "Flying reptile, not a dinosaur"
   },
   {
+    "name": "Gorgosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Tyrannosauridae",
+    "S": 0.68,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "VERY LOW",
+    "notes": "Juvenile bonebeds suggest age-segregated groups. Ontogenetic niche shift."
+  },
+  {
     "name": "Markhor",
     "group": "Mammal",
     "subgroup": "Ungulate",
@@ -2358,6 +2588,16 @@ const SPECIES_DB = [
     "U": 0.5,
     "confidence": "MEDIUM",
     "notes": "Central complex = command hub"
+  },
+  {
+    "name": "Oviraptor",
+    "group": "Dinosaur",
+    "subgroup": "Oviraptorosauria",
+    "S": 0.62,
+    "I": 0.5,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Found on nest. Parental care. Crest for display."
   },
   {
     "name": "Llama",
@@ -2700,6 +2940,26 @@ const SPECIES_DB = [
     "notes": "Electrogenesis, remote-controls prey"
   },
   {
+    "name": "Ornithomimus",
+    "group": "Dinosaur",
+    "subgroup": "Ornithomimidae",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Ostrich-mimic. Evidence of feathered wings for display. Fast runner."
+  },
+  {
+    "name": "Gallimimus",
+    "group": "Dinosaur",
+    "subgroup": "Ornithomimidae",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Ostrich-mimic. Herding. Omnivorous flexibility."
+  },
+  {
     "name": "Cichlid (Oscar)",
     "group": "Fish",
     "subgroup": "Cichlidae",
@@ -2708,6 +2968,16 @@ const SPECIES_DB = [
     "U": 0.48,
     "confidence": "MEDIUM",
     "notes": "Reported play, strong personalities"
+  },
+  {
+    "name": "Citipati",
+    "group": "Dinosaur",
+    "subgroup": "Oviraptorosauria",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Multiple specimens found on nests in brooding posture. Best oviraptorid parental evidence."
   },
   {
     "name": "Tiger beetle",
@@ -2728,6 +2998,16 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "LOW",
     "notes": "Extraordinary sensing, breach planning"
+  },
+  {
+    "name": "Megalodon",
+    "group": "Extinct Fish",
+    "subgroup": "Lamnidae",
+    "S": 0.78,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Largest predatory fish ever. Bracketed by great white. Nursery site fidelity."
   },
   {
     "name": "King cobra",
@@ -2840,6 +3120,16 @@ const SPECIES_DB = [
     "notes": "Prehensile nose, seed disperser"
   },
   {
+    "name": "Quinkana",
+    "group": "Extinct Reptile",
+    "subgroup": "Pleistocene croc",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "VERY LOW",
+    "notes": "Terrestrial crocodilian. Australia. Galloping predator. Upright leg stance."
+  },
+  {
     "name": "Wrasse (Napoleon)",
     "group": "Fish",
     "subgroup": "Labridae",
@@ -2868,6 +3158,16 @@ const SPECIES_DB = [
     "U": 0.48,
     "confidence": "MEDIUM",
     "notes": "Tadpole transport, territorial wrestling with assessment"
+  },
+  {
+    "name": "Spinosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Spinosauridae",
+    "S": 0.65,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Dual-environment hunting (land+water), pressure sensors = active sensory integration. Semi-aquatic flexibility."
   },
   {
     "name": "Grasshopper/Locust",
@@ -2930,6 +3230,16 @@ const SPECIES_DB = [
     "notes": "Densest fur, social"
   },
   {
+    "name": "Compsognathus",
+    "group": "Dinosaur",
+    "subgroup": "Compsognathidae",
+    "S": 0.6,
+    "I": 0.48,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Chicken-sized. Fast hunter. Relatively high EQ for its time."
+  },
+  {
     "name": "Pufferfish",
     "group": "Fish",
     "subgroup": "Tetraodontidae",
@@ -2948,6 +3258,16 @@ const SPECIES_DB = [
     "U": 0.45,
     "confidence": "MEDIUM",
     "notes": "Flower-tracking while hovering"
+  },
+  {
+    "name": "Quetzalcoatlus",
+    "group": "Dinosaur",
+    "subgroup": "Pterosauria",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Largest flying animal. Terrestrial stalker. NOT a dinosaur."
   },
   {
     "name": "Cichlid (African)",
@@ -2988,6 +3308,16 @@ const SPECIES_DB = [
     "U": 0.48,
     "confidence": "LOW",
     "notes": "Cuba national"
+  },
+  {
+    "name": "Parasaurolophus",
+    "group": "Dinosaur",
+    "subgroup": "Hadrosauridae",
+    "S": 0.58,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Built-in resonating crest for species-specific calls = communication infrastructure. Herding. Nesting."
   },
   {
     "name": "Sacred scarab",
@@ -3060,6 +3390,26 @@ const SPECIES_DB = [
     "notes": "Bizarre nose, critically endangered"
   },
   {
+    "name": "Sarcosuchus",
+    "group": "Extinct Reptile",
+    "subgroup": "Cretaceous croc",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "12m 'super croc.' Bracketed by modern crocs. Pressure sensors likely."
+  },
+  {
+    "name": "Giganotosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Carcharodontosauridae",
+    "S": 0.65,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Among largest theropods. Pack evidence debated."
+  },
+  {
     "name": "Gharial",
     "group": "Reptile",
     "subgroup": "Crocodilian",
@@ -3110,6 +3460,26 @@ const SPECIES_DB = [
     "notes": "Netherlands national"
   },
   {
+    "name": "Woolly rhinoceros",
+    "group": "Extinct Mammal",
+    "subgroup": "Rhinocerotidae",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Bracketed by modern rhinos. Cave paintings show behavior."
+  },
+  {
+    "name": "Moa",
+    "group": "Extinct Bird",
+    "subgroup": "Dinornithiformes",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "3.6m tall. Flightless. Hunted to extinction by Maori. Bracketed by kiwi/emu."
+  },
+  {
     "name": "Golden poison frog",
     "group": "Amphibian",
     "subgroup": "Dendrobatid",
@@ -3138,6 +3508,16 @@ const SPECIES_DB = [
     "U": 0.48,
     "confidence": "LOW",
     "notes": "Touch-sensitive, gentle"
+  },
+  {
+    "name": "Maiasaura",
+    "group": "Dinosaur",
+    "subgroup": "Hadrosauridae",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Good Mother Lizard. Best dinosaur parental care evidence. Nesting colonies."
   },
   {
     "name": "C. elegans",
@@ -3178,6 +3558,46 @@ const SPECIES_DB = [
     "U": 0.45,
     "confidence": "VERY LOW",
     "notes": "Hibernates 6+ months"
+  },
+  {
+    "name": "Triceratops",
+    "group": "Dinosaur",
+    "subgroup": "Ceratopsidae",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Herding, horn combat with assessment, frill display = social identity. Above sleepwalker."
+  },
+  {
+    "name": "Corythosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Hadrosauridae",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Plate-like crest as resonating chamber. Different frequency than Parasaurolophus."
+  },
+  {
+    "name": "Diprotodon",
+    "group": "Extinct Mammal",
+    "subgroup": "Diprotodontia",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Largest marsupial ever (2.8 tons). Bracketed by wombats. Herding."
+  },
+  {
+    "name": "Mosasaurus",
+    "group": "Dinosaur",
+    "subgroup": "Mosasauridae",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Marine apex predator. Monitor lizard-grade brain. Viviparous. NOT a dinosaur."
   },
   {
     "name": "Reef shark",
@@ -3230,14 +3650,14 @@ const SPECIES_DB = [
     "notes": "Group hunting with turn-taking"
   },
   {
-    "name": "Spinosaurus",
-    "group": "Dinosaur",
-    "subgroup": "Spinosauridae",
-    "S": 0.65,
+    "name": "Titanoboa",
+    "group": "Extinct Reptile",
+    "subgroup": "Paleocene snake",
+    "S": 0.62,
     "I": 0.4,
-    "U": 0.4,
+    "U": 0.42,
     "confidence": "VERY LOW",
-    "notes": "Semi-aquatic, pressure sensors"
+    "notes": "13m, 1100 kg. Largest snake ever. Constricted crocodilians. 60 mya. Bracketed by boas/anacondas."
   },
   {
     "name": "Tuna (bluefin)",
@@ -3250,6 +3670,16 @@ const SPECIES_DB = [
     "notes": "Endothermic brain"
   },
   {
+    "name": "Ichthyosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Ichthyosauria",
+    "S": 0.65,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "26cm eyes. Dolphin-shaped. Live birth fossil. NOT a dinosaur."
+  },
+  {
     "name": "Stickleback",
     "group": "Fish",
     "subgroup": "Gasterosteidae",
@@ -3258,6 +3688,16 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "HIGH",
     "notes": "Bold/shy personalities, social learning"
+  },
+  {
+    "name": "Dodo",
+    "group": "Extinct Bird",
+    "subgroup": "Columbiformes",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "VERY LOW",
+    "notes": "Flightless. Fearless of humans (no predator experience). Bracketed by Nicobar pigeon."
   },
   {
     "name": "Housefly",
@@ -3310,6 +3750,26 @@ const SPECIES_DB = [
     "notes": "IR imaging, graduated rattle warning"
   },
   {
+    "name": "Carnotaurus",
+    "group": "Dinosaur",
+    "subgroup": "Abelisauridae",
+    "S": 0.62,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Horned predator. Tiny arms. Fast runner. Skin impressions show scales."
+  },
+  {
+    "name": "Dilophosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Theropoda",
+    "S": 0.62,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Double-crested. No frill or venom (Jurassic Park inaccurate). Early large theropod."
+  },
+  {
     "name": "Dugong",
     "group": "Mammal",
     "subgroup": "Sirenian",
@@ -3358,6 +3818,16 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "LOW",
     "notes": "Only diurnal marsupial"
+  },
+  {
+    "name": "Pachycephalosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Pachycephalosauria",
+    "S": 0.58,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Dome skull for head-butting contests with force assessment. Social display."
   },
   {
     "name": "Clownfish",
@@ -3500,6 +3970,26 @@ const SPECIES_DB = [
     "notes": "Opponent size assessment before combat"
   },
   {
+    "name": "Therizinosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Therizinosauria",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "1-meter claws. Herbivore from carnivore lineage."
+  },
+  {
+    "name": "Edmontosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Hadrosauridae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Massive herding (thousands). Migration. Skin impressions. Fleshy crest."
+  },
+  {
     "name": "Cane toad",
     "group": "Amphibian",
     "subgroup": "Bufonid",
@@ -3548,16 +4038,6 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "LOW",
     "notes": "Social hierarchy, serotonin"
-  },
-  {
-    "name": "Parasaurolophus",
-    "group": "Dinosaur",
-    "subgroup": "Hadrosauridae",
-    "S": 0.58,
-    "I": 0.38,
-    "U": 0.4,
-    "confidence": "LOW",
-    "notes": "Built-in resonating crest"
   },
   {
     "name": "Boa constrictor",
@@ -3618,6 +4098,16 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "VERY LOW",
     "notes": "Precision chemical spray"
+  },
+  {
+    "name": "Giant ground sloth (Megatherium)",
+    "group": "Extinct Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "6-ton herbivore. Bipedal browsing. Burrowed (massive burrows found in Brazil)."
   },
   {
     "name": "Betta",
@@ -3840,6 +4330,16 @@ const SPECIES_DB = [
     "notes": "UV tongue display"
   },
   {
+    "name": "Iguanodon",
+    "group": "Dinosaur",
+    "subgroup": "Ornithopoda",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "VERY LOW",
+    "notes": "Thumb spike defense. Herding. First fossilized brain tissue found (2016)."
+  },
+  {
     "name": "Guppy",
     "group": "Fish",
     "subgroup": "Poeciliidae",
@@ -3848,6 +4348,16 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "HIGH",
     "notes": "Numerical discrimination, mate copying"
+  },
+  {
+    "name": "Dunkleosteus",
+    "group": "Extinct Fish",
+    "subgroup": "Devonian placoderm",
+    "S": 0.62,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Largest Devonian predator. Self-sharpening jaw plates. 6m armored fish. 380 mya."
   },
   {
     "name": "Glass frog",
@@ -3930,14 +4440,14 @@ const SPECIES_DB = [
     "notes": "Maternal care"
   },
   {
-    "name": "Triceratops",
+    "name": "Protoceratops",
     "group": "Dinosaur",
-    "subgroup": "Ceratopsidae",
-    "S": 0.58,
-    "I": 0.35,
-    "U": 0.38,
+    "subgroup": "Ceratopsia",
+    "S": 0.52,
+    "I": 0.38,
+    "U": 0.4,
     "confidence": "LOW",
-    "notes": "Horn+frill display"
+    "notes": "Nesting behavior documented. Frill for display. Fighting Dinosaurs specimen."
   },
   {
     "name": "Red-backed salamander",
@@ -4190,6 +4700,16 @@ const SPECIES_DB = [
     "notes": "Aggregation site fidelity"
   },
   {
+    "name": "Glyptodon",
+    "group": "Extinct Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.52,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Car-sized armored mammal. Tail club. Bracketed by armadillos."
+  },
+  {
     "name": "Jewel beetle",
     "group": "Insect",
     "subgroup": "Coleoptera",
@@ -4208,6 +4728,26 @@ const SPECIES_DB = [
     "U": 0.35,
     "confidence": "VERY LOW",
     "notes": "Detects stressed trees long-range"
+  },
+  {
+    "name": "Plesiosaur",
+    "group": "Dinosaur",
+    "subgroup": "Plesiosauria",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Long-neck hunter. Gastroliths. NOT a dinosaur."
+  },
+  {
+    "name": "Dimetrodon",
+    "group": "Dinosaur",
+    "subgroup": "Synapsida",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Sail-backed. NOT a dinosaur \u2014 synapsid (mammal ancestor line). Permian."
   },
   {
     "name": "Scorpion",
@@ -4280,6 +4820,26 @@ const SPECIES_DB = [
     "notes": "Fastest insecticide resistance"
   },
   {
+    "name": "Ankylosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Ankylosauridae",
+    "S": 0.52,
+    "I": 0.32,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Tail club targeting = motor coordination. Armored. Solitary inferred."
+  },
+  {
+    "name": "Tiktaalik",
+    "group": "Extinct Fish",
+    "subgroup": "Devonian lobe-fin",
+    "S": 0.55,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Fish-tetrapod transition. Could do push-ups. Flat head for surface breathing. 375 mya."
+  },
+  {
     "name": "Lungfish",
     "group": "Fish",
     "subgroup": "Dipnoi",
@@ -4350,6 +4910,16 @@ const SPECIES_DB = [
     "notes": "Puffs up + sticky skin defense"
   },
   {
+    "name": "Ammonite",
+    "group": "Extinct Cephalopod",
+    "subgroup": "Mesozoic cephalopod",
+    "S": 0.52,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Shelled cephalopod. Complex suture patterns. Bracketed between nautilus and cuttlefish."
+  },
+  {
     "name": "Sturgeon",
     "group": "Fish",
     "subgroup": "Acipenseridae",
@@ -4390,6 +4960,16 @@ const SPECIES_DB = [
     "notes": "Freeze tolerance"
   },
   {
+    "name": "Pulmonoscorpius",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Carboniferous scorpion",
+    "S": 0.55,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "70cm scorpion. Terrestrial predator. Bracketed by modern scorpions but scaled up."
+  },
+  {
     "name": "Stick insect",
     "group": "Insect",
     "subgroup": "Phasmatodea",
@@ -4398,6 +4978,26 @@ const SPECIES_DB = [
     "U": 0.35,
     "confidence": "VERY LOW",
     "notes": "Extreme camouflage"
+  },
+  {
+    "name": "Brachiosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Sauropoda",
+    "S": 0.5,
+    "I": 0.3,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Herding from trackways, migration = spatial memory. Small brain but coordinated social behavior."
+  },
+  {
+    "name": "Stegosaurus",
+    "group": "Dinosaur",
+    "subgroup": "Stegosauridae",
+    "S": 0.5,
+    "I": 0.3,
+    "U": 0.35,
+    "confidence": "VERY LOW",
+    "notes": "Plate display, thagomizer targeting, herding from trackways. Not a robot \u2014 but limited evidence of flexibility."
   },
   {
     "name": "Flea",
@@ -4450,6 +5050,16 @@ const SPECIES_DB = [
     "notes": "Most sensitive olfaction known"
   },
   {
+    "name": "Prionosuchus",
+    "group": "Extinct Amphibian",
+    "subgroup": "Permian temnospondyl",
+    "S": 0.52,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "9m giant amphibian. Largest amphibian ever. Crocodile-like predator."
+  },
+  {
     "name": "Elephant shark",
     "group": "Fish",
     "subgroup": "Callorhinchidae",
@@ -4458,6 +5068,56 @@ const SPECIES_DB = [
     "U": 0.3,
     "confidence": "VERY LOW",
     "notes": "Slowest-evolving genome"
+  },
+  {
+    "name": "Anomalocaris",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian apex",
+    "S": 0.55,
+    "I": 0.3,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Top predator of Cambrian seas. Compound eyes (16,000 lenses). 1m long. 520 mya."
+  },
+  {
+    "name": "Eurypterid (sea scorpion)",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Paleozoic chelicerate",
+    "S": 0.55,
+    "I": 0.3,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Up to 2.5m. Aquatic predator. 460-250 mya. Ancestral to arachnids."
+  },
+  {
+    "name": "Helicoprion",
+    "group": "Extinct Fish",
+    "subgroup": "Permian shark-relative",
+    "S": 0.55,
+    "I": 0.3,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Buzz-saw jaw whorl. Unique tooth arrangement. Classification debated for 100 years."
+  },
+  {
+    "name": "Cameroceras",
+    "group": "Extinct Cephalopod",
+    "subgroup": "Ordovician nautiloid",
+    "S": 0.5,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "6-9m giant nautiloid. Top Ordovician predator. Bracketed by nautilus but much larger."
+  },
+  {
+    "name": "Eryops",
+    "group": "Extinct Amphibian",
+    "subgroup": "Permian temnospondyl",
+    "S": 0.5,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "2m amphibian predator. Semi-aquatic. Early large land predator."
   },
   {
     "name": "Nautilus",
@@ -4540,6 +5200,16 @@ const SPECIES_DB = [
     "notes": "Maze solving"
   },
   {
+    "name": "Argentinosaur",
+    "group": "Dinosaur",
+    "subgroup": "Titanosauria",
+    "S": 0.45,
+    "I": 0.28,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "Among largest land animals ever. Nesting site fidelity. Herding."
+  },
+  {
     "name": "Earthworm",
     "group": "Annelid",
     "subgroup": "Oligochaeta",
@@ -4560,14 +5230,24 @@ const SPECIES_DB = [
     "notes": "400M year old design"
   },
   {
-    "name": "Brachiosaurus",
-    "group": "Dinosaur",
-    "subgroup": "Sauropoda",
+    "name": "Trilobite",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian arthropod",
     "S": 0.5,
     "I": 0.25,
-    "U": 0.3,
+    "U": 0.28,
     "confidence": "VERY LOW",
-    "notes": "Tiny brain for enormous body"
+    "notes": "Compound eyes (some with calcite lenses). 300M year lineage. Enrolled defense."
+  },
+  {
+    "name": "Megarachne",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Carboniferous eurypterid",
+    "S": 0.5,
+    "I": 0.25,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Originally thought giant spider, actually eurypterid (sea scorpion). 50cm."
   },
   {
     "name": "Box jellyfish",
@@ -4590,14 +5270,34 @@ const SPECIES_DB = [
     "notes": "Entire adult life = mate and die"
   },
   {
-    "name": "Stegosaurus",
-    "group": "Dinosaur",
-    "subgroup": "Stegosauridae",
-    "S": 0.5,
-    "I": 0.22,
+    "name": "Arthropleura",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Carboniferous millipede",
+    "S": 0.45,
+    "I": 0.25,
     "U": 0.28,
     "confidence": "VERY LOW",
-    "notes": "Famous tiny brain"
+    "notes": "2.6m millipede. Largest land arthropod ever. Herbivore. Carboniferous."
+  },
+  {
+    "name": "Acanthostega",
+    "group": "Extinct Amphibian",
+    "subgroup": "Devonian tetrapod",
+    "S": 0.45,
+    "I": 0.25,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Early tetrapod with 8 fingers. Could not walk on land efficiently. Aquatic. 365 mya."
+  },
+  {
+    "name": "Hynerpeton",
+    "group": "Extinct Amphibian",
+    "subgroup": "Devonian tetrapod",
+    "S": 0.45,
+    "I": 0.25,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Early tetrapod. Fish-to-land transition. 365 mya."
   },
   {
     "name": "Hagfish",
@@ -4628,6 +5328,26 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "HIGH",
     "notes": "Minimal sensing"
+  },
+  {
+    "name": "Opabinia",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian arthropod",
+    "S": 0.4,
+    "I": 0.2,
+    "U": 0.22,
+    "confidence": "VERY LOW",
+    "notes": "5 eyes + forward-facing proboscis. Unique body plan. Burgess Shale."
+  },
+  {
+    "name": "Pikaia",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian chordate",
+    "S": 0.35,
+    "I": 0.2,
+    "U": 0.22,
+    "confidence": "VERY LOW",
+    "notes": "Earliest known chordate. Our ancestor's body plan. Notochord. Burgess Shale."
   },
   {
     "name": "Paramecium",
@@ -4668,6 +5388,26 @@ const SPECIES_DB = [
     "U": 0.1,
     "confidence": "HIGH",
     "notes": "Integration/unity collapsed"
+  },
+  {
+    "name": "Hallucigenia",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian lobopod",
+    "S": 0.3,
+    "I": 0.15,
+    "U": 0.18,
+    "confidence": "VERY LOW",
+    "notes": "Bizarre spiny worm. Originally reconstructed upside-down. Burgess Shale."
+  },
+  {
+    "name": "Ottoia",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian priapulid",
+    "S": 0.3,
+    "I": 0.15,
+    "U": 0.18,
+    "confidence": "VERY LOW",
+    "notes": "Burrowing worm predator. Proboscis with teeth. Common Burgess Shale fossil."
   },
   {
     "name": "Euglena",
@@ -4718,6 +5458,16 @@ const SPECIES_DB = [
     "U": 0.15,
     "confidence": "LOW",
     "notes": "Simple nerve net"
+  },
+  {
+    "name": "Wiwaxia",
+    "group": "Extinct Invertebrate",
+    "subgroup": "Cambrian mollusk-like",
+    "S": 0.25,
+    "I": 0.12,
+    "U": 0.15,
+    "confidence": "VERY LOW",
+    "notes": "Armored sluglike. Sclerites for defense. Debated classification."
   },
   {
     "name": "Mimosa pudica",
