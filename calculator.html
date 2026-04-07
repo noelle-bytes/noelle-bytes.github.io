@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SIU Calculator - Score Any Organism</title>
+  <meta name="description" content="Interactive calculator for the SIU awareness framework. Score any organism's awareness using Sensing, Integration, and Unity.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">SIU <span>Framework</span></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="calculator.html" class="active">Calculator</a>
+      <a href="species.html">Species Database</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="hero" style="padding-bottom: 36px">
+    <h1>Score any organism</h1>
+    <p class="subtitle">Adjust the three parameters. The framework does the rest.</p>
+  </div>
+
+  <section style="padding-top: 36px">
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div style="min-width: 0;">
+        <h2>Parameters</h2>
+
+        <div class="slider-row">
+          <span class="slider-label">S</span>
+          <input type="range" id="s-slider" min="0" max="100" value="50">
+          <span class="slider-value" id="s-value">0.50</span>
+        </div>
+        <p class="slider-desc">Sensing: how much can it detect? Modality count, receptor quality, bandwidth.</p>
+
+        <div class="slider-row">
+          <span class="slider-label">I</span>
+          <input type="range" id="i-slider" min="0" max="100" value="50">
+          <span class="slider-value" id="i-value">0.50</span>
+        </div>
+        <p class="slider-desc">Integration: how well do signals talk to each other? Cross-modal binding, neural connectivity.</p>
+
+        <div class="slider-row">
+          <span class="slider-label">U</span>
+          <input type="range" id="u-slider" min="0" max="100" value="50">
+          <span class="slider-value" id="u-value">0.50</span>
+        </div>
+        <p class="slider-desc">Unity: is there a unified self? Self-model, coherent behavior, mirror test evidence.</p>
+
+        <div class="caveat" style="margin-top: 32px">
+          <div class="caveat-title">Scoring Guide</div>
+          <p><strong>0.00-0.15</strong> &mdash; Absent or vestigial. Sponge, plant, bacterium.<br>
+          <strong>0.15-0.35</strong> &mdash; Basic. Simple nerve net, reflexive.<br>
+          <strong>0.35-0.55</strong> &mdash; Moderate. Some learning, behavioral flexibility.<br>
+          <strong>0.55-0.75</strong> &mdash; Strong. Complex social behavior, problem solving.<br>
+          <strong>0.75-0.95</strong> &mdash; Exceptional. Tool use, self-recognition, planning.</p>
+        </div>
+      </div>
+
+      <div style="min-width: 0;">
+        <h2>Result</h2>
+        <div class="card" style="text-align: center; padding: 32px 24px;">
+          <div class="result-label">SIU Score</div>
+          <div class="result-big" id="result-score">12.5%</div>
+          <div id="result-tier" style="margin: 12px 0 24px;">
+            <span class="tier-badge tier-subconscious">Subconscious</span>
+          </div>
+          <div class="result-label">% of Human Waking Awareness</div>
+          <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;" id="result-pct-human">16.3%</div>
+        </div>
+
+        <div class="card" style="margin-top: 16px;">
+          <div class="result-label" style="margin-bottom: 12px;">Nearest Scored Organisms</div>
+          <div id="nearest-organisms" style="font-size: 14px; color: var(--text-dim);"></div>
+        </div>
+
+        <div class="card" style="margin-top: 16px;">
+          <div class="result-label" style="margin-bottom: 12px;">All Formulas</div>
+          <table id="formula-table" style="font-size: 13px;">
+            <tr><td>A = S &times; I (Simple)</td><td class="num" id="f-si">--</td></tr>
+            <tr><td>A = S &times; I &times; U (Standard)</td><td class="num" id="f-siu">--</td></tr>
+            <tr><td>A = S &times; I&sup2; &times; U (Precise)</td><td class="num" id="f-precise">--</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 40px">
+      <h2>Quick Presets</h2>
+      <div class="filter-row" id="presets"></div>
+    </div>
+
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>The SIU Principle &mdash; noelle-bytes &mdash; 2026</p>
+  </div>
+</footer>
+
+<script src="species-data.js"></script>
+<script>
+const H_SIU = 0.85 * 0.95 * 0.95;
+
+const presets = [
+  {name: "Human", s:85, i:95, u:95},
+  {name: "Chimpanzee", s:80, i:90, u:90},
+  {name: "Dolphin", s:75, i:88, u:88},
+  {name: "Octopus", s:80, i:72, u:82},
+  {name: "Crow", s:70, i:75, u:78},
+  {name: "Honeybee", s:70, i:70, u:75},
+  {name: "Cleaner wrasse", s:65, i:55, u:58},
+  {name: "Dog", s:75, i:72, u:75},
+  {name: "Goldfish", s:50, i:38, u:35},
+  {name: "Box jellyfish", s:90, i:15, u:25},
+  {name: "Ant", s:65, i:70, u:80},
+  {name: "C. elegans", s:40, i:50, u:55},
+  {name: "Oak tree", s:22, i:5, u:8},
+  {name: "Sponge", s:10, i:3, u:5},
+];
+
+function getTier(pctHuman) {
+  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware"};
+  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious"};
+  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious"};
+  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive"};
+  return {name: "Minimal", cls: "tier-minimal"};
+}
+
+function update() {
+  const s = parseInt(document.getElementById('s-slider').value) / 100;
+  const i = parseInt(document.getElementById('i-slider').value) / 100;
+  const u = parseInt(document.getElementById('u-slider').value) / 100;
+
+  document.getElementById('s-value').textContent = s.toFixed(2);
+  document.getElementById('i-value').textContent = i.toFixed(2);
+  document.getElementById('u-value').textContent = u.toFixed(2);
+
+  const siu = s * i * u;
+  const pctHuman = (siu / H_SIU) * 100;
+  const tier = getTier(pctHuman);
+
+  document.getElementById('result-score').textContent = (siu * 100).toFixed(1) + '%';
+  document.getElementById('result-score').style.color =
+    `var(--${tier.cls.replace('tier-', 'tier-')})`;
+  document.getElementById('result-tier').innerHTML =
+    `<span class="tier-badge ${tier.cls}">${tier.name}</span>`;
+  document.getElementById('result-pct-human').textContent = pctHuman.toFixed(1) + '%';
+
+  // Formula variants
+  document.getElementById('f-si').textContent = (s * i * 100).toFixed(1) + '%';
+  document.getElementById('f-siu').textContent = (siu * 100).toFixed(1) + '%';
+  document.getElementById('f-precise').textContent = (s * i * i * u * 100).toFixed(2) + '%';
+
+  // Nearest organisms
+  const scored = SPECIES_DB.map(sp => ({
+    name: sp.name,
+    siu: sp.S * sp.I * sp.U,
+    dist: Math.abs(sp.S * sp.I * sp.U - siu)
+  })).sort((a, b) => a.dist - b.dist).slice(0, 5);
+
+  document.getElementById('nearest-organisms').innerHTML = scored.map(sp => {
+    const spPct = (sp.siu / H_SIU * 100).toFixed(1);
+    const spTier = getTier(sp.siu / H_SIU * 100);
+    return `<div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border);">
+      <span>${sp.name}</span>
+      <span style="font-family: var(--mono); font-size: 12px;">${spPct}% <span class="tier-badge ${spTier.cls}" style="font-size: 9px; padding: 1px 6px;">${spTier.name}</span></span>
+    </div>`;
+  }).join('');
+}
+
+// Preset buttons
+const presetsEl = document.getElementById('presets');
+presets.forEach(p => {
+  const btn = document.createElement('button');
+  btn.className = 'chip';
+  btn.textContent = p.name;
+  btn.onclick = () => {
+    document.getElementById('s-slider').value = p.s;
+    document.getElementById('i-slider').value = p.i;
+    document.getElementById('u-slider').value = p.u;
+    update();
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+  };
+  presetsEl.appendChild(btn);
+});
+
+// Listeners
+['s-slider', 'i-slider', 'u-slider'].forEach(id => {
+  document.getElementById(id).addEventListener('input', () => {
+    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    update();
+  });
+});
+
+update();
+</script>
+</body>
+</html>

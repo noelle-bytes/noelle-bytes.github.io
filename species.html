@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Species Database - SIU Framework</title>
+  <meta name="description" content="Complete database of 117 organisms scored using the SIU awareness framework. Searchable, filterable, sortable.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="logo">SIU <span>Framework</span></a>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="calculator.html">Calculator</a>
+      <a href="species.html" class="active">Species Database</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wide-container">
+
+  <div class="hero" style="padding-bottom: 24px;">
+    <h1>117 organisms, ranked</h1>
+    <p class="subtitle">Every score justified. Confidence levels noted. Bias corrections applied. Search, filter, and sort.</p>
+  </div>
+
+  <section style="padding-top: 24px;">
+    <input type="text" class="search-box" id="search" placeholder="Search species, group, or notes...">
+
+    <div class="filter-row" id="group-filters"></div>
+    <div class="filter-row" id="tier-filters"></div>
+
+    <div style="overflow-x: auto; margin-top: 16px;">
+      <table id="species-table">
+        <thead>
+          <tr>
+            <th data-sort="rank" style="cursor:pointer; width: 40px">#</th>
+            <th data-sort="name" style="cursor:pointer">Species</th>
+            <th data-sort="group" style="cursor:pointer">Group</th>
+            <th data-sort="S" style="cursor:pointer; text-align:right">S</th>
+            <th data-sort="I" style="cursor:pointer; text-align:right">I</th>
+            <th data-sort="U" style="cursor:pointer; text-align:right">U</th>
+            <th data-sort="siu" style="cursor:pointer; text-align:right">SIU%</th>
+            <th data-sort="pct" style="cursor:pointer; text-align:right">%Hum</th>
+            <th data-sort="tier" style="cursor:pointer">Tier</th>
+            <th>Conf.</th>
+            <th style="min-width: 200px">Notes</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+
+    <div class="caveat" style="margin-top: 32px;">
+      <div class="caveat-title">About This Data</div>
+      <p>Parameters are scorer estimates calibrated against published behavioral and neuroscience evidence. <strong>HIGH</strong> confidence means published data supports most parameters. <strong>MEDIUM</strong> means partial data with inference. <strong>LOW</strong> means mostly extrapolated from related species. Tier boundaries are estimated working thresholds (Self-Aware &ge;50%, Conscious &ge;18%, Subconscious &ge;5%, Reactive &ge;1%, Minimal &lt;1% of human waking awareness). This database is a work in progress and will be revised as empirical data accumulates.</p>
+    </div>
+
+  </section>
+
+  <section>
+    <h2>Tier Distribution</h2>
+    <div id="tier-summary" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px;"></div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="container">
+    <p>The SIU Principle &mdash; noelle-bytes &mdash; 2026</p>
+    <p style="margin-top: 8px; font-size: 12px;">This framework is open. Use it, test it, break it, improve it.</p>
+  </div>
+</footer>
+
+<script src="species-data.js"></script>
+<script>
+const H_SIU = 0.85 * 0.95 * 0.95;
+
+function getTier(pctHuman) {
+  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware", order: 5};
+  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious", order: 4};
+  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious", order: 3};
+  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", order: 2};
+  return {name: "Minimal", cls: "tier-minimal", order: 1};
+}
+
+// Build enriched data
+let data = SPECIES_DB.map((sp, idx) => {
+  const siu = sp.S * sp.I * sp.U;
+  const pct = (siu / H_SIU) * 100;
+  const tier = getTier(pct);
+  return {...sp, siu, pct, tier: tier.name, tierCls: tier.cls, tierOrder: tier.order};
+}).sort((a, b) => b.siu - a.siu).map((sp, idx) => ({...sp, rank: idx + 1}));
+
+// Groups and tiers
+const groups = [...new Set(data.map(d => d.group))].sort();
+const tiers = ["Self-Aware", "Conscious", "Subconscious", "Reactive", "Minimal"];
+
+let activeGroups = new Set();
+let activeTiers = new Set();
+let sortKey = 'rank';
+let sortAsc = true;
+let searchText = '';
+
+// Build group filters
+const groupFilters = document.getElementById('group-filters');
+groups.forEach(g => {
+  const btn = document.createElement('button');
+  btn.className = 'chip';
+  btn.textContent = `${g} (${data.filter(d => d.group === g).length})`;
+  btn.onclick = () => {
+    if (activeGroups.has(g)) { activeGroups.delete(g); btn.classList.remove('active'); }
+    else { activeGroups.add(g); btn.classList.add('active'); }
+    render();
+  };
+  groupFilters.appendChild(btn);
+});
+
+// Build tier filters
+const tierFilters = document.getElementById('tier-filters');
+const tierClasses = {"Self-Aware":"tier-selfaware","Conscious":"tier-conscious","Subconscious":"tier-subconscious","Reactive":"tier-reactive","Minimal":"tier-minimal"};
+tiers.forEach(t => {
+  const btn = document.createElement('button');
+  btn.className = 'chip';
+  btn.innerHTML = `<span class="tier-badge ${tierClasses[t]}" style="font-size:10px; padding: 2px 6px">${t}</span> (${data.filter(d => d.tier === t).length})`;
+  btn.onclick = () => {
+    if (activeTiers.has(t)) { activeTiers.delete(t); btn.classList.remove('active'); }
+    else { activeTiers.add(t); btn.classList.add('active'); }
+    render();
+  };
+  tierFilters.appendChild(btn);
+});
+
+// Tier summary
+const tierSummary = document.getElementById('tier-summary');
+tiers.forEach(t => {
+  const count = data.filter(d => d.tier === t).length;
+  const pctRange = data.filter(d => d.tier === t);
+  const min = pctRange.length ? Math.min(...pctRange.map(d => d.pct)).toFixed(1) : 0;
+  const max = pctRange.length ? Math.max(...pctRange.map(d => d.pct)).toFixed(1) : 0;
+  const div = document.createElement('div');
+  div.className = 'card';
+  div.innerHTML = `<span class="tier-badge ${tierClasses[t]}">${t}</span>
+    <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;">${count}</div>
+    <div style="font-size: 12px; color: var(--text-muted);">${min}% - ${max}% of human</div>`;
+  tierSummary.appendChild(div);
+});
+
+// Sort
+document.querySelectorAll('th[data-sort]').forEach(th => {
+  th.onclick = () => {
+    const key = th.dataset.sort;
+    if (sortKey === key) sortAsc = !sortAsc;
+    else { sortKey = key; sortAsc = key === 'name' || key === 'group'; }
+    render();
+  };
+});
+
+// Search
+document.getElementById('search').addEventListener('input', e => {
+  searchText = e.target.value.toLowerCase();
+  render();
+});
+
+function render() {
+  let filtered = data.filter(d => {
+    if (activeGroups.size && !activeGroups.has(d.group)) return false;
+    if (activeTiers.size && !activeTiers.has(d.tier)) return false;
+    if (searchText) {
+      const hay = `${d.name} ${d.group} ${d.subgroup} ${d.notes}`.toLowerCase();
+      if (!hay.includes(searchText)) return false;
+    }
+    return true;
+  });
+
+  const sortFns = {
+    rank: (a, b) => a.rank - b.rank,
+    name: (a, b) => a.name.localeCompare(b.name),
+    group: (a, b) => a.group.localeCompare(b.group),
+    S: (a, b) => a.S - b.S,
+    I: (a, b) => a.I - b.I,
+    U: (a, b) => a.U - b.U,
+    siu: (a, b) => a.siu - b.siu,
+    pct: (a, b) => a.pct - b.pct,
+    tier: (a, b) => a.tierOrder - b.tierOrder,
+  };
+  if (sortFns[sortKey]) {
+    filtered.sort((a, b) => {
+      const result = sortFns[sortKey](a, b);
+      return sortAsc ? result : -result;
+    });
+  }
+
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = filtered.map(d => `<tr>
+    <td class="num">${d.rank}</td>
+    <td style="font-weight: 600">${d.name}</td>
+    <td style="color: var(--text-dim); font-size: 13px">${d.group}</td>
+    <td class="num">${d.S.toFixed(2)}</td>
+    <td class="num">${d.I.toFixed(2)}</td>
+    <td class="num">${d.U.toFixed(2)}</td>
+    <td class="num">${(d.siu * 100).toFixed(1)}%</td>
+    <td class="num">${d.pct.toFixed(1)}%</td>
+    <td><span class="tier-badge ${d.tierCls}">${d.tier}</span></td>
+    <td style="font-family: var(--mono); font-size: 11px; color: ${d.confidence === 'HIGH' ? 'var(--tier-selfaware)' : d.confidence === 'MEDIUM' ? 'var(--tier-subconscious)' : 'var(--tier-reactive)'}">${d.confidence}</td>
+    <td style="font-size: 12px; color: var(--text-dim); max-width: 300px">${d.notes}</td>
+  </tr>`).join('');
+}
+
+render();
+</script>
+</body>
+</html>
