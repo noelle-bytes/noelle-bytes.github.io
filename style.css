@@ -133,7 +133,7 @@ th {
   text-transform: uppercase; letter-spacing: 1px;
   color: var(--text-muted); text-align: left;
   padding: 10px 12px; border-bottom: 2px solid var(--border-accent);
-  position: sticky; top: 56px; background: var(--bg); z-index: 10;
+  position: sticky; top: 52px; background: #0a0e17; z-index: 50;
 }
 td {
   padding: 10px 12px; border-bottom: 1px solid var(--border);
@@ -241,4 +241,5 @@ footer a { color: var(--accent); text-decoration: none; }
   nav .links { gap: 16px; }
   .slider-row { flex-wrap: wrap; }
   .calc-grid { grid-template-columns: 1fr !important; }
+  th { position: static; }
 }
