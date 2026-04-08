@@ -410,6 +410,16 @@ const SPECIES_DB = [
     "notes": "Bin-opening culture, 14 dance moves"
   },
   {
+    "name": "Jumping spider (Portia)",
+    "group": "Arachnid",
+    "subgroup": "Salticidae",
+    "S": 0.75,
+    "I": 0.68,
+    "U": 0.72,
+    "confidence": "HIGH",
+    "notes": "Popperian creature: plans ahead using mental representations. Species-specific strategies. Working memory."
+  },
+  {
     "name": "Gibbon",
     "group": "Mammal",
     "subgroup": "Primate",
@@ -707,7 +717,7 @@ const SPECIES_DB = [
     "I": 0.58,
     "U": 0.62,
     "confidence": "MEDIUM",
-    "notes": "16 color receptors"
+    "notes": "16 color receptors. Individual recognition. Ritualized contests. Monogamous some species."
   },
   {
     "name": "Spider monkey",
@@ -1260,6 +1270,16 @@ const SPECIES_DB = [
     "notes": "Deceptive fake caching"
   },
   {
+    "name": "Jumping spider (Habronattus)",
+    "group": "Arachnid",
+    "subgroup": "Salticidae",
+    "S": 0.72,
+    "I": 0.58,
+    "U": 0.6,
+    "confidence": "MEDIUM",
+    "notes": "Trichromatic color vision (rare in spiders). Complex multimodal courtship."
+  },
+  {
     "name": "Galah",
     "group": "Bird",
     "subgroup": "Parrot",
@@ -1498,6 +1518,26 @@ const SPECIES_DB = [
     "U": 0.58,
     "confidence": "LOW",
     "notes": "Caches thousands of eggs"
+  },
+  {
+    "name": "Peacock spider (Maratus)",
+    "group": "Arachnid",
+    "subgroup": "Salticidae",
+    "S": 0.7,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "LOW",
+    "notes": "Elaborate courtship dance. Adjusts based on female response. Wrong move = death."
+  },
+  {
+    "name": "Bold jumping spider",
+    "group": "Arachnid",
+    "subgroup": "Salticidae",
+    "S": 0.7,
+    "I": 0.55,
+    "U": 0.58,
+    "confidence": "MEDIUM",
+    "notes": "Most common N American jumping spider. Detour behavior documented."
   },
   {
     "name": "Damselfly",
@@ -1900,6 +1940,36 @@ const SPECIES_DB = [
     "notes": "7m monitor lizard. Australia. Bracketed by Komodo dragon but larger. Ambush predator."
   },
   {
+    "name": "Zebra",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Individual stripe patterns = fingerprints. Harem social structure. Migration. Collective predator vigilance."
+  },
+  {
+    "name": "Moose",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Largest deer. Dives 5+ meters for aquatic plants. Excellent swimmer. Spatial memory for huge territory."
+  },
+  {
+    "name": "Reindeer",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.68,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "UV vision (sees lichen under snow). 5000 km migration (longest land mammal). Females also have antlers. Herd decisions."
+  },
+  {
     "name": "Lovebird",
     "group": "Bird",
     "subgroup": "Parrot",
@@ -2160,6 +2230,26 @@ const SPECIES_DB = [
     "notes": "Argentina national, mud oven nests"
   },
   {
+    "name": "Wildebeest",
+    "group": "Mammal",
+    "subgroup": "Ungulate",
+    "S": 0.62,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "1.5M animal migration with collective river-crossing decisions. Assess for crocodiles before crossing. Calves walk within minutes. Cultural route learning."
+  },
+  {
+    "name": "Coconut crab",
+    "group": "Crustacean",
+    "subgroup": "Coenobitidae",
+    "S": 0.62,
+    "I": 0.52,
+    "U": 0.55,
+    "confidence": "LOW",
+    "notes": "Opens coconuts (multi-step). Steals objects. Lives 60+ years. Largest land arthropod."
+  },
+  {
     "name": "Velociraptor",
     "group": "Dinosaur",
     "subgroup": "Dromaeosauridae",
@@ -2178,26 +2268,6 @@ const SPECIES_DB = [
     "U": 0.52,
     "confidence": "LOW",
     "notes": "Nocturnal switch during hunting season"
-  },
-  {
-    "name": "Zebra",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.68,
-    "I": 0.5,
-    "U": 0.52,
-    "confidence": "LOW",
-    "notes": "Unique stripe patterns = ID"
-  },
-  {
-    "name": "Moose",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.68,
-    "I": 0.5,
-    "U": 0.52,
-    "confidence": "LOW",
-    "notes": "Largest deer, dives for plants"
   },
   {
     "name": "Utahraptor",
@@ -2348,16 +2418,6 @@ const SPECIES_DB = [
     "U": 0.52,
     "confidence": "HIGH",
     "notes": "Selective attention 20-30 Hz, consciousness hypothesis"
-  },
-  {
-    "name": "Reindeer",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.68,
-    "I": 0.48,
-    "U": 0.5,
-    "confidence": "LOW",
-    "notes": "UV vision, 5000 km migration"
   },
   {
     "name": "Echidna",
@@ -2680,6 +2740,16 @@ const SPECIES_DB = [
     "notes": "120 ms foraging decision"
   },
   {
+    "name": "Net-casting spider",
+    "group": "Arachnid",
+    "subgroup": "Deinopidae",
+    "S": 0.65,
+    "I": 0.48,
+    "U": 0.48,
+    "confidence": "LOW",
+    "notes": "Night vision 2000x human. Throws net over prey. Adjusts by prey type."
+  },
+  {
     "name": "Cuban crocodile",
     "group": "Reptile",
     "subgroup": "Crocodilian",
@@ -2970,6 +3040,16 @@ const SPECIES_DB = [
     "notes": "Reported play, strong personalities"
   },
   {
+    "name": "Amblypygid (whip spider)",
+    "group": "Arachnid",
+    "subgroup": "Amblypygid",
+    "S": 0.58,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "MEDIUM",
+    "notes": "Learns mazes, remembers for weeks. Navigates in total darkness. Social."
+  },
+  {
     "name": "Citipati",
     "group": "Dinosaur",
     "subgroup": "Oviraptorosauria",
@@ -3018,16 +3098,6 @@ const SPECIES_DB = [
     "U": 0.48,
     "confidence": "LOW",
     "notes": "Only nest-building snake"
-  },
-  {
-    "name": "Wildebeest",
-    "group": "Mammal",
-    "subgroup": "Ungulate",
-    "S": 0.62,
-    "I": 0.45,
-    "U": 0.48,
-    "confidence": "LOW",
-    "notes": "1.5M individual migration"
   },
   {
     "name": "Springbok",
@@ -3270,6 +3340,16 @@ const SPECIES_DB = [
     "notes": "Largest flying animal. Terrestrial stalker. NOT a dinosaur."
   },
   {
+    "name": "Ant-mimicking spider",
+    "group": "Arachnid",
+    "subgroup": "Salticidae",
+    "S": 0.62,
+    "I": 0.45,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Mimics specific ant species. Changes walk style by context."
+  },
+  {
     "name": "Cichlid (African)",
     "group": "Fish",
     "subgroup": "Cichlidae",
@@ -3350,6 +3430,16 @@ const SPECIES_DB = [
     "notes": "Adjusts call complexity by competition AND predation risk"
   },
   {
+    "name": "Fiddler crab",
+    "group": "Crustacean",
+    "subgroup": "Ocypodidae",
+    "S": 0.55,
+    "I": 0.45,
+    "U": 0.48,
+    "confidence": "MEDIUM",
+    "notes": "Species-specific claw waving. Builds decorated burrows. Adjusts display by audience."
+  },
+  {
     "name": "Moray eel",
     "group": "Fish",
     "subgroup": "Muraenidae",
@@ -3398,6 +3488,16 @@ const SPECIES_DB = [
     "U": 0.45,
     "confidence": "VERY LOW",
     "notes": "12m 'super croc.' Bracketed by modern crocs. Pressure sensors likely."
+  },
+  {
+    "name": "Wolf spider",
+    "group": "Arachnid",
+    "subgroup": "Lycosidae",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "MEDIUM",
+    "notes": "Carries babies on back. Active hunter with no web. Vibratory courtship."
   },
   {
     "name": "Giganotosaurus",
@@ -3590,6 +3690,16 @@ const SPECIES_DB = [
     "notes": "Largest marsupial ever (2.8 tons). Bracketed by wombats. Herding."
   },
   {
+    "name": "Spiny lobster",
+    "group": "Crustacean",
+    "subgroup": "Palinuridae",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Mass single-file migration. Magnetic compass. Circle defense formation."
+  },
+  {
     "name": "Mosasaurus",
     "group": "Dinosaur",
     "subgroup": "Mosasauridae",
@@ -3628,6 +3738,36 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "VERY LOW",
     "notes": "Only asymmetric-billed bird"
+  },
+  {
+    "name": "Nurse shark",
+    "group": "Fish",
+    "subgroup": "Ginglymostomatidae",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Social resting piles (unusual for sharks). Consistent site fidelity. Suction feeding technique."
+  },
+  {
+    "name": "Mosquito",
+    "group": "Insect",
+    "subgroup": "Diptera",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Multi-modal sequential host tracking (CO2 > thermal > odor > visual > humidity). Learns host odor quality. Insecticide avoidance learning."
+  },
+  {
+    "name": "Fishing spider",
+    "group": "Arachnid",
+    "subgroup": "Pisauridae",
+    "S": 0.6,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Walks on water. Catches fish by surface vibration. Carries egg sac."
   },
   {
     "name": "Goliath frog",
@@ -3698,6 +3838,36 @@ const SPECIES_DB = [
     "U": 0.45,
     "confidence": "VERY LOW",
     "notes": "Flightless. Fearless of humans (no predator experience). Bracketed by Nicobar pigeon."
+  },
+  {
+    "name": "Armadillo",
+    "group": "Mammal",
+    "subgroup": "Xenarthra",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Crosses rivers by walking along bottom (holds breath 6 min). Identical quadruplets. Spatial memory for burrow networks."
+  },
+  {
+    "name": "Leatherback turtle",
+    "group": "Reptile",
+    "subgroup": "Sea turtle",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "12,000 km transoceanic migration via magnetic map. Natal beach fidelity across decades. Deepest-diving reptile (1200m)."
+  },
+  {
+    "name": "Pistol/snapping shrimp",
+    "group": "Crustacean",
+    "subgroup": "Alpheidae",
+    "S": 0.55,
+    "I": 0.42,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "Cavitation bubble weapon (4700\u00b0C). Mutualistic partnership with gobies."
   },
   {
     "name": "Housefly",
@@ -3828,6 +3998,16 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "LOW",
     "notes": "Dome skull for head-butting contests with force assessment. Social display."
+  },
+  {
+    "name": "Solifuge/camel spider",
+    "group": "Arachnid",
+    "subgroup": "Solifuge",
+    "S": 0.58,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "VERY LOW",
+    "notes": "Fastest arachnid. Active pursuit predator. Almost no behavioral research."
   },
   {
     "name": "Clownfish",
@@ -3990,6 +4170,56 @@ const SPECIES_DB = [
     "notes": "Massive herding (thousands). Migration. Skin impressions. Fleshy crest."
   },
   {
+    "name": "Hermit crab",
+    "group": "Crustacean",
+    "subgroup": "Decapod",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Vacancy chain shell exchange. Size assessment. Social turn-taking."
+  },
+  {
+    "name": "Golden orb weaver",
+    "group": "Arachnid",
+    "subgroup": "Nephilidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Web as extended cognitive tool. Adjusts architecture by prey availability."
+  },
+  {
+    "name": "Diving bell spider",
+    "group": "Arachnid",
+    "subgroup": "Dictynidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Only fully aquatic spider. Builds underwater air bubble habitat."
+  },
+  {
+    "name": "Blue crab",
+    "group": "Crustacean",
+    "subgroup": "Portunidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Male guards female for days during mating. Maze learning."
+  },
+  {
+    "name": "Signal crayfish",
+    "group": "Crustacean",
+    "subgroup": "Astacidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "MEDIUM",
+    "notes": "Individual recognition. Winner/loser mood effects. Serotonin dominance system."
+  },
+  {
     "name": "Cane toad",
     "group": "Amphibian",
     "subgroup": "Bufonid",
@@ -3998,6 +4228,36 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "MEDIUM",
     "notes": "Most successful amphibian invader, behavioral flexibility"
+  },
+  {
+    "name": "Bolas spider",
+    "group": "Arachnid",
+    "subgroup": "Araneidae",
+    "S": 0.52,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Swings pheromone bolas. Switches chemical lure by time of night."
+  },
+  {
+    "name": "Cleaner shrimp",
+    "group": "Crustacean",
+    "subgroup": "Lysmatidae",
+    "S": 0.52,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Cleaning symbiosis. Recognizes regular clients. Advertises services."
+  },
+  {
+    "name": "Social spider",
+    "group": "Arachnid",
+    "subgroup": "Theridiidae",
+    "S": 0.5,
+    "I": 0.4,
+    "U": 0.45,
+    "confidence": "LOW",
+    "notes": "One of ~25 social spider species. Cooperative hunting. Communal brood care."
   },
   {
     "name": "Swordfish",
@@ -4070,6 +4330,16 @@ const SPECIES_DB = [
     "notes": "Vocal 'tokay' call"
   },
   {
+    "name": "Emperor scorpion",
+    "group": "Arachnid",
+    "subgroup": "Scorpionidae",
+    "S": 0.58,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Pectine ground sensors. UV fluorescence. Carries babies. Social."
+  },
+  {
     "name": "Bearded dragon",
     "group": "Reptile",
     "subgroup": "Lizard",
@@ -4098,6 +4368,16 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "VERY LOW",
     "notes": "Precision chemical spray"
+  },
+  {
+    "name": "Brazilian wandering spider",
+    "group": "Arachnid",
+    "subgroup": "Ctenidae",
+    "S": 0.55,
+    "I": 0.4,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Most venomous spider. Active wandering hunter. Threat display."
   },
   {
     "name": "Giant ground sloth (Megatherium)",
@@ -4150,6 +4430,16 @@ const SPECIES_DB = [
     "notes": "False cleaner deception"
   },
   {
+    "name": "Decorator crab",
+    "group": "Crustacean",
+    "subgroup": "Majidae",
+    "S": 0.52,
+    "I": 0.4,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Deliberately decorates shell with chemically defended organisms. Environment-matched."
+  },
+  {
     "name": "Barracuda",
     "group": "Fish",
     "subgroup": "Sphyraenidae",
@@ -4160,26 +4450,6 @@ const SPECIES_DB = [
     "notes": "Visual ambush predator"
   },
   {
-    "name": "Nurse shark",
-    "group": "Fish",
-    "subgroup": "Ginglymostomatidae",
-    "S": 0.6,
-    "I": 0.38,
-    "U": 0.38,
-    "confidence": "VERY LOW",
-    "notes": "Social resting piles"
-  },
-  {
-    "name": "Mosquito",
-    "group": "Insect",
-    "subgroup": "Diptera",
-    "S": 0.6,
-    "I": 0.38,
-    "U": 0.38,
-    "confidence": "MEDIUM",
-    "notes": "Multi-modal host tracking"
-  },
-  {
     "name": "Whirligig beetle",
     "group": "Insect",
     "subgroup": "Coleoptera",
@@ -4188,6 +4458,16 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "VERY LOW",
     "notes": "Split eyes: air+water simultaneously"
+  },
+  {
+    "name": "Whale shark",
+    "group": "Fish",
+    "subgroup": "Rhincodontidae",
+    "S": 0.6,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Long-distance migration. Aggregation at feeding sites based on plankton blooms. Very limited behavioral data."
   },
   {
     "name": "Antlion larva",
@@ -4250,16 +4530,6 @@ const SPECIES_DB = [
     "notes": "Arboreal, fast neurotoxin"
   },
   {
-    "name": "Hermit crab",
-    "group": "Crustacean",
-    "subgroup": "Decapod",
-    "S": 0.55,
-    "I": 0.38,
-    "U": 0.4,
-    "confidence": "LOW",
-    "notes": "Shell negotiation"
-  },
-  {
     "name": "Crayfish",
     "group": "Crustacean",
     "subgroup": "Decapod",
@@ -4310,16 +4580,6 @@ const SPECIES_DB = [
     "notes": "Strongest animal relative to weight"
   },
   {
-    "name": "Armadillo",
-    "group": "Mammal",
-    "subgroup": "Xenarthra",
-    "S": 0.55,
-    "I": 0.38,
-    "U": 0.4,
-    "confidence": "LOW",
-    "notes": "Identical quadruplets"
-  },
-  {
     "name": "Blue-tongued skink",
     "group": "Reptile",
     "subgroup": "Lizard",
@@ -4338,6 +4598,16 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "VERY LOW",
     "notes": "Thumb spike defense. Herding. First fossilized brain tissue found (2016)."
+  },
+  {
+    "name": "Vinegaroon/whip scorpion",
+    "group": "Arachnid",
+    "subgroup": "Thelyphonid",
+    "S": 0.55,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Sprays vinegar at threats. Maternal care. Sensory whip legs."
   },
   {
     "name": "Guppy",
@@ -4450,6 +4720,16 @@ const SPECIES_DB = [
     "notes": "Nesting behavior documented. Frill for display. Fighting Dinosaurs specimen."
   },
   {
+    "name": "Black widow",
+    "group": "Arachnid",
+    "subgroup": "Theridiidae",
+    "S": 0.52,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Complex tangle web. Males court carefully to avoid being eaten."
+  },
+  {
     "name": "Red-backed salamander",
     "group": "Amphibian",
     "subgroup": "Plethodontid",
@@ -4490,6 +4770,26 @@ const SPECIES_DB = [
     "notes": "Live birth in some subspecies"
   },
   {
+    "name": "Trapdoor spider",
+    "group": "Arachnid",
+    "subgroup": "Ctenizidae",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "Builds hinged trapdoor. Tripwire silk lines. Vibration-timed ambush."
+  },
+  {
+    "name": "Christmas Island red crab",
+    "group": "Crustacean",
+    "subgroup": "Gecarcinidae",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.4,
+    "confidence": "LOW",
+    "notes": "50 million individuals migrate simultaneously. Lunar synchronization."
+  },
+  {
     "name": "Anole",
     "group": "Reptile",
     "subgroup": "Lizard",
@@ -4500,14 +4800,24 @@ const SPECIES_DB = [
     "notes": "First lizard problem-solving (2012)"
   },
   {
-    "name": "Whale shark",
-    "group": "Fish",
-    "subgroup": "Rhincodontidae",
-    "S": 0.6,
-    "I": 0.35,
-    "U": 0.35,
+    "name": "Crab spider",
+    "group": "Arachnid",
+    "subgroup": "Thomisidae",
+    "S": 0.52,
+    "I": 0.38,
+    "U": 0.38,
     "confidence": "LOW",
-    "notes": "Gentle giant"
+    "notes": "Changes color to match flower over days. Ambush pollinator hunter."
+  },
+  {
+    "name": "Sydney funnel-web",
+    "group": "Arachnid",
+    "subgroup": "Atracidae",
+    "S": 0.52,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Funnel web construction. Venom specifically dangerous to primates."
   },
   {
     "name": "Orb weaver",
@@ -4518,16 +4828,6 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "LOW",
     "notes": "Web as extended cognition"
-  },
-  {
-    "name": "Leatherback turtle",
-    "group": "Reptile",
-    "subgroup": "Sea turtle",
-    "S": 0.55,
-    "I": 0.35,
-    "U": 0.38,
-    "confidence": "LOW",
-    "notes": "Deepest-diving reptile, 12000 km migration"
   },
   {
     "name": "Ball python",
@@ -4560,6 +4860,26 @@ const SPECIES_DB = [
     "notes": "Most trafficked mammal"
   },
   {
+    "name": "Deathstalker",
+    "group": "Arachnid",
+    "subgroup": "Buthidae",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Most venomous scorpion. Limited cognitive data."
+  },
+  {
+    "name": "Arizona bark scorpion",
+    "group": "Arachnid",
+    "subgroup": "Buthidae",
+    "S": 0.55,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Social aggregation (rare in scorpions). Climbs walls and ceilings."
+  },
+  {
     "name": "Axolotl",
     "group": "Amphibian",
     "subgroup": "Ambystomatid",
@@ -4588,6 +4908,16 @@ const SPECIES_DB = [
     "U": 0.38,
     "confidence": "LOW",
     "notes": "Glides between trees, foam nest construction"
+  },
+  {
+    "name": "Spitting spider",
+    "group": "Arachnid",
+    "subgroup": "Scytodidae",
+    "S": 0.5,
+    "I": 0.38,
+    "U": 0.38,
+    "confidence": "LOW",
+    "notes": "Spits venomous silk net at prey. Calculates distance. Ranged attack."
   },
   {
     "name": "Surinam toad",
@@ -4770,6 +5100,26 @@ const SPECIES_DB = [
     "notes": "Best neural data, connectome in progress"
   },
   {
+    "name": "Goliath birdeater",
+    "group": "Arachnid",
+    "subgroup": "Theraphosidae",
+    "S": 0.5,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Largest spider by mass. Stridulation warning sound."
+  },
+  {
+    "name": "Japanese spider crab",
+    "group": "Crustacean",
+    "subgroup": "Inachidae",
+    "S": 0.5,
+    "I": 0.35,
+    "U": 0.38,
+    "confidence": "VERY LOW",
+    "notes": "Largest living arthropod. Decorates shell. May live 100+ years."
+  },
+  {
     "name": "Spotted salamander",
     "group": "Amphibian",
     "subgroup": "Ambystomatid",
@@ -4938,6 +5288,16 @@ const SPECIES_DB = [
     "U": 0.35,
     "confidence": "LOW",
     "notes": "Slowest mammal"
+  },
+  {
+    "name": "Horseshoe crab",
+    "group": "Arachnid",
+    "subgroup": "Limulidae",
+    "S": 0.5,
+    "I": 0.32,
+    "U": 0.35,
+    "confidence": "MEDIUM",
+    "notes": "450M year living fossil. 10 eyes. Lunar-tidal spawning synchronization."
   },
   {
     "name": "Fig wasp",
@@ -5160,6 +5520,26 @@ const SPECIES_DB = [
     "notes": "Most ancient vertebrate lineage"
   },
   {
+    "name": "Krill",
+    "group": "Crustacean",
+    "subgroup": "Euphausiidae",
+    "S": 0.45,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "LOW",
+    "notes": "Swarms of billions with precise spacing. Daily 100m+ vertical migration."
+  },
+  {
+    "name": "Giant isopod",
+    "group": "Crustacean",
+    "subgroup": "Cirolanidae",
+    "S": 0.45,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "VERY LOW",
+    "notes": "Deep-sea giant. Fasts 5+ years. Rolls into armored ball."
+  },
+  {
     "name": "Glowworm",
     "group": "Insect",
     "subgroup": "Coleoptera",
@@ -5200,6 +5580,16 @@ const SPECIES_DB = [
     "notes": "Maze solving"
   },
   {
+    "name": "Varroa mite",
+    "group": "Arachnid",
+    "subgroup": "Varroidae",
+    "S": 0.45,
+    "I": 0.3,
+    "U": 0.3,
+    "confidence": "LOW",
+    "notes": "Honeybee parasite. Times reproduction to specific bee larval stage."
+  },
+  {
     "name": "Argentinosaur",
     "group": "Dinosaur",
     "subgroup": "Titanosauria",
@@ -5208,6 +5598,26 @@ const SPECIES_DB = [
     "U": 0.32,
     "confidence": "VERY LOW",
     "notes": "Among largest land animals ever. Nesting site fidelity. Herding."
+  },
+  {
+    "name": "Deer tick",
+    "group": "Arachnid",
+    "subgroup": "Ixodidae",
+    "S": 0.48,
+    "I": 0.28,
+    "U": 0.3,
+    "confidence": "LOW",
+    "notes": "Multi-modal host detection while questing. Lyme disease vector."
+  },
+  {
+    "name": "Woodlouse/pillbug",
+    "group": "Crustacean",
+    "subgroup": "Armadillidiidae",
+    "S": 0.42,
+    "I": 0.3,
+    "U": 0.32,
+    "confidence": "LOW",
+    "notes": "Only fully terrestrial crustacean. LRLR navigation algorithm. Rolls into ball."
   },
   {
     "name": "Earthworm",
@@ -5228,6 +5638,26 @@ const SPECIES_DB = [
     "U": 0.3,
     "confidence": "VERY LOW",
     "notes": "400M year old design"
+  },
+  {
+    "name": "Velvet mite",
+    "group": "Arachnid",
+    "subgroup": "Trombidiidae",
+    "S": 0.45,
+    "I": 0.28,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Male builds decorated 'love garden.' Rivals destroy each other's gardens."
+  },
+  {
+    "name": "Yeti crab",
+    "group": "Crustacean",
+    "subgroup": "Kiwaidae",
+    "S": 0.42,
+    "I": 0.28,
+    "U": 0.3,
+    "confidence": "VERY LOW",
+    "notes": "Farms bacteria on its arms near hydrothermal vents. Discovered 2005."
   },
   {
     "name": "Trilobite",
@@ -5300,6 +5730,16 @@ const SPECIES_DB = [
     "notes": "Early tetrapod. Fish-to-land transition. 365 mya."
   },
   {
+    "name": "Tongue-eating louse",
+    "group": "Crustacean",
+    "subgroup": "Cymothoidae",
+    "S": 0.4,
+    "I": 0.28,
+    "U": 0.28,
+    "confidence": "VERY LOW",
+    "notes": "Replaces fish's tongue and functions as replacement organ. Extreme parasitism."
+  },
+  {
     "name": "Hagfish",
     "group": "Fish",
     "subgroup": "Myxinidae",
@@ -5320,6 +5760,16 @@ const SPECIES_DB = [
     "notes": "Memory survives regeneration"
   },
   {
+    "name": "Daphnia (water flea)",
+    "group": "Crustacean",
+    "subgroup": "Daphniidae",
+    "S": 0.38,
+    "I": 0.25,
+    "U": 0.28,
+    "confidence": "MEDIUM",
+    "notes": "Changes body shape when it smells predators. Major model organism."
+  },
+  {
     "name": "Human (deep sleep)",
     "group": "Mammal",
     "subgroup": "Great Ape",
@@ -5328,6 +5778,16 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "HIGH",
     "notes": "Minimal sensing"
+  },
+  {
+    "name": "Copepod",
+    "group": "Crustacean",
+    "subgroup": "Calanidae",
+    "S": 0.35,
+    "I": 0.22,
+    "U": 0.25,
+    "confidence": "LOW",
+    "notes": "Most abundant multicellular animal. Escape jump 500 body-lengths/sec."
   },
   {
     "name": "Opabinia",
@@ -5348,6 +5808,16 @@ const SPECIES_DB = [
     "U": 0.22,
     "confidence": "VERY LOW",
     "notes": "Earliest known chordate. Our ancestor's body plan. Notochord. Burgess Shale."
+  },
+  {
+    "name": "Barnacle",
+    "group": "Crustacean",
+    "subgroup": "Balanidae",
+    "S": 0.35,
+    "I": 0.2,
+    "U": 0.22,
+    "confidence": "LOW",
+    "notes": "Darwin's specialty. Larva makes one life-defining choice of where to settle."
   },
   {
     "name": "Paramecium",
