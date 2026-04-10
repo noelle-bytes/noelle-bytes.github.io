@@ -2870,6 +2870,16 @@ const SPECIES_DB = [
     "notes": "Sri Lanka national"
   },
   {
+    "name": "King cobra",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.62,
+    "I": 0.48,
+    "U": 0.5,
+    "confidence": "LOW",
+    "notes": "Only nest-building snake. Multi-week maternal guarding. Individual keeper recognition. Graduated hood threat display."
+  },
+  {
     "name": "Mud dauber",
     "group": "Insect",
     "subgroup": "Solitary Hymenoptera",
@@ -3088,16 +3098,6 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "VERY LOW",
     "notes": "Largest predatory fish ever. Bracketed by great white. Nursery site fidelity."
-  },
-  {
-    "name": "King cobra",
-    "group": "Reptile",
-    "subgroup": "Snake",
-    "S": 0.62,
-    "I": 0.45,
-    "U": 0.48,
-    "confidence": "LOW",
-    "notes": "Only nest-building snake"
   },
   {
     "name": "Springbok",
@@ -3710,6 +3710,16 @@ const SPECIES_DB = [
     "notes": "Marine apex predator. Monitor lizard-grade brain. Viviparous. NOT a dinosaur."
   },
   {
+    "name": "Rattlesnake",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.62,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "IR thermal imaging. Graduated rattle warning adjusts by threat proximity. Kin recognition."
+  },
+  {
     "name": "Reef shark",
     "group": "Fish",
     "subgroup": "Carcharhinidae",
@@ -3890,6 +3900,16 @@ const SPECIES_DB = [
     "notes": "Biparental care, adjusts brood to resource"
   },
   {
+    "name": "Boa constrictor",
+    "group": "Reptile",
+    "subgroup": "Snake",
+    "S": 0.58,
+    "I": 0.42,
+    "U": 0.42,
+    "confidence": "LOW",
+    "notes": "Monitors prey heartbeat during constriction. Ambush site learning."
+  },
+  {
     "name": "Darwin's frog",
     "group": "Amphibian",
     "subgroup": "Rhinodermatid",
@@ -3908,16 +3928,6 @@ const SPECIES_DB = [
     "U": 0.42,
     "confidence": "LOW",
     "notes": "60 cm tongue, 35K insects/day"
-  },
-  {
-    "name": "Rattlesnake",
-    "group": "Reptile",
-    "subgroup": "Snake",
-    "S": 0.62,
-    "I": 0.4,
-    "U": 0.4,
-    "confidence": "LOW",
-    "notes": "IR imaging, graduated rattle warning"
   },
   {
     "name": "Carnotaurus",
@@ -4298,16 +4308,6 @@ const SPECIES_DB = [
     "U": 0.4,
     "confidence": "LOW",
     "notes": "Social hierarchy, serotonin"
-  },
-  {
-    "name": "Boa constrictor",
-    "group": "Reptile",
-    "subgroup": "Snake",
-    "S": 0.58,
-    "I": 0.38,
-    "U": 0.4,
-    "confidence": "LOW",
-    "notes": "Monitors prey heartbeat"
   },
   {
     "name": "Firefly",

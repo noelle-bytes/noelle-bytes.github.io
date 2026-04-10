@@ -60,7 +60,7 @@
 
     <div class="caveat" style="margin-top: 32px;">
       <div class="caveat-title">About This Data</div>
-      <p>Parameters are scorer estimates calibrated against published behavioral and neuroscience evidence. <strong>HIGH</strong> confidence means published data supports most parameters. <strong>MEDIUM</strong> means partial data with inference. <strong>LOW</strong> means mostly extrapolated from related species. Tier boundaries are estimated working thresholds (Self-Aware &ge;50%, Conscious &ge;18%, Subconscious &ge;5%, Reactive &ge;1%, Minimal &lt;1% of human waking awareness). This database is a work in progress and will be revised as empirical data accumulates.</p>
+      <p>Parameters are scorer estimates calibrated against published behavioral and neuroscience evidence. <strong>Sub-tiers (I, II, III)</strong> indicate degree within each main tier, based on functional capability: I = basic, II = flexible, III = complex. Sub-tier boundaries are roughly inspired by the progression of capabilities observed during consciousness development, but do not assume human-like development in other species. Tier boundaries are estimated working thresholds (Self-Aware &ge;50%, Conscious &ge;18%, Subconscious &ge;5%, Reactive &ge;1%, Minimal &lt;1% of human waking awareness). This database is a work in progress.</p>
     </div>
 
   </section>
@@ -84,11 +84,17 @@
 const H_SIU = 0.85 * 0.95 * 0.95;
 
 function getTier(pctHuman) {
-  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware", order: 5};
-  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious", order: 4};
-  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious", order: 3};
-  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", order: 2};
-  return {name: "Minimal", cls: "tier-minimal", order: 1};
+  if (pctHuman >= 80) return {name: "Self-Aware III", parent: "Self-Aware", cls: "tier-selfaware", order: 9};
+  if (pctHuman >= 65) return {name: "Self-Aware II", parent: "Self-Aware", cls: "tier-selfaware", order: 8};
+  if (pctHuman >= 50) return {name: "Self-Aware I", parent: "Self-Aware", cls: "tier-selfaware", order: 7};
+  if (pctHuman >= 35) return {name: "Conscious III", parent: "Conscious", cls: "tier-conscious", order: 6};
+  if (pctHuman >= 25) return {name: "Conscious II", parent: "Conscious", cls: "tier-conscious", order: 5};
+  if (pctHuman >= 18) return {name: "Conscious I", parent: "Conscious", cls: "tier-conscious", order: 4};
+  if (pctHuman >= 14) return {name: "Subconscious III", parent: "Subconscious", cls: "tier-subconscious", order: 3.5};
+  if (pctHuman >= 9) return {name: "Subconscious II", parent: "Subconscious", cls: "tier-subconscious", order: 3};
+  if (pctHuman >= 5) return {name: "Subconscious I", parent: "Subconscious", cls: "tier-subconscious", order: 2.5};
+  if (pctHuman >= 1) return {name: "Reactive", parent: "Reactive", cls: "tier-reactive", order: 2};
+  return {name: "Minimal", parent: "Minimal", cls: "tier-minimal", order: 1};
 }
 
 // Build enriched data
@@ -96,12 +102,12 @@ let data = SPECIES_DB.map((sp, idx) => {
   const siu = sp.S * sp.I * sp.U;
   const pct = (siu / H_SIU) * 100;
   const tier = getTier(pct);
-  return {...sp, siu, pct, tier: tier.name, tierCls: tier.cls, tierOrder: tier.order};
+  return {...sp, siu, pct, tier: tier.name, tierParent: tier.parent, tierCls: tier.cls, tierOrder: tier.order};
 }).sort((a, b) => b.siu - a.siu).map((sp, idx) => ({...sp, rank: idx + 1}));
 
 // Groups and tiers
 const groups = [...new Set(data.map(d => d.group))].sort();
-const tiers = ["Self-Aware", "Conscious", "Subconscious", "Reactive", "Minimal"];
+const parentTiers = ["Self-Aware", "Conscious", "Subconscious", "Reactive", "Minimal"];
 
 let activeGroups = new Set();
 let activeTiers = new Set();
@@ -123,13 +129,13 @@ groups.forEach(g => {
   groupFilters.appendChild(btn);
 });
 
-// Build tier filters
+// Build tier filters (parent tiers for filtering)
 const tierFilters = document.getElementById('tier-filters');
 const tierClasses = {"Self-Aware":"tier-selfaware","Conscious":"tier-conscious","Subconscious":"tier-subconscious","Reactive":"tier-reactive","Minimal":"tier-minimal"};
-tiers.forEach(t => {
+parentTiers.forEach(t => {
   const btn = document.createElement('button');
   btn.className = 'chip';
-  btn.innerHTML = `<span class="tier-badge ${tierClasses[t]}" style="font-size:10px; padding: 2px 6px">${t}</span> (${data.filter(d => d.tier === t).length})`;
+  btn.innerHTML = `<span class="tier-badge ${tierClasses[t]}" style="font-size:10px; padding: 2px 6px">${t}</span> (${data.filter(d => d.tierParent === t).length})`;
   btn.onclick = () => {
     if (activeTiers.has(t)) { activeTiers.delete(t); btn.classList.remove('active'); }
     else { activeTiers.add(t); btn.classList.add('active'); }
@@ -140,9 +146,9 @@ tiers.forEach(t => {
 
 // Tier summary
 const tierSummary = document.getElementById('tier-summary');
-tiers.forEach(t => {
-  const count = data.filter(d => d.tier === t).length;
-  const pctRange = data.filter(d => d.tier === t);
+parentTiers.forEach(t => {
+  const count = data.filter(d => d.tierParent === t).length;
+  const pctRange = data.filter(d => d.tierParent === t);
   const min = pctRange.length ? Math.min(...pctRange.map(d => d.pct)).toFixed(1) : 0;
   const max = pctRange.length ? Math.max(...pctRange.map(d => d.pct)).toFixed(1) : 0;
   const div = document.createElement('div');
@@ -172,9 +178,9 @@ document.getElementById('search').addEventListener('input', e => {
 function render() {
   let filtered = data.filter(d => {
     if (activeGroups.size && !activeGroups.has(d.group)) return false;
-    if (activeTiers.size && !activeTiers.has(d.tier)) return false;
+    if (activeTiers.size && !activeTiers.has(d.tierParent)) return false;
     if (searchText) {
-      const hay = `${d.name} ${d.group} ${d.subgroup} ${d.notes}`.toLowerCase();
+      const hay = `${d.name} ${d.group} ${d.subgroup} ${d.notes} ${d.tier}`.toLowerCase();
       if (!hay.includes(searchText)) return false;
     }
     return true;
@@ -208,7 +214,7 @@ function render() {
     <td class="num">${d.U.toFixed(2)}</td>
     <td class="num">${(d.siu * 100).toFixed(1)}%</td>
     <td class="num">${d.pct.toFixed(1)}%</td>
-    <td><span class="tier-badge ${d.tierCls}">${d.tier}</span></td>
+    <td><span class="tier-badge ${d.tierCls}" style="font-size: 10px">${d.tier}</span></td>
     <td style="font-family: var(--mono); font-size: 11px; color: ${d.confidence === 'HIGH' ? 'var(--tier-selfaware)' : d.confidence === 'MEDIUM' ? 'var(--tier-subconscious)' : 'var(--tier-reactive)'}">${d.confidence}</td>
     <td style="font-size: 12px; color: var(--text-dim); max-width: 300px">${d.notes}</td>
   </tr>`).join('');

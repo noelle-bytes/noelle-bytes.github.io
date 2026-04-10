@@ -134,11 +134,17 @@ const presets = [
 ];
 
 function getTier(pctHuman) {
-  if (pctHuman >= 50) return {name: "Self-Aware", cls: "tier-selfaware"};
-  if (pctHuman >= 18) return {name: "Conscious", cls: "tier-conscious"};
-  if (pctHuman >= 5) return {name: "Subconscious", cls: "tier-subconscious"};
-  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive"};
-  return {name: "Minimal", cls: "tier-minimal"};
+  if (pctHuman >= 80) return {name: "Self-Aware III", cls: "tier-selfaware", sub: "Recursive: metacognition, language/symbols, cultural accumulation"};
+  if (pctHuman >= 65) return {name: "Self-Aware II", cls: "tier-selfaware", sub: "Social self: theory of mind, empathy, complex deception, cultural traditions"};
+  if (pctHuman >= 50) return {name: "Self-Aware I", cls: "tier-selfaware", sub: "Self-model: mirror recognition, contingency testing, individual identity"};
+  if (pctHuman >= 35) return {name: "Conscious III", cls: "tier-conscious", sub: "Planning: tool use, cooperative strategy, cultural transmission"};
+  if (pctHuman >= 25) return {name: "Conscious II", cls: "tier-conscious", sub: "Flexible: problem solving, individual recognition, social learning, strategy adjustment"};
+  if (pctHuman >= 18) return {name: "Conscious I", cls: "tier-conscious", sub: "Aware: basic learning, conditioning, spatial memory, preferences, habitual but flexible"};
+  if (pctHuman >= 14) return {name: "Subconscious III", cls: "tier-subconscious", sub: "Approaching awareness: some behavioral flexibility but limited"};
+  if (pctHuman >= 9) return {name: "Subconscious II", cls: "tier-subconscious", sub: "Routine: conditioned responses, basic spatial memory, habitual"};
+  if (pctHuman >= 5) return {name: "Subconscious I", cls: "tier-subconscious", sub: "Sleepwalker: simple habituation, minimal learning, reactive with slight flexibility"};
+  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", sub: "Responds to stimuli but no evidence of learning or adjustment"};
+  return {name: "Minimal", cls: "tier-minimal", sub: "No nervous system or equivalent"};
 }
 
 function update() {
@@ -158,7 +164,8 @@ function update() {
   document.getElementById('result-score').style.color =
     `var(--${tier.cls.replace('tier-', 'tier-')})`;
   document.getElementById('result-tier').innerHTML =
-    `<span class="tier-badge ${tier.cls}">${tier.name}</span>`;
+    `<span class="tier-badge ${tier.cls}">${tier.name}</span>
+     <div style="font-size: 12px; color: var(--text-dim); margin-top: 6px; font-style: italic;">${tier.sub}</div>`;
   document.getElementById('result-pct-human').textContent = pctHuman.toFixed(1) + '%';
 
   // Formula variants
@@ -176,7 +183,7 @@ function update() {
   document.getElementById('nearest-organisms').innerHTML = scored.map(sp => {
     const spPct = (sp.siu / H_SIU * 100).toFixed(1);
     const spTier = getTier(sp.siu / H_SIU * 100);
-    return `<div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border);">
+    return `<div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 4px;">
       <span>${sp.name}</span>
       <span style="font-family: var(--mono); font-size: 12px;">${spPct}% <span class="tier-badge ${spTier.cls}" style="font-size: 9px; padding: 1px 6px;">${spTier.name}</span></span>
     </div>`;
