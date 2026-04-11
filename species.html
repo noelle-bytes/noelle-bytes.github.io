@@ -60,7 +60,7 @@
 
     <div class="caveat" style="margin-top: 32px;">
       <div class="caveat-title">About This Data</div>
-      <p>Parameters are scorer estimates calibrated against published behavioral and neuroscience evidence. <strong>Sub-tiers (I, II, III)</strong> indicate degree within each main tier, based on functional capability: I = basic, II = flexible, III = complex. Sub-tier boundaries are roughly inspired by the progression of capabilities observed during consciousness development, but do not assume human-like development in other species. Tier boundaries are estimated working thresholds (Self-Aware &ge;50%, Conscious &ge;18%, Subconscious &ge;5%, Reactive &ge;1%, Minimal &lt;1% of human waking awareness). This database is a work in progress.</p>
+      <p>Parameters are scorer estimates calibrated against published behavioral and neuroscience evidence. <strong>Sub-tiers</strong> indicate degree within each main tier, based on functional capability progression. Self-Aware has 3 levels (I&ndash;III), Conscious has 5 levels (I&ndash;V), and Subconscious has 2 levels (I&ndash;II). Tier boundaries are estimated working thresholds (Self-Aware &ge;50%, Conscious &ge;14%, Subconscious &ge;5%, Reactive &ge;1%, Minimal &lt;1% of human waking awareness). This database is a work in progress.</p>
     </div>
 
   </section>
@@ -84,15 +84,16 @@
 const H_SIU = 0.85 * 0.95 * 0.95;
 
 function getTier(pctHuman) {
-  if (pctHuman >= 80) return {name: "Self-Aware III", parent: "Self-Aware", cls: "tier-selfaware", order: 9};
-  if (pctHuman >= 65) return {name: "Self-Aware II", parent: "Self-Aware", cls: "tier-selfaware", order: 8};
-  if (pctHuman >= 50) return {name: "Self-Aware I", parent: "Self-Aware", cls: "tier-selfaware", order: 7};
-  if (pctHuman >= 35) return {name: "Conscious III", parent: "Conscious", cls: "tier-conscious", order: 6};
-  if (pctHuman >= 25) return {name: "Conscious II", parent: "Conscious", cls: "tier-conscious", order: 5};
-  if (pctHuman >= 18) return {name: "Conscious I", parent: "Conscious", cls: "tier-conscious", order: 4};
-  if (pctHuman >= 14) return {name: "Subconscious III", parent: "Subconscious", cls: "tier-subconscious", order: 3.5};
-  if (pctHuman >= 9) return {name: "Subconscious II", parent: "Subconscious", cls: "tier-subconscious", order: 3};
-  if (pctHuman >= 5) return {name: "Subconscious I", parent: "Subconscious", cls: "tier-subconscious", order: 2.5};
+  if (pctHuman >= 80) return {name: "Self-Aware III", parent: "Self-Aware", cls: "tier-selfaware", order: 12};
+  if (pctHuman >= 65) return {name: "Self-Aware II", parent: "Self-Aware", cls: "tier-selfaware", order: 11};
+  if (pctHuman >= 50) return {name: "Self-Aware I", parent: "Self-Aware", cls: "tier-selfaware", order: 10};
+  if (pctHuman >= 42) return {name: "Conscious V", parent: "Conscious", cls: "tier-conscious", order: 9};
+  if (pctHuman >= 35) return {name: "Conscious IV", parent: "Conscious", cls: "tier-conscious", order: 8};
+  if (pctHuman >= 27) return {name: "Conscious III", parent: "Conscious", cls: "tier-conscious", order: 7};
+  if (pctHuman >= 20) return {name: "Conscious II", parent: "Conscious", cls: "tier-conscious", order: 6};
+  if (pctHuman >= 14) return {name: "Conscious I", parent: "Conscious", cls: "tier-conscious", order: 5};
+  if (pctHuman >= 9) return {name: "Subconscious II", parent: "Subconscious", cls: "tier-subconscious", order: 4};
+  if (pctHuman >= 5) return {name: "Subconscious I", parent: "Subconscious", cls: "tier-subconscious", order: 3};
   if (pctHuman >= 1) return {name: "Reactive", parent: "Reactive", cls: "tier-reactive", order: 2};
   return {name: "Minimal", parent: "Minimal", cls: "tier-minimal", order: 1};
 }
