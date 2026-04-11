@@ -137,13 +137,14 @@ function getTier(pctHuman) {
   if (pctHuman >= 80) return {name: "Self-Aware III", cls: "tier-selfaware", sub: "Recursive: metacognition, language/symbols, cultural accumulation"};
   if (pctHuman >= 65) return {name: "Self-Aware II", cls: "tier-selfaware", sub: "Social self: theory of mind, empathy, complex deception, cultural traditions"};
   if (pctHuman >= 50) return {name: "Self-Aware I", cls: "tier-selfaware", sub: "Self-model: mirror recognition, contingency testing, individual identity"};
-  if (pctHuman >= 35) return {name: "Conscious III", cls: "tier-conscious", sub: "Planning: tool use, cooperative strategy, cultural transmission"};
-  if (pctHuman >= 25) return {name: "Conscious II", cls: "tier-conscious", sub: "Flexible: problem solving, individual recognition, social learning, strategy adjustment"};
-  if (pctHuman >= 18) return {name: "Conscious I", cls: "tier-conscious", sub: "Aware: basic learning, conditioning, spatial memory, preferences, habitual but flexible"};
-  if (pctHuman >= 14) return {name: "Subconscious III", cls: "tier-subconscious", sub: "Approaching awareness: some behavioral flexibility but limited"};
+  if (pctHuman >= 42) return {name: "Conscious V", cls: "tier-conscious", sub: "Near self-aware: complex planning, cultural transmission, cooperative strategy"};
+  if (pctHuman >= 35) return {name: "Conscious IV", cls: "tier-conscious", sub: "Strategic: tool use, multi-step planning, social manipulation"};
+  if (pctHuman >= 27) return {name: "Conscious III", cls: "tier-conscious", sub: "Flexible: problem solving, individual recognition, strategy adjustment"};
+  if (pctHuman >= 20) return {name: "Conscious II", cls: "tier-conscious", sub: "Learning: social learning, spatial memory, adapts to new situations"};
+  if (pctHuman >= 14) return {name: "Conscious I", cls: "tier-conscious", sub: "Aware: basic learning, conditioning, preferences, not a sleepwalker"};
   if (pctHuman >= 9) return {name: "Subconscious II", cls: "tier-subconscious", sub: "Routine: conditioned responses, basic spatial memory, habitual"};
-  if (pctHuman >= 5) return {name: "Subconscious I", cls: "tier-subconscious", sub: "Sleepwalker: simple habituation, minimal learning, reactive with slight flexibility"};
-  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", sub: "Responds to stimuli but no evidence of learning or adjustment"};
+  if (pctHuman >= 5) return {name: "Subconscious I", cls: "tier-subconscious", sub: "Sleepwalker: simple habituation, minimal learning"};
+  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", sub: "Responds to stimuli but no learning or adjustment"};
   return {name: "Minimal", cls: "tier-minimal", sub: "No nervous system or equivalent"};
 }
 
