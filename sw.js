@@ -1,10 +1,13 @@
-const CACHE = 'siu-v1';
+const CACHE = 'siu-v2';
 const ASSETS = [
   '/',
   '/index.html',
   '/calculator.html',
   '/species.html',
   '/methodology.html',
+  '/calculator-legacy.html',
+  '/methodology-legacy.html',
+  '/siu-v2.js',
   '/style.css',
   '/species-data.js',
   '/icon-192.png',

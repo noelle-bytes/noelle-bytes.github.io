@@ -6,22 +6,9 @@
   <meta name="theme-color" content="#38bdf8">
   <link rel="apple-touch-icon" href="icon-192.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scoring Methodology - SIU Framework</title>
-  <meta name="description" content="How to score any organism using the SIU awareness framework. Concrete rubrics, data sources, and step-by-step instructions.">
+  <title>Methodology (Worksheet v2) - SIU Framework</title>
+  <meta name="description" content="How the SIU field worksheet, version 2, scores a system: tier placement, Sensing, Integration and Unity items, the gate and bands, and the three-track self profile.">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .rubric-table { width: 100%; border-collapse: collapse; margin: 16px 0 32px; font-size: 14px; }
-    .rubric-table th { background: var(--bg-card); padding: 10px 14px; text-align: left; font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); border-bottom: 2px solid var(--border-accent); }
-    .rubric-table td { padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.5; }
-    .rubric-table .range-cell { font-family: var(--mono); font-weight: 600; white-space: nowrap; min-width: 80px; }
-    .rubric-table .example-cell { color: var(--text-dim); font-size: 13px; font-style: italic; }
-    .step-box { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 24px; margin: 16px 0; }
-    .step-num { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--accent); display: inline-block; background: var(--accent-dim); width: 28px; height: 28px; line-height: 28px; text-align: center; border-radius: 50%; margin-right: 10px; }
-    .step-title { font-family: var(--serif); font-size: 18px; font-weight: 600; display: inline; }
-    .data-source { font-family: var(--mono); font-size: 12px; color: var(--tier-conscious); background: rgba(163,230,53,0.1); padding: 2px 8px; border-radius: 3px; display: inline-block; margin: 2px 0; }
-    .proxy-box { background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.15); border-radius: 6px; padding: 16px; margin: 12px 0; }
-    .proxy-title { font-family: var(--mono); font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
-  </style>
 </head>
 <body>
 
@@ -31,373 +18,280 @@
     <div class="links">
       <a href="index.html">Home</a>
       <a href="calculator.html">Calculator</a>
-      <a href="species.html">Species Database</a>
       <a href="methodology.html" class="active">Methodology</a>
+      <a href="species.html">Species Database</a>
     </div>
   </div>
 </nav>
 
-<div class="container">
+<div class="container v2-prose">
 
-  <div class="hero">
-    <h1>How to score an organism</h1>
-    <p class="subtitle">Concrete rubrics for each parameter. What data to look for. Where to find it. How to convert evidence into a number.</p>
+  <div class="hero" style="padding-bottom: 32px">
+    <h1>How the worksheet scores a system</h1>
+    <p class="subtitle">Version 2 of the method. Capacity and selfhood are scored separately: SIU estimates how much of an architecture a system has, and three self tracks describe what kind of self, if any, runs on it.</p>
+    <div class="notice">
+      <strong>Status:</strong> a proposal. The reference scores below were all made by one surveyor and serve as a development set. The reliability and validation work that would turn the bands into results is described at the end and has not been done. The <a href="calculator.html">calculator</a> runs everything on this page. The v1 rubric is kept as the <a href="methodology-legacy.html">legacy methodology</a>.
+    </div>
+    <p class="toc" style="margin-top: 16px">
+      <a href="#changes">What changed</a> &middot; <a href="#measures">What the band measures</a> &middot; <a href="#tiers">Tiers</a> &middot; <a href="#capacity">Capacity</a> &middot; <a href="#items">Items</a> &middot; <a href="#self">Self tracks</a> &middot; <a href="#cases">Reference cases</a> &middot; <a href="#validation">Validation</a> &middot; <a href="#open">Open questions</a>
+    </p>
   </div>
 
-  <section>
-    <h2>The Process</h2>
-    <p>Scoring an organism takes three steps: score Sensing, score Integration, score Unity. Each parameter uses a 0.00 to 1.00 scale. The rubric tables below define what each range means, what evidence qualifies, and what data sources to consult. When in doubt, score conservatively and note your confidence level.</p>
-
-    <div class="caveat">
-      <div class="caveat-title">Two Scoring Modes</div>
-      <p><strong>Field Mode:</strong> Use observable behavior and published natural history data. Faster, less precise. Good for initial estimates. Most parameters will be MEDIUM or LOW confidence.</p>
-      <p style="margin-top: 8px;"><strong>Research Mode:</strong> Use published neuroscience, connectome data, controlled behavioral experiments. Slower, more precise. Produces HIGH confidence scores where data exists.</p>
-    </div>
+  <section id="changes">
+    <h2>What changed from v1</h2>
+    <p>Version 1 multiplied three slider estimates, divided by a human baseline, and called anything above 50% of human self-aware. That design had three problems. A product of small nonzero numbers never reaches zero, so a thermostat or a planet always scored something. A single self-aware cutoff mislabeled whole groups of animals: a dog reads human gaze and intent with great skill and fails the visual mirror test, and one number cannot hold both facts. And the sliders were estimates with no fixed items behind them, so two people could not be expected to reach the same score.</p>
+    <p>Version 2 keeps the three terms and changes everything around them:</p>
+    <ul>
+      <li>Each term is scored from five fixed items, so the score can be checked item by item.</li>
+      <li>The terms are combined with a geometric mean, and a gate on the weakest term does the conjunctive work.</li>
+      <li>Unity has an entry rung, a mapped sensory hierarchy. A system without one scores a true zero.</li>
+      <li>Scores fall into coarse bands set by frozen reference species, and percent of human is gone.</li>
+      <li>Self-awareness is scored on its own, as three tracks, instead of as the top slice of SIU.</li>
+      <li>A short tier check decides whether a system is scored at all.</li>
+    </ul>
+    <p>The species database still holds v1 scores and has not been rescored on this worksheet.</p>
   </section>
 
-  <!-- ============================== SENSING ============================== -->
-  <section>
-    <h2>S — Sensing</h2>
-    <h3>What it measures</h3>
-    <p>The breadth and quality of an organism's ability to detect information from its environment and its own body. Combines external sensing (vision, hearing, chemoreception, electroreception, magnetoreception, mechanoreception, etc.) and internal sensing (proprioception, interoception, nociception, vestibular sense).</p>
+  <section id="measures">
+    <h2>What the band measures</h2>
+    <p>The Integration items follow Ginsburg and Jablonka's sequence of learning, which they tie to minimal consciousness. The Unity items follow Feinberg and Mallatt's account of mapped sensory hierarchies, which they tie to sensory consciousness. The band is therefore an estimate of how much of that architecture a system has. It inherits those two accounts' inference from marker to experience and adds nothing to it. Anyone who rejects either account should read the band as a graded profile of cognitive architecture and nothing more.</p>
+    <p>One consequence is stated openly: an individual ant clears the gate, because it learns in an open-ended way on a mapped sensory hierarchy. That is a claim about its architecture, not about what, if anything, it is like to be an ant.</p>
+  </section>
 
-    <h3>Scoring Rubric</h3>
-    <table class="rubric-table">
-      <tr><th>Range</th><th>Level</th><th>Criteria</th><th>Examples</th></tr>
-      <tr>
-        <td class="range-cell">0.00 — 0.15</td>
-        <td>Vestigial</td>
-        <td>1-2 modalities. Chemical gradients or light/dark only. No specialized sensory organs. Response times measured in minutes to hours.</td>
-        <td class="example-cell">Bacteria (chemotaxis), sponge (flow sensing), amoeba</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.15 — 0.30</td>
-        <td>Basic</td>
-        <td>2-4 modalities. Simple photoreception, basic chemoreception, touch. May have eyespots or statocysts. No image-forming eyes.</td>
-        <td class="example-cell">Planarian, hydra, sea anemone, coral, plants (light + gravity + touch + chemical)</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.30 — 0.50</td>
-        <td>Moderate</td>
-        <td>4-6 modalities. Image-forming eyes (simple or compound), basic hearing, lateral line or equivalent. Internal senses emerging.</td>
-        <td class="example-cell">C. elegans, earthworm, basic insects, goldfish, zebrafish</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.50 — 0.70</td>
-        <td>Good</td>
-        <td>6-9 modalities. Color vision, directional hearing, olfaction with discrimination. Proprioception. May have specialized senses (IR, UV, polarization). Lateral line + vision + chemical in fish.</td>
-        <td class="example-cell">Most fish, reptiles, amphibians, basic mammals, most insects, spiders</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.70 — 0.85</td>
-        <td>Strong</td>
-        <td>8-11 modalities. High-acuity vision, complex auditory processing, refined proprioception, interoception. May include echolocation, electroreception, or magnetic sense. Multiple specialized modalities.</td>
-        <td class="example-cell">Dogs, cats, primates, corvids, parrots, dolphins, sharks, mantis shrimp</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.85 — 1.00</td>
-        <td>Exceptional</td>
-        <td>10+ modalities including rare ones. Best-in-class resolution in multiple channels. Dragonfly-level vision, echolocating bat hearing, shark electroreception. Strong interoception.</td>
-        <td class="example-cell">Humans (12 modalities), echolocating bats, mantis shrimp (16 color receptors), platypus (electroreception + all mammalian senses)</td>
-      </tr>
+  <section id="tiers">
+    <h2>Step 0: The tiers</h2>
+    <p>Before scoring capacity, place the system. This step has no points.</p>
+    <ul>
+      <li><strong>Tier 1, persistence.</strong> Holds and rebuilds its own form while energy flows through it, with no ratchet. Flames, hurricanes, stars, the Earth. The word life is kept for Tier 2.</li>
+      <li><strong>Tier 2, Darwinian life.</strong> Builds and repairs its own parts inside its own boundary, and belongs to a reproducing, selectable lineage. Trees, animals, bacteria.</li>
+      <li><strong>Tier 3, awareness.</strong> A Tier 2 system that clears the SIU gate. Its self tracks are then scored.</li>
+      <li><strong>Constructs.</strong> Made rather than evolved. Placed beside the ladder and scored on SIU like anything else. An aware construct that does not reproduce would be a kind of virtual mule: aware, sterile, made by members of a lineage without being one.</li>
+    </ul>
+    <p>The questions, in order:</p>
+    <ol>
+      <li>Made or evolved? Made means construct; go to Step 1.</li>
+      <li>Does it keep its form only while energy or matter flows through it? No means it is not on the ladder (a rock, a crystal, a corpse).</li>
+      <li>When disturbed, does it restore its own form? No means a passing pattern. Yes means Tier 1.</li>
+      <li>Does it build and repair its own parts inside its own boundary? No means Tier 1, and SIU is not scored.</li>
+      <li>Did it come from parents like itself, through heredity with variation? Yes means Tier 2. Sterile members of a reproducing lineage count (worker ants, mules). A virus has a lineage without self-production; record it as borderline Tier 2 and expect it to fail the gate.</li>
+    </ol>
+  </section>
+
+  <section id="capacity">
+    <h2>Capacity: SIU, the gate and the bands</h2>
+    <div class="formula-display">A = (S &times; I &times; U)<sup>1/3</sup></div>
+    <p>Each term runs from 0 to 1 and is the sum of five items. A term at zero gives zero, which is the necessity claim: sensing with nothing integrating it is a camera, and integration with no unified perspective is a disconnected network. The cube root keeps the product's order and its collapse to zero, and it puts the result back on the 0 to 1 scale of the terms.</p>
+    <p>The cube root is still a mean, so above zero a weak term can be partly offset by strong ones. Sensing at 0.2 with the other two at 1 gives A of 0.58. The Human Development Index made the same move to a geometric mean in 2010, and the standard criticism of it is that it hides tradeoff rates that are hard to defend (Ravallion 2012). So the worksheet does not rely on the formula for conjunction. It reports min(S, I, U) beside A, and the gate requires it.</p>
+    <p><strong>The gate.</strong> A system is scored for a self only if all three hold:</p>
+    <ul>
+      <li>A is at least 0.35;</li>
+      <li>min(S, I, U) is at least 0.35;</li>
+      <li>open-ended learning (I2) is at least Partial.</li>
+    </ul>
+    <p>A system that fails the gate is recorded as band None, with B, IP and NC as None.</p>
+
+    <table class="v2-table" style="max-width: 520px; margin: 16px 0 28px">
+      <thead><tr><th>Band</th><th>A</th></tr></thead>
+      <tbody>
+        <tr><td><span class="tier-badge tier-minimal">None</span></td><td>below 0.35, or the gate failed</td></tr>
+        <tr><td><span class="tier-badge tier-reactive">Low</span></td><td class="mono">0.35 to under 0.80</td></tr>
+        <tr><td><span class="tier-badge tier-subconscious">Moderate</span></td><td class="mono">0.80 to under 0.95</td></tr>
+        <tr><td><span class="tier-badge tier-conscious">High</span></td><td class="mono">0.95 or above</td></tr>
+        <tr><td><span class="tier-badge tier-selfaware">Very high</span></td><td>0.95 or above, with all three stretch items shown</td></tr>
+      </tbody>
     </table>
 
-    <h3>How to Score S — Step by Step</h3>
+    <p><strong>How the cutoffs were set.</strong> Five reference species were placed in bands before any other case was scored, then scored on the worksheet, and each cutoff was fixed at the midpoint between neighboring anchors, rounded to 0.05. The cutoffs are frozen: they change only by re-running the anchors, never to move a particular case.</p>
 
-    <div class="step-box">
-      <span class="step-num">1</span>
-      <span class="step-title">Count sensory modalities</span>
-      <p style="margin-top: 8px;">List every distinct modality the organism can detect. Standard modalities: vision, hearing, olfaction, gustation, touch/mechanoreception, proprioception, vestibular/balance, nociception (pain), thermoreception, interoception (internal state), magnetoreception, electroreception, echolocation, UV detection, polarization vision, infrasound detection, chemical gradient sensing.</p>
-      <div class="proxy-box">
-        <div class="proxy-title">Data Sources</div>
-        <p style="font-size: 13px; color: var(--text-dim);">
-          <span class="data-source">PubMed</span> Search "[species] sensory modalities" or "[species] sensory ecology"<br>
-          <span class="data-source">Animal Diversity Web</span> animaldiversity.org — species accounts list senses<br>
-          <span class="data-source">Field guides</span> Typically list key sensory adaptations
-        </p>
-      </div>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">2</span>
-      <span class="step-title">Rate quality within each modality</span>
-      <p style="margin-top: 8px;">A mantis shrimp has vision, but it's not the same as a mole's vision. Within each modality, ask: what is the resolution, bandwidth, range, and discrimination ability? An eagle's visual acuity is 4-8x human. A goldfish sees color but with lower acuity. Both count as "vision" in Step 1, but differ in quality.</p>
-      <p style="margin-top: 8px; font-size: 14px; color: var(--text-dim);">Quick quality indicators: Can it discriminate individuals by this sense? (high quality) Can it detect presence/absence only? (low quality) Can it track moving objects? (moderate+) Can it form spatial maps from this sense? (high)</p>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">3</span>
-      <span class="step-title">Assess internal sensing</span>
-      <p style="margin-top: 8px;">Does the organism monitor its own internal state? Evidence includes: hunger-dependent behavior changes (stops hunting when sated), pain avoidance learning (not just reflex withdrawal), fatigue-adjusted activity, stress hormone responses that alter behavior, sickness behavior (reducing activity when ill).</p>
-      <p style="margin-top: 8px; font-size: 14px; color: var(--text-dim);">Internal sensing is often the hardest to assess. For most invertebrates, score conservatively (0.10-0.25) unless specific interoceptive evidence exists.</p>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">4</span>
-      <span class="step-title">Combine into a single S score</span>
-      <p style="margin-top: 8px;">Use the rubric table above. Match the organism's modality count and quality profile to the closest range. Don't average — match the overall profile. An organism with 8 modalities but poor quality in most of them scores lower (0.55-0.60) than one with 6 high-quality modalities (0.65-0.70).</p>
-    </div>
-  </section>
-
-  <!-- ============================== INTEGRATION ============================== -->
-  <section>
-    <h2>I — Integration</h2>
-    <h3>What it measures</h3>
-    <p>How well sensory signals communicate with each other and get bound into coherent representations. This is the bottleneck parameter — the one that most strongly predicts awareness. An organism with excellent sensors but poor integration (box jellyfish) scores much lower than one with modest sensors and strong integration (honeybee).</p>
-
-    <h3>Scoring Rubric</h3>
-    <table class="rubric-table">
-      <tr><th>Range</th><th>Level</th><th>Criteria</th><th>Examples</th></tr>
-      <tr>
-        <td class="range-cell">0.00 — 0.10</td>
-        <td>None/Minimal</td>
-        <td>No nervous system, or only diffuse nerve net with no centralization. Purely chemical signaling between cells. Response to one stimulus does not influence response to another.</td>
-        <td class="example-cell">Sponge, coral, sea anemone (0 innexin genes), plants</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.10 — 0.25</td>
-        <td>Basic</td>
-        <td>Nerve net or simple ganglia. Some signal convergence but no central brain. Parallel processing clusters that operate mostly independently. Basic reflex arcs may cross modalities.</td>
-        <td class="example-cell">Jellyfish (4 independent rhopalia), starfish, hydra, sea urchin</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.25 — 0.40</td>
-        <td>Moderate</td>
-        <td>Centralized ganglia or simple brain. Signals from multiple senses converge on shared processing centers. Basic associative learning (if A, then B). Conditioned responses across modalities.</td>
-        <td class="example-cell">Planarian, most fish, basic crustaceans, simple insects, C. elegans</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.40 — 0.60</td>
-        <td>Good</td>
-        <td>Well-developed brain with distinct processing regions. Cross-modal integration demonstrated (e.g., combines visual + spatial + memory). Social learning. Tool use or equivalent flexible problem solving. Can learn categories, not just specific stimuli.</td>
-        <td class="example-cell">Cleaner wrasse, archer fish, cichlids, reptiles, cats, most birds, jumping spiders</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.60 — 0.80</td>
-        <td>Strong</td>
-        <td>Complex brain with rich interconnection. Evidence of multi-step planning, episodic-like memory, transitive inference, theory of mind, or metacognition. Can solve novel problems not encountered in evolutionary history. Rapid learning and generalization.</td>
-        <td class="example-cell">Dogs, corvids, parrots, octopus, social insects (honeybees, paper wasps), cetaceans, elephants</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.80 — 1.00</td>
-        <td>Exceptional</td>
-        <td>Highest known levels of neural integration. Recursive thought (thinking about thinking). Language or symbolic communication. Cultural transmission across generations. Flexible executive control across all domains.</td>
-        <td class="example-cell">Great apes, humans</td>
-      </tr>
+    <table class="v2-table" style="margin: 16px 0 28px">
+      <thead><tr><th>Anchor</th><th>Placed in</th><th>S</th><th>I</th><th>U</th><th>A</th><th>Basis</th></tr></thead>
+      <tbody>
+        <tr><td>C. elegans</td><td>None</td><td class="mono">0.9</td><td class="mono">0.2</td><td class="mono">0.0</td><td class="mono">0.00</td><td>no mapped hierarchy, so U is zero; associative learning only; 302 neurons</td></tr>
+        <tr><td>Fruit fly</td><td>Low</td><td class="mono">0.9</td><td class="mono">0.4</td><td class="mono">1.0</td><td class="mono">0.71</td><td>second-order conditioning; no flexible problem-solving; about 140,000 neurons</td></tr>
+        <tr><td>Honeybee</td><td>Moderate</td><td class="mono">1.0</td><td class="mono">0.8</td><td class="mono">1.0</td><td class="mono">0.93</td><td>open-ended learning; same and different transferred to new stimuli; about a million neurons</td></tr>
+        <tr><td>Chimpanzee</td><td>High</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.00</td><td>every item shown in the species; analogical reasoning only after token training, so not Very high</td></tr>
+        <tr><td>Human</td><td>Very high</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.00</td><td>every item and all three stretch items</td></tr>
+      </tbody>
     </table>
 
-    <h3>How to Score I — Step by Step</h3>
+    <p><strong>Read the bands for what they are.</strong> Sensing and Unity sit near 1 for nearly every animal with a centralized brain, so for those animals A is close to the cube root of Integration, and the cutoffs work out to Integration thresholds of about 0.04, 0.51 and 0.86. For vertebrates the bands are Integration bands sitting on a floor. The three-term structure does its real work elsewhere: Unity spreads for cephalopods, and both Sensing and Unity spread for constructs and distributed systems.</p>
 
-    <div class="step-box">
-      <span class="step-num">1</span>
-      <span class="step-title">Determine neural architecture</span>
-      <p style="margin-top: 8px;">What kind of nervous system does it have? Options: none (sponge), nerve net (cnidarians), ganglionic ladder (flatworms, annelids), centralized brain + ventral nerve cord (arthropods), centralized brain + dorsal nerve cord (vertebrates), distributed brain with central control (cephalopods).</p>
-      <div class="proxy-box">
-        <div class="proxy-title">Research-Mode Proxies</div>
-        <p style="font-size: 13px; color: var(--text-dim);">
-          <span class="data-source">Neuron count</span> Total neurons. More neurons generally means more integration capacity, but architecture matters more than count.<br>
-          <span class="data-source">Gap junction genes</span> Search "[species] innexin" (invertebrates) or "[species] connexin" (vertebrates) on UniProt/NCBI. More gap junction genes = more potential for direct cell-to-cell signal integration. C. elegans has 25 innexin genes (high for its size). Sea anemone has 0 (very low).<br>
-          <span class="data-source">Brain-to-body ratio</span> Encephalization quotient. Higher EQ suggests more processing relative to body maintenance.<br>
-          <span class="data-source">PCI data</span> Perturbational Complexity Index, if available. Directly measures integration in neural tissue. Only exists for a handful of species.
-        </p>
-      </div>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">2</span>
-      <span class="step-title">Check behavioral evidence of integration</span>
-      <p style="margin-top: 8px;">This is often more telling than anatomy. Look for:</p>
-      <p style="margin-top: 8px; font-size: 14px;">
-        <strong>Cross-modal learning</strong> — Learns about something in one sense, responds correctly in another. (Score 0.35+)<br>
-        <strong>Category learning</strong> — Groups novel stimuli into learned categories, not just specific instances. (Score 0.40+)<br>
-        <strong>Social learning</strong> — Learns by watching others without direct reinforcement. (Score 0.45+)<br>
-        <strong>Tool use</strong> — Uses an external object to achieve a goal. (Score 0.50+)<br>
-        <strong>Novel problem solving</strong> — Solves problems not encountered in evolutionary history. (Score 0.55+)<br>
-        <strong>Multi-step planning</strong> — Performs sequence of actions toward a future goal. (Score 0.60+)<br>
-        <strong>Transitive inference</strong> — If A > B and B > C, deduces A > C. (Score 0.65+)<br>
-        <strong>Theory of mind</strong> — Adjusts behavior based on what another agent knows or doesn't know. (Score 0.70+)<br>
-        <strong>Metacognition</strong> — Demonstrates awareness of own knowledge state (e.g., "opt out" behavior when uncertain). (Score 0.75+)
-      </p>
-      <div class="proxy-box">
-        <div class="proxy-title">Data Sources</div>
-        <p style="font-size: 13px; color: var(--text-dim);">
-          <span class="data-source">Google Scholar</span> "[species] cognition" or "[species] learning" or "[species] problem solving"<br>
-          <span class="data-source">Animal Cognition (journal)</span> Primary journal for comparative cognition research<br>
-          <span class="data-source">Shettleworth, S.J. "Cognition, Evolution, and Behavior"</span> Comprehensive reference
-        </p>
-      </div>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">3</span>
-      <span class="step-title">Use the highest applicable evidence</span>
-      <p style="margin-top: 8px;">Score at the level of the most complex integration behavior documented for the species. If an organism shows tool use (0.50+) but no evidence of theory of mind, score in the 0.50-0.60 range. The behavioral benchmarks above are floors, not ceilings — an organism that shows tool use might score 0.55 if the tool use is simple, or 0.60 if it involves tool manufacture from novel materials.</p>
-    </div>
+    <p><strong>The floor.</strong> Unity's entry rung asks for a mapped sensory hierarchy. A system without one, such as a thermostat, an electron or the nematode C. elegans, scores U of 0 and so A of 0. That zero is a rule of the instrument, defended from Feinberg and Mallatt rather than derived. Three mapped levels is a convention, set to match the smallest brains that also show the behavioral items, so the jump from C. elegans at 0 to the fruit fly at 1.0 on Unity belongs to the rubric, not to nature. The floor does not refute panpsychism, which is a claim about experience. It only records that below the entry rung the instrument finds no structure to score.</p>
   </section>
 
-  <!-- ============================== UNITY ============================== -->
-  <section>
-    <h2>U — Unity</h2>
-    <h3>What it measures</h3>
-    <p>Whether the organism's processing produces a unified "self" — a single coherent perspective that binds all integrated information into one experience. This is the most contested parameter. It captures the difference between a system that processes information in parallel (no unity) and one where "there is something it is like" to be that organism (high unity).</p>
+  <section id="items">
+    <h2>Step 1: The items</h2>
+    <p>Score each item Yes (0.2), Partial (0.1) or No (0). Sensing items are scored on their own. Integration and Unity are ladders ordered by difficulty: an item counts only if the one before it scored at least Partial, and the ladder stops at the first No. I5 sits outside the ladder and is always scored for organisms.</p>
+    <p>Unknown is not No. Mark it U, score the term twice, once with every U as No and once as Yes, and report the range. On the No branch the ladder stops at the U item; on the Yes branch it continues. Tag each answer with its evidence: F for field observation, L for lab experiment, N for neuroanatomy, R for inference from a related species (lowest confidence).</p>
 
-    <h3>Scoring Rubric</h3>
-    <table class="rubric-table">
-      <tr><th>Range</th><th>Level</th><th>Criteria</th><th>Examples</th></tr>
-      <tr>
-        <td class="range-cell">0.00 — 0.10</td>
-        <td>None</td>
-        <td>No evidence of unified processing. Colonial organisms where units operate independently. No behavioral coherence beyond chemical cascades. No central decision point.</td>
-        <td class="example-cell">Sponge, coral, colonial organisms, bacteria</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.10 — 0.25</td>
-        <td>Fragmentary</td>
-        <td>Some coordinated behavior but processing clusters operate semi-independently. No single decision point dominates. Responses to different stimuli can contradict each other.</td>
-        <td class="example-cell">Jellyfish (4 rhopalia), starfish (5 arms with independent decision-making), sea anemone</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.25 — 0.40</td>
-        <td>Basic</td>
-        <td>Centralized decision-making exists but is relatively simple. Organism behaves as a single agent most of the time. Sleep-wake cycling (suggests unified state transitions). Consistent directional responses to stimuli.</td>
-        <td class="example-cell">Worms, basic fish, basic insects, snails</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.40 — 0.60</td>
-        <td>Coherent</td>
-        <td>Organism clearly behaves as a unified agent. Consistent personality traits (bold/shy) over time. Goal-directed behavior that persists through interruptions. Emotional-state-like shifts that affect multiple behaviors simultaneously (fear changes locomotion, feeding, and attention at once).</td>
-        <td class="example-cell">Most fish, reptiles, amphibians, solitary insects, spiders</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.60 — 0.80</td>
-        <td>Self-Modeling</td>
-        <td>Evidence that the organism maintains a model of itself. Mirror-directed behavior (even without full mark test). Audience effects (changes behavior based on who is watching). Deception that requires self-other distinction. Body-awareness (knows where own body ends).</td>
-        <td class="example-cell">Cleaner wrasse, social mammals, corvids, parrots, octopus, social insects with face recognition</td>
-      </tr>
-      <tr>
-        <td class="range-cell">0.80 — 1.00</td>
-        <td>Self-Aware</td>
-        <td>Passes mirror test. Recognizes self in photographs. Demonstrates contingency testing (experiments with own reflection). Autobiographical-like memory. Can distinguish between own actions and externally caused events.</td>
-        <td class="example-cell">Great apes, dolphins, elephants, magpies, cleaner wrasse (rapid MSR + contingency testing)</td>
-      </tr>
+    <h3 style="margin-top: 28px">Sensing (S)</h3>
+    <table class="v2-table">
+      <tbody>
+        <tr><td class="mono">S1</td><td><strong>Dedicated sensors.</strong> Yes: receptor cells gathered into sense organs, such as eyes, antennae or a lateral line. Partial: specialized cells not gathered into organs. No: only general cell responses.</td></tr>
+        <tr><td class="mono">S2</td><td><strong>Number of senses.</strong> Yes: four or more distinct modalities. Partial: two or three.</td></tr>
+        <tr><td class="mono">S3</td><td><strong>Distance sense.</strong> Detects things it is not touching, with direction. Yes: vision, hearing, smell tracked to a source, electroreception, echolocation. Partial: light versus dark only, or a diffuse gradient.</td></tr>
+        <tr><td class="mono">S4</td><td><strong>Body sense.</strong> Senses its own posture or limb position, and an internal state such as hunger. Yes: both. Partial: one.</td></tr>
+        <tr><td class="mono">S5</td><td><strong>Fine discrimination.</strong> Yes: tells apart individuals of its own species, or differences as fine in some sense. Partial: coarse categories only.</td></tr>
+      </tbody>
     </table>
 
-    <h3>How to Score U — Step by Step</h3>
-
-    <div class="step-box">
-      <span class="step-num">1</span>
-      <span class="step-title">Check for mirror test data</span>
-      <p style="margin-top: 8px;">Has the species been tested for mirror self-recognition (MSR)? If yes: passed = score 0.75+, failed = does not necessarily mean low U (many species fail for reasons unrelated to self-awareness, like not caring about visual marks). If no MSR data exists, proceed to behavioral evidence.</p>
-      <div class="proxy-box">
-        <div class="proxy-title">Data Source</div>
-        <p style="font-size: 13px; color: var(--text-dim);">
-          <span class="data-source">Google Scholar</span> "[species] mirror test" or "[species] mirror self-recognition"<br>
-          <span class="data-source">Known MSR species</span> Chimpanzee, orangutan, bonobo, gorilla (some), bottlenose dolphin, orca, Asian elephant, Eurasian magpie, Indian house crow, cleaner wrasse, manta ray (possible)
-        </p>
-      </div>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">2</span>
-      <span class="step-title">Check for self-other distinction evidence</span>
-      <p style="margin-top: 8px;">Even without mirror tests, many behaviors imply a self-model:</p>
-      <p style="margin-top: 8px; font-size: 14px;">
-        <strong>Audience effects</strong> — Changes behavior when being watched vs. alone. (U 0.55+)<br>
-        <strong>Tactical deception</strong> — Hides food, misleads competitors, or feigns behavior. Requires distinguishing what self knows from what other knows. (U 0.60+)<br>
-        <strong>Referential gestures</strong> — Points or directs another's attention to an object. Implies understanding self-as-agent-who-can-influence-others. (U 0.60+)<br>
-        <strong>Embarrassment / shame responses</strong> — Behavioral changes after social failure. (U 0.65+)<br>
-        <strong>Self-handicapping in play</strong> — Larger animal deliberately plays gently with smaller partner. (U 0.65+)<br>
-        <strong>Contingency testing</strong> — Experiments with own body or objects to understand how reflections / tools / environments respond to own actions. (U 0.70+)
-      </p>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">3</span>
-      <span class="step-title">Assess behavioral coherence</span>
-      <p style="margin-top: 8px;">If no self-awareness or self-other data exists, assess whether the organism behaves as a unified agent. Does it show consistent personality traits across contexts (bold in foraging AND bold in mating)? Does it have sleep-wake cycles (implies unified state transitions)? Does it pursue goals through interruptions (starts a task, gets disturbed, returns to the same task)?</p>
-      <p style="margin-top: 8px; font-size: 14px; color: var(--text-dim);">For organisms with no behavioral data at all, use neural architecture as a proxy: single centralized brain = higher U than distributed ganglia, which is higher than nerve net, which is higher than no nervous system.</p>
-    </div>
-
-    <div class="step-box">
-      <span class="step-num">4</span>
-      <span class="step-title">Watch for single-cell unity bonus</span>
-      <p style="margin-top: 8px;">Single-celled organisms (Physarum, Paramecium) get a paradoxical boost on U because everything happens within one shared cytoplasm. There's no integration problem — all signals are already in the same physical space. This doesn't mean they're highly aware (S and I are low), but their Unity is inherently higher than a colonial organism of the same complexity where units are physically separated.</p>
-    </div>
-  </section>
-
-  <!-- ============================== CONFIDENCE ============================== -->
-  <section>
-    <h2>Confidence Levels</h2>
-    <p>After scoring all three parameters, assign a confidence level to the overall score:</p>
-    <table class="rubric-table">
-      <tr><th>Level</th><th>Criteria</th><th>Uncertainty Range</th></tr>
-      <tr>
-        <td class="range-cell" style="color: var(--tier-selfaware)">HIGH</td>
-        <td>Published neuroscience data exists for most parameters. Controlled behavioral experiments have been conducted. Neural architecture is well-characterized. Multiple independent studies confirm key findings.</td>
-        <td class="range-cell">&pm;5% per parameter</td>
-      </tr>
-      <tr>
-        <td class="range-cell" style="color: var(--tier-subconscious)">MEDIUM</td>
-        <td>Some published data exists but gaps remain. Behavioral evidence is available but not from controlled experiments. Some parameters are inferred from related species or general body plan.</td>
-        <td class="range-cell">&pm;15% per parameter</td>
-      </tr>
-      <tr>
-        <td class="range-cell" style="color: var(--tier-reactive)">LOW</td>
-        <td>Most parameters are extrapolated from related species, general phylogenetic position, or anatomical comparison. Little or no species-specific behavioral data. Score is essentially an educated guess.</td>
-        <td class="range-cell">&pm;25% per parameter</td>
-      </tr>
+    <h3 style="margin-top: 28px">Integration (I)</h3>
+    <table class="v2-table">
+      <tbody>
+        <tr><td class="mono">I1</td><td><strong>Associative learning.</strong> Links a cue to an outcome by classical or operant conditioning. Partial: habituation or sensitization only.</td></tr>
+        <tr><td class="mono">I2</td><td><strong>Open-ended learning.</strong> Learns new compound stimuli or new action sequences, including second-order or trace conditioning and cues combined across senses (unlimited associative learning). Partial: one sense or a few cue types.</td></tr>
+        <tr><td class="mono">I3</td><td><strong>Flexible problem-solving.</strong> Solves a problem it has not met before without step-by-step training, such as a detour around a new barrier or a new use of a tool. Partial: only after long trial and error, or only some individuals. Planning results go under N3 instead, so one study cannot raise the band and then be counted again under the cap that band sets.</td></tr>
+        <tr><td class="mono">I4</td><td><strong>Rule transfer.</strong> Applies a learned rule (same versus different, a number, a sequence) to stimuli it has never seen. Partial: only to stimuli close to the trained ones.</td></tr>
+        <tr><td class="mono">I5</td><td><strong>Scale, outside the ladder.</strong> Neurons in the integrating center: cortex in mammals, pallium in birds, whole brain in fish and insects, central brain with optic lobes in cephalopods. Yes: 100 million or more. Partial: 100,000 to under 100 million. No: under 100,000. The centers differ by clade, so the counts are not one quantity; the item only asks whether the center clears two coarse thresholds, and it is worth at most 0.2.</td></tr>
+      </tbody>
     </table>
+    <p class="small-note">Record integration speed if it is known, but do not score it; speed tracks body size and temperature more than capacity. A large-brained animal tested only on simple tasks scores at most 0.6 on I: size adds 0.2 and cannot carry the term.</p>
+
+    <h3 style="margin-top: 28px">Unity (U)</h3>
+    <table class="v2-table">
+      <tbody>
+        <tr><td class="mono">U1</td><td><strong>Funneling hierarchy, the entry rung.</strong> Sensory streams converge on a central hub through mapped levels. A mapped level is a layer or nucleus in which neighboring receptors, or neighboring points in a sensory field, project to neighboring cells, and which feeds a further such layer; the insect retina, lamina and medulla are three. Yes: three or more. Partial: two. No: a nerve net, or sensory neurons feeding interneurons directly. A No makes U, and A, zero.</td></tr>
+        <tr><td class="mono">U2</td><td><strong>Whole-system states.</strong> States that switch the whole system between modes, with recovery after deprivation; in animals, sleep with recovery sleep. Partial: a whole-system rest state without recovery, or only local quiescence.</td></tr>
+        <tr><td class="mono">U3</td><td><strong>One agent.</strong> The whole body acts toward one goal at a time. Partial: parts keep substantial local control, as octopus arms do.</td></tr>
+        <tr><td class="mono">U4</td><td><strong>Competing drives.</strong> Settles conflicts by the stakes, accepting more risk when hungrier. Partial: a fixed order of priority.</td></tr>
+        <tr><td class="mono">U5</td><td><strong>Selective attention.</strong> Picks one target among distractors and holds it. Partial: orients to stimuli but is captured by each new one.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 28px">Stretch items</h3>
+    <p>Yes or no, with no points. Many animals score 1 on a term, so these separate the top of the scale. All three, with A at 0.95 or above, give Very high. An untested stretch item is not counted, and the result notes that Very high would follow if it were shown.</p>
+    <table class="v2-table">
+      <tbody>
+        <tr><td class="mono">S+</td><td><strong>Image-forming sense.</strong> Resolves the features of an object at a distance, as a camera-type eye or echolocation does.</td></tr>
+        <tr><td class="mono">I+</td><td><strong>Analogical reasoning.</strong> Matches relations between relations without being trained on that task.</td></tr>
+        <tr><td class="mono">U+</td><td><strong>Uncertainty monitoring.</strong> Declines, delays or seeks more information on hard trials more often than on easy ones.</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 28px">Constructs</h3>
+    <p>Three extra rules. A receptor means a physical transducer the system carries, such as a camera, microphone or motion sensor; input handed to it already digitized counts at most Partial on S1, and channels with no transducer count at most Partial on S2. Learning counts only if it happens inside the system during its own operation, so retraining done elsewhere and installed by update does not count. I5 does not apply, because an artificial unit is not a neuron; Integration is the sum of I1 to I4 divided by 0.8, so a construct can still reach 1. Construct scores on the behavioral items are upper bounds, since a system trained to produce a behavior can show it without the property behind it (Butlin et al. 2026).</p>
   </section>
 
-  <!-- ============================== WORKED EXAMPLE ============================== -->
-  <section>
-    <h2>Worked Example: Cleaner Wrasse</h2>
+  <section id="self">
+    <h2>Steps 2 to 4: The three self tracks</h2>
+    <p>Capacity is one axis. The self is three, each scored on its own and held below what the capacity band supports.</p>
+    <ul>
+      <li><strong>Bodily-agentive (B):</strong> being a distinct body and the author of one's own actions, up to recognizing oneself. Gallagher's minimal self, Damasio's core self.</li>
+      <li><strong>Interpersonal (IP):</strong> representing other agents as agents, an "I" set against a "you," up to modeling what others perceive. Neisser's interpersonal self.</li>
+      <li><strong>Narrative-conceptual (NC):</strong> the self extended in time and built in a social, linguistic frame. Gallagher's narrative self, Damasio's autobiographical self, Neisser's conceptual self.</li>
+    </ul>
 
-    <div class="step-box">
-      <span class="step-num">S</span>
-      <span class="step-title">Sensing = 0.65</span>
-      <p style="margin-top: 8px;"><strong>Modalities (5):</strong> Color vision, lateral line (hydrodynamic), chemoreception, touch/mechanoreception, hearing. No electroreception, no magnetoreception, no echolocation. <strong>Quality:</strong> Vision is good enough for individual face recognition across conspecifics and client fish. Lateral line provides spatial awareness of nearby water movement. <strong>Internal:</strong> Body-mark awareness during mirror test suggests some proprioceptive/interoceptive capacity. Hunger-dependent behavior (satiated fish stop cleaning). <strong>Rubric match:</strong> "Good" tier (0.50-0.70). 5 modalities with high-quality vision and demonstrated internal state monitoring places it at 0.65.</p>
-    </div>
+    <table class="v2-table" style="margin: 16px 0 28px">
+      <thead><tr><th>Track</th><th>Low</th><th>Moderate</th><th>High</th></tr></thead>
+      <tbody>
+        <tr><td>B</td><td>B1 body distinct from world</td><td>B2 body as obstacle; B3 contingency testing</td><td>B4 self-recognition in any modality</td></tr>
+        <tr><td>IP</td><td>P1 others as agents; P2 individual recognition</td><td>P3 audience effect; P4 selective sharing</td><td>P5 deception; P6 visual perspective; P7 hunting and fighting that tracks perception</td></tr>
+        <tr><td>NC</td><td>N1 fragments of past and future</td><td>N2 episodic-like memory; N3 planning</td><td>N4 language; N5 self in others' minds</td></tr>
+      </tbody>
+    </table>
 
-    <div class="step-box">
-      <span class="step-num">I</span>
-      <span class="step-title">Integration = 0.55</span>
-      <p style="margin-top: 8px;"><strong>Neural architecture:</strong> Centralized teleost brain, relatively small (~500K neurons est.), but with well-developed telencephalon for a fish. <strong>Behavioral evidence:</strong> Passes category learning (distinguishes client from predator), social learning (juveniles learn from adults — Truskanov et al. 2020), individual recognition (face-based), and the staged cognitive sequence during mirror testing (aggression > contingency testing > mark removal in 30 min) demonstrates rapid cross-modal integration of visual + proprioceptive + behavioral planning. The shrimp-dropping contingency experiment integrates object manipulation with visual feedback analysis. <strong>Highest applicable:</strong> Novel problem solving in mirror context, social learning, category learning = 0.50-0.60 range. Object manipulation experiment pushes toward higher end. Score: 0.55.</p>
-    </div>
+    <p><strong>Evidence rules.</strong> These steps score rungs, not points. A track reaches a rung when an indicator for that rung is shown and the rung below is reached.</p>
+    <ul>
+      <li>An untested indicator does not raise a rung.</li>
+      <li>A result from a single study or a single lab, or a test that left out a component, gives a range down to the rung below, at low confidence. This replication rule applies to every indicator. For self-recognition, a failed close replication counts as a Moderate indicator, which is where the magpie lands.</li>
+      <li>A contested reading, one that could be explained by reading the other's behavior alone, counts toward the upper end of the range only.</li>
+      <li>Evidence from a related species (R) is recorded but does not set a rung.</li>
+    </ul>
+    <p>These rules are stricter than Step 1's, where R-tagged and single-study evidence may set an item at lowest confidence. The difference is deliberate. A capacity item is one of five and moves a term by at most 0.2, while a single self indicator can set a whole rung, and the rungs are where the contested claims sit.</p>
+    <p>For scent self-recognition, the modified own odor must draw more interest than the added odor alone, or novelty has not been ruled out.</p>
 
-    <div class="step-box">
-      <span class="step-num">U</span>
-      <span class="step-title">Unity = 0.58</span>
-      <p style="margin-top: 8px;"><strong>Mirror test:</strong> Passes with 94% rate. 17/18 fish in Kohda lab studies. Mark removal within 30 minutes in some individuals (Sogawa et al. 2026). <strong>Self-other distinction:</strong> Recognizes own face in photographs (not just movement matching). Contingency testing with shrimp (U 0.70+ behavior). Post-recognition behavioral shift (calmer swimming) suggests unified state change. <strong>Researchers' interpretation:</strong> "Self-awareness may not have evolved only in the limited number of species that passed the mirror test but may be more widely prevalent." Speed of recognition implies self-model existed before mirror exposure. <strong>Why not higher:</strong> Scored conservatively because fish MSR remains debated (Gallup disputes interpretation). No evidence of tactical deception, autobiographical memory, or other higher-order self-awareness markers. Score: 0.58.</p>
-    </div>
+    <h3 style="margin-top: 28px">Three rules that keep the tracks honest</h3>
+    <ol>
+      <li><strong>The substrate cap.</strong> No track is scored above what the capacity band supports. Apply it after all three tracks are scored, and record the raw and capped rungs side by side. The principle is Damasio's nesting: no autobiographical self without a core self.
+        <table class="v2-table" style="max-width: 520px; margin: 10px 0">
+          <thead><tr><th>SIU band</th><th>B at most</th><th>IP at most</th><th>NC at most</th></tr></thead>
+          <tbody>
+            <tr><td>Low</td><td>Moderate</td><td>Moderate</td><td>Low</td></tr>
+            <tr><td>Moderate</td><td>High</td><td>High</td><td>Moderate</td></tr>
+            <tr><td>High or Very high</td><td>High</td><td>High</td><td>High</td></tr>
+          </tbody>
+        </table>
+      </li>
+      <li><strong>The ant rule.</strong> The interpersonal track scores self-other representation, never social activity. An ant colony's constant pheromone signaling is coordination with no "I versus you" model, so an individual ant stays Low on IP despite maximal social behavior.</li>
+      <li><strong>The symbolic cap.</strong> A narrative self is built in symbols, so NC cannot reach High unless language (N4) or naming is shown. Memory and planning carry NC to Moderate on their own. Naming, vocal labels for specific individuals as in dolphin signature whistles and African elephant name-like calls, lifts the cap but does not itself score High.</li>
+    </ol>
 
-    <div class="card" style="margin-top: 24px; text-align: center;">
-      <p style="font-family: var(--mono); font-size: 14px; color: var(--text-muted);">A = 0.65 &times; 0.55 &times; 0.58</p>
-      <p style="font-family: var(--mono); font-size: 36px; font-weight: 600; color: var(--tier-conscious); margin: 8px 0;">20.7%</p>
-      <p><span class="tier-badge tier-conscious">Conscious</span></p>
-      <p style="font-size: 14px; color: var(--text-dim); margin-top: 12px;">27.0% of human waking awareness &bull; Confidence: HIGH</p>
+    <h3 style="margin-top: 28px">Self states</h3>
+    <p>The profile is named by checking these in order and taking the first that fits. When a track is a range that crosses High, name the state at each end.</p>
+    <ul>
+      <li><strong>Integrated self:</strong> all three tracks High, with SIU High or above. Whether the tracks fuse in behavior is not scored; no indicator for that exists. The name avoids "personhood," which carries moral and legal weight the instrument does not measure.</li>
+      <li><strong>Narrative self:</strong> NC High.</li>
+      <li><strong>Social self:</strong> IP High.</li>
+      <li><strong>Identified self:</strong> B High, self-recognition in any modality.</li>
+      <li><strong>Implicit/situated self:</strong> B at least Low, no track at High. Most animals land here.</li>
+      <li><strong>None:</strong> the gate failed, or B is None.</li>
+    </ul>
+  </section>
+
+  <section id="cases">
+    <h2>Reference cases</h2>
+    <p>Every case that forced a design decision, scored item by item. Load any of them in the <a href="calculator.html">calculator</a> to see each answer. One surveyor scored them, so confidence stays low until other people score the same evidence.</p>
+    <div style="overflow-x: auto">
+    <table class="v2-table">
+      <thead><tr><th>Case</th><th>S</th><th>I</th><th>U</th><th>A</th><th>Band</th><th>B / IP / NC</th><th>Self state</th></tr></thead>
+      <tbody>
+        <tr><td>Human</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.00</td><td>Very high</td><td>High / High / High</td><td>integrated</td></tr>
+        <tr><td>Chimpanzee</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.00</td><td>High</td><td>High / High / Mod</td><td>social</td></tr>
+        <tr><td>Common raven</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.0</td><td class="mono">1.00</td><td>High; Very high if uncertainty monitoring is shown</td><td>Low / High / Low to Mod</td><td>social</td></tr>
+        <tr><td>Dog</td><td class="mono">1.0</td><td class="mono">0.7 to 0.9</td><td class="mono">1.0</td><td class="mono">0.89 to 0.97</td><td>Moderate to High</td><td>Mod to High / Mod to High / Low to Mod</td><td>social at the top; implicit/situated at the bottom</td></tr>
+        <tr><td>African elephant</td><td class="mono">1.0</td><td class="mono">0.7 to 0.9</td><td class="mono">1.0</td><td class="mono">0.89 to 0.97</td><td>Moderate to High</td><td>Low / Low to High / Low</td><td>social at the top; implicit/situated at the bottom</td></tr>
+        <tr><td>Raccoon</td><td class="mono">1.0</td><td class="mono">0.7 to 0.9</td><td class="mono">1.0</td><td class="mono">0.89 to 0.97</td><td>Moderate to High</td><td>Low / Low / Low</td><td>implicit/situated (barely tested)</td></tr>
+        <tr><td>Octopus</td><td class="mono">0.9</td><td class="mono">0.8 to 1.0</td><td class="mono">0.9</td><td class="mono">0.87 to 0.93</td><td>Moderate</td><td>Low to Mod / Low / Low</td><td>implicit/situated</td></tr>
+        <tr><td>Cleaner wrasse</td><td class="mono">1.0</td><td class="mono">0.6 to 0.8</td><td class="mono">1.0</td><td class="mono">0.84 to 0.93</td><td>Moderate</td><td>Mod to High / Low to Mod / Low to Mod</td><td>identified at the top; implicit/situated at the bottom</td></tr>
+        <tr><td>Honeybee</td><td class="mono">1.0</td><td class="mono">0.8</td><td class="mono">1.0</td><td class="mono">0.93</td><td>Moderate</td><td colspan="2">anchor; self tracks not scored</td></tr>
+        <tr><td>Ant (individual)</td><td class="mono">0.9</td><td class="mono">0.4</td><td class="mono">0.8</td><td class="mono">0.66</td><td>Low</td><td>Low / Low / Low</td><td>implicit/situated</td></tr>
+        <tr><td>Fruit fly</td><td class="mono">0.9</td><td class="mono">0.4</td><td class="mono">1.0</td><td class="mono">0.71</td><td>Low</td><td colspan="2">anchor; self tracks not scored</td></tr>
+        <tr><td>C. elegans</td><td class="mono">0.9</td><td class="mono">0.2</td><td class="mono">0.0</td><td class="mono">0.00</td><td>None</td><td colspan="2">no mapped hierarchy; fails the gate</td></tr>
+        <tr><td>Language model</td><td class="mono">0.4</td><td class="mono">0 to 1.0</td><td class="mono">0 to 0.2</td><td class="mono">0 to 0.43</td><td>None</td><td colspan="2">fails the gate on Unity even on the generous reading</td></tr>
+        <tr><td>Tesla</td><td class="mono">0.9</td><td class="mono">0</td><td class="mono">0.7</td><td class="mono">0.00</td><td>None</td><td colspan="2">no learning within its own operation</td></tr>
+        <tr><td>Computer worm</td><td class="mono">0.2</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0.00</td><td>None</td><td colspan="2">replicates, but neither learns nor has a mapped hierarchy</td></tr>
+        <tr><td>Model T</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0</td><td class="mono">0.00</td><td>None</td><td colspan="2">pure mechanism; zero through Sensing</td></tr>
+        <tr><td>Earth</td><td colspan="5">Tier 1, persistence; SIU not scored</td><td colspan="2">no planet-level ratchet; would score U of 0</td></tr>
+      </tbody>
+    </table>
     </div>
+    <p style="margin-top: 16px">The wrasse is why three tracks beat one. Its reported mark-test pass may be real bodily self-recognition, and it shows no narrative self, so a single score has to call it either self-aware or not, and either answer is wrong. On three tracks the pass counts on the bodily track, at a range because every result comes from one lab, and the argument about whether a small-brained fish is "self-aware" mostly dissolves. The ant is why the interpersonal rule matters: score social activity and the ant breaks the model; score representation and it lands at Low.</p>
+  </section>
+
+  <section id="validation">
+    <h2>Validation plan</h2>
+    <p>Reliability is necessary and is not the same as validity. Before the bands are used as results, the worksheet needs four checks:</p>
+    <ol>
+      <li><strong>Agreement.</strong> Independent surveyors score the same species from the same evidence, and agreement on bands is measured with Krippendorff's alpha.</li>
+      <li><strong>Hold-out cases.</strong> The reference cases each shaped a design decision, so they are a development set. The test set has to be species chosen and scored after the cutoffs were frozen.</li>
+      <li><strong>Convergence.</strong> Bands and self profiles compared with the multidimensional profiles of Birch, Schnell and Clayton (2020), Veit and colleagues (2025) for corvids, and Dung and Newen (2023). Different dimensions, but the gross ordering should agree.</li>
+      <li><strong>The ladders.</strong> Whether the Integration and Unity items really run in order of difficulty is testable with Mokken scale analysis, once the species database has been rescored item by item on this worksheet.</li>
+    </ol>
+  </section>
+
+  <section id="open">
+    <h2>Open questions</h2>
+    <ul>
+      <li><strong>Is unity a threshold or a slope?</strong> The floor is set by rule. If unity in nature fades continuously, the entry rung is a defensible convention rather than a natural boundary.</li>
+      <li><strong>Superorganisms.</strong> Whether a eusocial colony should ever be scored as a unit is unresolved. The current rule scores the individual.</li>
+      <li><strong>Thin narrative evidence.</strong> Evidence for a temporally extended self is thin outside about a dozen well-studied species, so expect many low-confidence NC scores.</li>
+      <li><strong>Splitting the narrative track.</strong> Patient K.C. could not recall a single experienced event yet rated his own traits accurately (Tulving 1993), and scrub jays show episodic-like memory with no sign of a self-concept. NC merges a temporal self and a conceptual self that come apart in both directions.</li>
+      <li><strong>Hierarchy.</strong> Laurenzi, Raffone, Gallagher and Chiarella (2025) argue the dimensions of the animal self are not hierarchically ordered. The substrate cap disagrees at one point, and a species with a High narrative self on a Low capacity would show the cap to be wrong.</li>
+      <li><strong>Affect.</strong> SIU has no evaluative dimension. Whether a system's states feel good or bad is outside its scope.</li>
+    </ul>
   </section>
 
   <section>
-    <h2>Common Pitfalls</h2>
-    <p><strong>Don't confuse sensing with integration.</strong> A box jellyfish has extraordinary sensors (S = 0.90) but terrible integration (I = 0.15) because its four visual clusters don't communicate. Score each independently.</p>
-    <br>
-    <p><strong>Don't use brain size as a proxy for integration.</strong> Honeybees have ~1 million neurons and score I = 0.70 (number sense, dance language, optimism/pessimism). A tuna has millions more neurons but scores I = 0.38. Architecture and connectivity matter more than count.</p>
-    <br>
-    <p><strong>Don't inflate Unity for charismatic species.</strong> Dogs feel unified to us because we live with them, but the evidence for canine self-modeling is weaker than for corvids or cleaner wrasse. Score what's documented, not what feels right.</p>
-    <br>
-    <p><strong>Don't deflate scores for "alien" cognition.</strong> Cephalopods, insects, and fish process information through radically different architectures than mammals. Different does not mean less. Score the behavior, not the brain shape.</p>
-    <br>
-    <p><strong>When in doubt, score conservatively and note your confidence.</strong> A LOW-confidence score of 0.45 is more honest than a HIGH-confidence score of 0.45 that's based on guesswork.</p>
+    <h2>Lineage</h2>
+    <p style="font-size: 15px; color: var(--text-dim)">The pieces are established; the assembly is new. Self as several dissociable components: Rochat (2003), Gallagher (2000), Damasio (1999), Neisser (1988), DeGrazia (2009). The gradualist critique of the mirror test: de Waal (2019). Neural dissociation of bodily and narrative self: Farb et al. (2007), Lyu et al. (2023). Learning as the marker of minimal consciousness: Ginsburg and Jablonka (2019). Mapped sensory hierarchies: Feinberg and Mallatt (2016). Consciousness profiles: Birch, Schnell and Clayton (2020), Dung and Newen (2023). Indicators for AI systems: Butlin et al. (2026). Persistence and dissipative structures: Prigogine, England (2013). Darwinian individuality: Godfrey-Smith (2009). The geometric mean and its critique: UNDP (2010), Ravallion (2012). Replication of self-recognition results: Prior et al. (2008), Soler et al. (2020), Kohda et al. (2019, 2022, 2023), Horowitz (2017). The behavior-reading objection: Heyes (1998), Penn and Povinelli (2007).</p>
   </section>
 
 </div>
 
 <footer>
   <div class="container">
-    <p>The SIU Principle &mdash; noelle-bytes &mdash; 2026</p>
-    <p style="margin-top: 8px; font-size: 12px;">This framework is open. Use it, test it, break it, improve it.</p>
+    <p>The SIU Principle &middot; noelle-bytes &middot; 2026</p>
+    <p style="margin-top: 8px; font-size: 12px;">Worksheet v2. Earlier tools: <a href="calculator-legacy.html">legacy calculator</a> &middot; <a href="methodology-legacy.html">legacy methodology</a>.</p>
   </div>
 </footer>
 
