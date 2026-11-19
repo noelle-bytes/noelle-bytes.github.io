@@ -6,11 +6,11 @@
   <meta name="theme-color" content="#38bdf8">
   <link rel="apple-touch-icon" href="icon-192.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SIU Calculator - Score Any Organism</title>
-  <meta name="description" content="Interactive calculator for the SIU awareness framework. Score any organism's awareness using Sensing, Integration, and Unity.">
+  <title>SIU Calculator (Worksheet v2)</title>
+  <meta name="description" content="Item-level calculator for the SIU field worksheet, version 2: tier placement, Sensing, Integration and Unity items, the gate, the capacity band, and the three-track self profile.">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="has-mobile-bar">
 
 <nav>
   <div class="container">
@@ -18,205 +18,506 @@
     <div class="links">
       <a href="index.html">Home</a>
       <a href="calculator.html" class="active">Calculator</a>
-      <a href="species.html">Species Database</a>
       <a href="methodology.html">Methodology</a>
+      <a href="species.html">Species Database</a>
     </div>
   </div>
 </nav>
 
-<div class="container">
+<div class="wide-container">
 
-  <div class="hero" style="padding-bottom: 36px">
-    <h1>Score any organism</h1>
-    <p class="subtitle">Adjust the three parameters. The framework does the rest.</p>
+  <div class="hero" style="padding-bottom: 32px">
+    <h1>Score a system, item by item</h1>
+    <p class="subtitle">This calculator runs the field worksheet, version 2. Answer what the evidence shows, mark what is untested, and it works out the capacity band and the self profile, with ranges wherever the evidence is incomplete.</p>
+    <div class="notice">
+      <strong>Status:</strong> a proposal, not a validated instrument. Every reference score was made by one surveyor, and the bands are coarse. The band estimates how much of a particular architecture a system has; it does not measure experience. How each item is defined, and why, is on the <a href="methodology.html">methodology page</a>.
+      The earlier slider calculator (v1) is kept as the <a href="calculator-legacy.html">legacy calculator</a>.
+    </div>
   </div>
 
-  <section style="padding-top: 36px">
+  <section style="padding-top: 28px">
+    <h2>Load a reference case</h2>
+    <div id="presets"></div>
+    <p class="small-note">These are the anchors and worked cases from the score sheets. Loading one replaces everything below.</p>
+  </section>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;" class="calc-grid">
-      <div style="min-width: 0;">
-        <h2>Parameters</h2>
+  <section style="padding-top: 28px">
+    <div class="v2-grid">
+      <div id="worksheet">
 
-        <div class="slider-row">
-          <span class="slider-label">S</span>
-          <input type="range" id="s-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="s-value">0.50</span>
+        <div class="step-card">
+          <h3>Record</h3>
+          <p class="step-intro">Optional. These go into the score sheet you can copy at the end.</p>
+          <input class="v2" id="sp-name" placeholder="System or species name">
+          <textarea class="v2" id="sp-notes" placeholder="Notes, sources, confidence" style="margin-top: 8px"></textarea>
         </div>
-        <p class="slider-desc">Sensing: how much can it detect? Modality count, receptor quality, bandwidth.</p>
 
-        <div class="slider-row">
-          <span class="slider-label">I</span>
-          <input type="range" id="i-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="i-value">0.50</span>
+        <div class="step-card">
+          <h3>Step 0: Place it on the tiers</h3>
+          <p class="step-intro">Answer in order. This step carries no points; it decides whether SIU is scored at all.</p>
+          <div id="step0"></div>
         </div>
-        <p class="slider-desc">Integration: how well do signals talk to each other? Cross-modal binding, neural connectivity.</p>
 
-        <div class="slider-row">
-          <span class="slider-label">U</span>
-          <input type="range" id="u-slider" min="0" max="100" value="50">
-          <span class="slider-value" id="u-value">0.50</span>
-        </div>
-        <p class="slider-desc">Unity: is there a unified self? Self-model, coherent behavior, mirror test evidence.</p>
-
-        <div class="caveat" style="margin-top: 32px">
-          <div class="caveat-title">Quick Scoring Guide</div>
-          <p><strong>0.00-0.15</strong> &mdash; Absent or vestigial. Sponge, plant, bacterium.<br>
-          <strong>0.15-0.35</strong> &mdash; Basic. Simple nerve net, reflexive.<br>
-          <strong>0.35-0.55</strong> &mdash; Moderate. Some learning, behavioral flexibility.<br>
-          <strong>0.55-0.75</strong> &mdash; Strong. Complex social behavior, problem solving.<br>
-          <strong>0.75-0.95</strong> &mdash; Exceptional. Tool use, self-recognition, planning.</p>
-          <p style="margin-top: 12px;"><a href="methodology.html" style="color: var(--accent); font-family: var(--mono); font-size: 13px;">Full scoring rubric with step-by-step instructions &rarr;</a></p>
-        </div>
-      </div>
-
-      <div style="min-width: 0;">
-        <h2>Result</h2>
-        <div class="card" style="text-align: center; padding: 32px 24px;">
-          <div class="result-label">SIU Score</div>
-          <div class="result-big" id="result-score">12.5%</div>
-          <div id="result-tier" style="margin: 12px 0 24px;">
-            <span class="tier-badge tier-subconscious">Subconscious</span>
+        <div class="step-card" id="step1">
+          <h3>Step 1: Score SIU</h3>
+          <p class="step-intro">Yes is 0.2, Partial 0.1, No 0. Sensing items are scored on their own. Integration and Unity are ladders: an item counts only if the one before it scored at least Partial, and the ladder stops at the first No. Mark untested items U; the calculator scores them both ways and reports the range. Tags (F field, L lab, N neuroanatomy, R related species) go on the record and do not change the score.</p>
+          <div id="construct-rules" class="notice" style="display:none">
+            <strong>Construct rules.</strong> A receptor means a physical transducer the system carries (a camera, a microphone, a motion sensor); input handed to it already digitized counts at most Partial on S1, and channels with no transducer count at most Partial on S2. Learning counts only if it happens inside the system during its own operation. I5 does not apply: Integration is I1 to I4, divided by 0.8.
           </div>
-          <div class="result-label">% of Human Waking Awareness</div>
-          <div style="font-family: var(--mono); font-size: 28px; font-weight: 600; margin: 8px 0;" id="result-pct-human">16.3%</div>
+          <div id="siu-items"></div>
         </div>
 
-        <div class="card" style="margin-top: 16px;">
-          <div class="result-label" style="margin-bottom: 12px;">Nearest Scored Organisms</div>
-          <div id="nearest-organisms" style="font-size: 14px; color: var(--text-dim);"></div>
+        <div class="step-card" id="self-card">
+          <h3>Steps 2 to 4: The three self tracks</h3>
+          <p class="step-intro">These score rungs, not points. A track reaches a rung when an indicator for that rung is shown and the rung below is reached. An untested indicator does not raise a rung. A result from a single study or a single lab, or a test that left out a component, gives a range down to the rung below. A contested reading (one that could be behavior-reading) counts toward the upper end only. Evidence from a related species is recorded but does not set a rung.</p>
+          <div id="self-gate-msg" class="notice" style="display:none"></div>
+          <div id="self-items"></div>
         </div>
 
-        <div class="card" style="margin-top: 16px;">
-          <div class="result-label" style="margin-bottom: 12px;">All Formulas</div>
-          <table id="formula-table" style="font-size: 13px;">
-            <tr><td>A = S &times; I (Simple)</td><td class="num" id="f-si">--</td></tr>
-            <tr><td>A = S &times; I &times; U (Standard)</td><td class="num" id="f-siu">--</td></tr>
-            <tr><td>A = S &times; I&sup2; &times; U (Precise)</td><td class="num" id="f-precise">--</td></tr>
-          </table>
-        </div>
       </div>
-    </div>
 
-    <div style="margin-top: 40px">
-      <h2>Quick Presets</h2>
-      <div class="filter-row" id="presets"></div>
+      <aside class="v2-results">
+        <div class="card" id="results"></div>
+        <div class="btn-row">
+          <button class="btn" id="copy-btn">Copy score sheet</button>
+          <button class="btn ghost" id="dl-btn">Download .txt</button>
+          <button class="btn ghost" id="reset-btn">Reset</button>
+        </div>
+        <p class="small-note" id="copy-msg"></p>
+      </aside>
     </div>
-
   </section>
 
 </div>
 
+<div class="mobile-bar" id="mobile-bar"></div>
+
 <footer>
   <div class="container">
-    <p>The SIU Principle &mdash; noelle-bytes &mdash; 2026</p>
+    <p>The SIU Principle &middot; noelle-bytes &middot; 2026</p>
+    <p style="margin-top: 8px; font-size: 12px;">Worksheet v2. The v1 tools remain available: <a href="calculator-legacy.html">legacy calculator</a> &middot; <a href="methodology-legacy.html">legacy methodology</a>.</p>
   </div>
 </footer>
 
-<script src="species-data.js"></script>
+<script src="siu-v2.js"></script>
 <script>
-const H_SIU = 0.85 * 0.95 * 0.95;
+(function () {
+  const SIU = window.SIU2;
 
-const presets = [
-  {name: "Human", s:85, i:95, u:95},
-  {name: "Chimpanzee", s:80, i:90, u:90},
-  {name: "Dolphin", s:75, i:88, u:88},
-  {name: "Octopus", s:80, i:72, u:82},
-  {name: "Crow", s:70, i:75, u:78},
-  {name: "Honeybee", s:70, i:70, u:75},
-  {name: "Cleaner wrasse", s:65, i:55, u:58},
-  {name: "Dog", s:75, i:72, u:75},
-  {name: "Goldfish", s:50, i:38, u:35},
-  {name: "Box jellyfish", s:90, i:15, u:25},
-  {name: "Ant", s:65, i:70, u:80},
-  {name: "C. elegans", s:40, i:50, u:55},
-  {name: "Oak tree", s:22, i:5, u:8},
-  {name: "Sponge", s:10, i:3, u:5},
-];
+  const STEP0 = [
+    { key: 'made', q: 'Made or evolved? Was it designed or manufactured?', opts: [['Y', 'Made'], ['N', 'Evolved']] },
+    { key: 'flow', q: 'Flow-dependence: does it keep its form only while energy or matter flows through it?', opts: [['Y', 'Yes'], ['N', 'No']] },
+    { key: 'recovery', q: 'Recovery: when disturbed, does it restore its own form, the way a flame re-forms after a gust?', opts: [['Y', 'Yes'], ['N', 'No']] },
+    { key: 'selfprod', q: 'Self-production: does it build and repair its own parts inside its own boundary?', opts: [['Y', 'Yes'], ['N', 'No']] },
+    { key: 'lineage', q: 'Lineage: did it come from parents like itself, through heredity with variation? Sterile members of a reproducing lineage count.', opts: [['Y', 'Yes'], ['B', 'Borderline'], ['N', 'No']] }
+  ];
 
-function getTier(pctHuman) {
-  if (pctHuman >= 80) return {name: "Self-Aware III", cls: "tier-selfaware", sub: "Recursive: metacognition, language/symbols, cultural accumulation"};
-  if (pctHuman >= 65) return {name: "Self-Aware II", cls: "tier-selfaware", sub: "Social self: theory of mind, empathy, complex deception, cultural traditions"};
-  if (pctHuman >= 50) return {name: "Self-Aware I", cls: "tier-selfaware", sub: "Self-model: mirror recognition, contingency testing, individual identity"};
-  if (pctHuman >= 42) return {name: "Conscious V", cls: "tier-conscious", sub: "Near self-aware: complex planning, cultural transmission, cooperative strategy"};
-  if (pctHuman >= 35) return {name: "Conscious IV", cls: "tier-conscious", sub: "Strategic: tool use, multi-step planning, social manipulation"};
-  if (pctHuman >= 27) return {name: "Conscious III", cls: "tier-conscious", sub: "Flexible: problem solving, individual recognition, strategy adjustment"};
-  if (pctHuman >= 20) return {name: "Conscious II", cls: "tier-conscious", sub: "Learning: social learning, spatial memory, adapts to new situations"};
-  if (pctHuman >= 14) return {name: "Conscious I", cls: "tier-conscious", sub: "Aware: basic learning, conditioning, preferences, not a sleepwalker"};
-  if (pctHuman >= 9) return {name: "Subconscious II", cls: "tier-subconscious", sub: "Routine: conditioned responses, basic spatial memory, habitual"};
-  if (pctHuman >= 5) return {name: "Subconscious I", cls: "tier-subconscious", sub: "Sleepwalker: simple habituation, minimal learning"};
-  if (pctHuman >= 1) return {name: "Reactive", cls: "tier-reactive", sub: "Responds to stimuli but no learning or adjustment"};
-  return {name: "Minimal", cls: "tier-minimal", sub: "No nervous system or equivalent"};
-}
-
-function update() {
-  const s = parseInt(document.getElementById('s-slider').value) / 100;
-  const i = parseInt(document.getElementById('i-slider').value) / 100;
-  const u = parseInt(document.getElementById('u-slider').value) / 100;
-
-  document.getElementById('s-value').textContent = s.toFixed(2);
-  document.getElementById('i-value').textContent = i.toFixed(2);
-  document.getElementById('u-value').textContent = u.toFixed(2);
-
-  const siu = s * i * u;
-  const pctHuman = (siu / H_SIU) * 100;
-  const tier = getTier(pctHuman);
-
-  document.getElementById('result-score').textContent = (siu * 100).toFixed(1) + '%';
-  document.getElementById('result-score').style.color =
-    `var(--${tier.cls.replace('tier-', 'tier-')})`;
-  document.getElementById('result-tier').innerHTML =
-    `<span class="tier-badge ${tier.cls}">${tier.name}</span>
-     <div style="font-size: 12px; color: var(--text-dim); margin-top: 6px; font-style: italic;">${tier.sub}</div>`;
-  document.getElementById('result-pct-human').textContent = pctHuman.toFixed(1) + '%';
-
-  // Formula variants
-  document.getElementById('f-si').textContent = (s * i * 100).toFixed(1) + '%';
-  document.getElementById('f-siu').textContent = (siu * 100).toFixed(1) + '%';
-  document.getElementById('f-precise').textContent = (s * i * i * u * 100).toFixed(2) + '%';
-
-  // Nearest organisms
-  const scored = SPECIES_DB.map(sp => ({
-    name: sp.name,
-    siu: sp.S * sp.I * sp.U,
-    dist: Math.abs(sp.S * sp.I * sp.U - siu)
-  })).sort((a, b) => a.dist - b.dist).slice(0, 5);
-
-  document.getElementById('nearest-organisms').innerHTML = scored.map(sp => {
-    const spPct = (sp.siu / H_SIU * 100).toFixed(1);
-    const spTier = getTier(sp.siu / H_SIU * 100);
-    return `<div style="display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 4px;">
-      <span>${sp.name}</span>
-      <span style="font-family: var(--mono); font-size: 12px;">${spPct}% <span class="tier-badge ${spTier.cls}" style="font-size: 9px; padding: 1px 6px;">${spTier.name}</span></span>
-    </div>`;
-  }).join('');
-}
-
-// Preset buttons
-const presetsEl = document.getElementById('presets');
-presets.forEach(p => {
-  const btn = document.createElement('button');
-  btn.className = 'chip';
-  btn.textContent = p.name;
-  btn.onclick = () => {
-    document.getElementById('s-slider').value = p.s;
-    document.getElementById('i-slider').value = p.i;
-    document.getElementById('u-slider').value = p.u;
-    update();
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    btn.classList.add('active');
+  const ITEMS = {
+    S: [
+      ['S1', 'Dedicated sensors', 'Receptor cells specialized for a stimulus. Yes: gathered into sense organs, such as eyes, antennae or a lateral line. Partial: specialized cells not gathered into organs. No: only general cell responses.'],
+      ['S2', 'Number of senses', 'Yes: four or more distinct modalities. Partial: two or three.'],
+      ['S3', 'Distance sense', 'Detects things it is not touching, with direction. Yes: vision, hearing, smell tracked to a source, electroreception, echolocation. Partial: light versus dark only, or a diffuse gradient.'],
+      ['S4', 'Body sense', 'Senses its own posture or limb position, and an internal state such as hunger. Yes: both. Partial: one.'],
+      ['S5', 'Fine discrimination', 'Yes: tells apart individuals of its own species, or differences as fine in some sense. Partial: coarse categories only (food or not, threat or not).']
+    ],
+    I: [
+      ['I1', 'Associative learning', 'Links a cue to an outcome by classical or operant conditioning. Partial: habituation or sensitization only.'],
+      ['I2', 'Open-ended learning', 'Learns new compound stimuli or new action sequences, including second-order or trace conditioning and cues combined across senses. Partial: shown for only one sense or a few cue types.'],
+      ['I3', 'Flexible problem-solving', 'Solves a problem it has not met before without step-by-step training, such as a detour around a new barrier or a new use of a tool. A planning result goes under N3, not here. Partial: only after long trial and error, or only some individuals.'],
+      ['I4', 'Rule transfer', 'Applies a learned rule (same versus different, a number, a sequence) to stimuli it has never seen. Partial: transfer only to stimuli close to the trained ones.'],
+      ['I5', 'Scale (outside the ladder)', 'Neurons in the integrating center: cortex in mammals, pallium in birds, the whole brain in fish and insects, the central brain with optic lobes in cephalopods. Yes: 100 million or more. Partial: 100,000 to under 100 million. No: under 100,000. Always scored for organisms; does not apply to constructs.']
+    ],
+    U: [
+      ['U1', 'Funneling hierarchy (entry rung)', 'Sensory streams converge on a central hub through mapped levels: layers where neighboring receptors project to neighboring cells, feeding a further such layer (the insect retina, lamina and medulla are three). Yes: three or more. Partial: two. No: a nerve net, or sensory neurons feeding interneurons directly. A No here makes U, and so A, zero.'],
+      ['U2', 'Whole-system states', 'States that switch the whole system between modes of operation, with recovery after deprivation; in animals, sleep with recovery sleep. Partial: a whole-system rest state without recovery, or only local quiescence.'],
+      ['U3', 'One agent', 'The whole body acts toward one goal at a time. Partial: parts keep substantial local control, as octopus arms do.'],
+      ['U4', 'Competing drives', 'Settles conflicts by the stakes, accepting more risk when hungrier. Partial: a fixed order of priority.'],
+      ['U5', 'Selective attention', 'Picks one target among distractors and holds it. Partial: orients to stimuli but is captured by each new one.']
+    ],
+    X: [
+      ['S+', 'Image-forming sense', 'Resolves the features of an object at a distance, as a camera-type eye or echolocation does.'],
+      ['I+', 'Analogical reasoning', 'Matches relations between relations (a same pair to a same pair, a different pair to a different pair) without being trained on that task.'],
+      ['U+', 'Uncertainty monitoring', 'Declines, delays or seeks more information on hard trials more often than on easy ones.']
+    ]
   };
-  presetsEl.appendChild(btn);
-});
 
-// Listeners
-['s-slider', 'i-slider', 'u-slider'].forEach(id => {
-  document.getElementById(id).addEventListener('input', () => {
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
-    update();
+  const SELF = {
+    B: { label: 'Bodily-agentive self (B)', items: [
+      ['B1', 'Self and world', 'Low', 'Treats its own body as distinct from the world: reacts differently to its own touch than to an outside touch, and does not attack its own limbs.'],
+      ['B2', 'Body as obstacle', 'Moderate', 'Takes its own body into account as an object, such as stepping off a mat it stands on in order to pull the mat, or judging whether it fits through a gap.'],
+      ['B3', 'Contingency testing', 'Moderate', 'Makes repeated movements while watching the effect follow, as in front of a mirror. Mark-test studies usually report this; score it from the same study.'],
+      ['B4', 'Self-recognition', 'High', 'Identifies itself in any modality: a mirror mark, its own scent or a photograph. For scent, the modified own odor must draw more interest than the added odor alone. A failed close replication counts as a Moderate indicator.']
+    ]},
+    IP: { label: 'Interpersonal self (IP)', items: [
+      ['P1', 'Others as agents', 'Low', 'Responds to another animal’s gaze or movement differently from an object’s movement.'],
+      ['P2', 'Individual recognition', 'Low', 'Treats a known individual differently from a stranger, based on past dealings. Telling individuals apart is not yet modeling an I against a you.'],
+      ['P3', 'Audience effect', 'Moderate', 'Behaves differently when watched than when alone.'],
+      ['P4', 'Selective sharing', 'Moderate', 'Hides or shares information depending on who is present.'],
+      ['P5', 'Deception', 'High', 'Gives false signals to, or misleads, a specific other, and adjusts the deception to that other.'],
+      ['P6', 'Visual perspective', 'High', 'Acts on what another can or cannot see. Prefer designs that rule out reading the other’s behavior alone.'],
+      ['P7', 'Hunting and fighting', 'High', 'Stalks prey from outside its line of sight, freezes when the prey looks, or feints against a rival, and only when the move tracks what the other perceives.']
+    ]},
+    NC: { label: 'Narrative-conceptual self (NC)', items: [
+      ['N1', 'Fragments of past and future', 'Low', 'Acts on a specific past experience days later, or anticipates a recurring event.'],
+      ['N2', 'Episodic-like memory', 'Moderate', 'Remembers what happened, where and when.'],
+      ['N3', 'Planning', 'Moderate', 'Prepares for a future need it does not feel now.'],
+      ['N4', 'Language', 'High', 'An open-ended symbolic system that composes new messages. Lifts the symbolic cap.'],
+      ['N5', 'Self in others’ minds', 'High', 'Acts to shape how a specific other will regard it later, such as repairing a relationship after a conflict. Audience effects alone go under P3.']
+    ]}
+  };
+
+  const STATUS = [
+    ['N', 'Not shown or untested'],
+    ['C', 'Shown, replicated'],
+    ['S', 'Single study or lab, or incomplete'],
+    ['X', 'Contested reading'],
+    ['R', 'Related species only (R)']
+  ];
+  const STATUS_B4 = STATUS.concat([['F', 'Failed close replication']]);
+
+  const BAND_CLASS = { 'None': 'tier-minimal', 'Low': 'tier-reactive', 'Moderate': 'tier-subconscious', 'High': 'tier-conscious', 'Very high': 'tier-selfaware' };
+
+  let state = blank();
+  function blank() { return { step0: {}, items: {}, tags: {}, self: {}, naming: 'N', name: '', notes: '' }; }
+
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  function seg(group, key, opts, current) {
+    return '<div class="seg" data-group="' + group + '" data-key="' + key + '">' +
+      opts.map(([v, label]) => '<button type="button" data-v="' + v + '"' + (current === v ? ' class="on"' : '') + '>' + label + '</button>').join('') +
+      '</div>';
+  }
+
+  function tagSelect(key) {
+    const cur = state.tags[key] || '';
+    return '<select class="v2" data-tag="' + key + '" title="Evidence tag">' +
+      [['', 'tag'], ['F', 'F'], ['L', 'L'], ['N', 'N'], ['R', 'R']].map(([v, l]) => '<option value="' + v + '"' + (cur === v ? ' selected' : '') + '>' + l + '</option>').join('') +
+      '</select>';
+  }
+
+  function buildPresets() {
+    const groups = {};
+    SIU.PRESETS.forEach((p, i) => { (groups[p.group] = groups[p.group] || []).push([p, i]); });
+    let html = '';
+    for (const g of Object.keys(groups)) {
+      html += '<div class="preset-group">' + esc(g) + '</div><div class="filter-row" style="margin:4px 0">' +
+        groups[g].map(([p, i]) => '<button class="chip" data-preset="' + i + '">' + esc(p.name) + '</button>').join('') + '</div>';
+    }
+    $('presets').innerHTML = html;
+  }
+
+  function buildStep0() {
+    $('step0').innerHTML = STEP0.map(s =>
+      '<div class="item" data-step0row="' + s.key + '"><div><div class="desc" style="font-size:14px;color:var(--text)">' + esc(s.q) + '</div></div>' +
+      '<div class="controls">' + seg('step0', s.key, s.opts, state.step0[s.key]) + '</div></div>').join('');
+  }
+
+  function buildSIU() {
+    const block = (term, title) => {
+      const opts = term === 'X' ? [['Y', 'Yes'], ['N', 'No'], ['U', 'U']] : [['Y', 'Yes'], ['P', 'Partial'], ['N', 'No'], ['U', 'U']];
+      return '<div class="term-head"><span>' + title + '</span><span class="term-val" id="tv-' + term + '"></span></div>' +
+        ITEMS[term].map(([code, t, d]) =>
+          '<div class="item" data-item="' + code + '"><div><span class="code">' + code + '</span><span class="title">' + esc(t) + '</span><span class="flag" id="fl-' + code + '"></span>' +
+          '<div class="desc">' + esc(d) + '</div></div>' +
+          '<div class="controls">' + seg('items', code, opts, state.items[code]) + tagSelect(code) + '</div></div>').join('');
+    };
+    $('siu-items').innerHTML =
+      block('S', 'Sensing (S)') + block('I', 'Integration (I)') + block('U', 'Unity (U)') +
+      block('X', 'Stretch items (no points; all three, with A at 0.95 or above, give Very high)');
+  }
+
+  function buildSelf() {
+    let html = '';
+    for (const t of ['B', 'IP', 'NC']) {
+      html += '<div class="term-head"><span>' + SELF[t].label + '</span><span class="term-val" id="sv-' + t + '"></span></div>';
+      for (const [code, title, rung, desc] of SELF[t].items) {
+        const opts = code === 'B4' ? STATUS_B4 : STATUS;
+        const cur = state.self[code] || 'N';
+        html += '<div class="item"><div><span class="code">' + code + '</span><span class="title">' + esc(title) + '</span><span class="flag">' + rung + '</span>' +
+          '<div class="desc">' + esc(desc) + '</div></div><div class="controls"><select class="v2" data-self="' + code + '">' +
+          opts.map(([v, l]) => '<option value="' + v + '"' + (cur === v ? ' selected' : '') + '>' + l + '</option>').join('') +
+          '</select></div></div>';
+      }
+      if (t === 'IP') {
+        html += '<p class="small-note">Ant rule: score self-other representation, never social activity. Pheromone coordination with no I-versus-you model is activity and does not count.</p>';
+      }
+      if (t === 'NC') {
+        html += '<div class="item"><div><span class="code">Naming</span><span class="title">Names for individuals</span><span class="flag">lifts cap</span>' +
+          '<div class="desc">Uses and answers vocal labels for specific individuals, its own included. Lifts the symbolic cap but is not a rung indicator: without language or naming, NC cannot reach High.</div></div>' +
+          '<div class="controls">' + seg('naming', 'naming', [['Y', 'Shown'], ['N', 'Not shown']], state.naming) + '</div></div>';
+      }
+    }
+    $('self-items').innerHTML = html;
+  }
+
+  function buildAll() {
+    $('sp-name').value = state.name;
+    $('sp-notes').value = state.notes;
+    buildStep0(); buildSIU(); buildSelf(); update();
+  }
+
+  function fmtRange(a, b, digits) {
+    const f = x => Number(x).toFixed(digits);
+    return a === b ? f(a) : f(a) + ' to ' + f(b);
+  }
+
+  function update() {
+    const r = SIU.score(state);
+    const lo = r.low, hi = r.high;
+    const construct = r.mode === 'construct';
+    const scored = r.placement.scored;
+
+    // Step 0 rows: disable questions after a stop or not yet reached.
+    const order = ['made', 'flow', 'recovery', 'selfprod', 'lineage'];
+    let reachable = true;
+    for (const k of order) {
+      const row = document.querySelector('[data-step0row="' + k + '"]');
+      row.classList.toggle('disabled', !reachable);
+      const v = state.step0[k];
+      if (k === 'made') reachable = v === 'N';
+      else if (reachable) reachable = v === 'Y';
+    }
+
+    $('construct-rules').style.display = construct ? 'block' : 'none';
+    $('step1').style.opacity = scored ? '1' : '0.4';
+    const i5 = document.querySelector('[data-item="I5"]');
+    if (i5) i5.classList.toggle('disabled', construct);
+
+    // Ladder flags.
+    const ladderFlags = (items, ans) => {
+      let stopLo = false, stopHi = false;
+      for (const it of items) {
+        const a = ans[it];
+        const vLo = a === 'Y' ? 2 : a === 'P' ? 1 : 0;
+        const vHi = a === 'U' ? 2 : vLo;
+        let flag = '';
+        if (stopLo && stopHi) flag = 'not counted: ladder stopped';
+        else if (stopLo) flag = 'counted on the upper end only';
+        document.getElementById('fl-' + it).textContent = flag;
+        document.querySelector('[data-item="' + it + '"]').classList.toggle('skipped', stopLo && stopHi);
+        if (vLo === 0) stopLo = true;
+        if (vHi === 0) stopHi = true;
+      }
+    };
+    ladderFlags(SIU.I_LADDER, state.items);
+    ladderFlags(SIU.U_LADDER, state.items);
+
+    $('tv-S').textContent = fmtRange(lo.S, hi.S, 1);
+    $('tv-I').textContent = fmtRange(lo.I, hi.I, 2);
+    $('tv-U').textContent = fmtRange(lo.U, hi.U, 1);
+    $('tv-X').textContent = '';
+
+    // Self tracks availability.
+    const gateAny = scored && hi.gate.pass;
+    const anySelf = Object.values(state.self).some(v => v && v !== 'N') || state.naming === 'Y';
+    $('self-gate-msg').style.display = gateAny ? 'none' : 'block';
+    $('self-gate-msg').innerHTML = scored
+      ? '<strong>Not scored for a self.</strong> The system does not clear the gate, so B, IP and NC are recorded as None.'
+      : '<strong>Not scored.</strong> Finish Step 0 first.';
+    $('self-items').style.opacity = gateAny ? '1' : '0.4';
+    for (const t of ['B', 'IP', 'NC']) {
+      const rr = r.self.afterSymbolic[t];
+      $('sv-' + t).textContent = gateAny && anySelf ? 'raw ' + SIU.rungRangeLabel(rr.lower, rr.upper) : '';
+    }
+
+    renderResults(r, gateAny, anySelf);
+  }
+
+  function gateCell(lo, hi, key) {
+    const a = lo.gate[key], b = hi.gate[key];
+    if (a && b) return '<span class="ok">pass</span>';
+    if (!a && !b) return '<span class="bad">fail</span>';
+    return '<span class="maybe">depends on U items</span>';
+  }
+
+  function renderResults(r, gateAny, anySelf) {
+    const lo = r.low, hi = r.high, p = r.placement;
+    let h = '<div class="res-head">Placement</div>';
+    h += '<div class="res-row"><span class="k">Tier</span><span class="v">' + esc(p.tier || 'not placed') + '</span></div>';
+    h += '<p class="small-note">' + esc(p.note) + '</p>';
+
+    if (!p.scored) {
+      h += '<div class="res-head">Capacity</div><p class="small-note">SIU is not scored for this placement.</p>';
+      $('results').innerHTML = h;
+      $('mobile-bar').innerHTML = '<span>' + esc(p.tier || 'Step 0') + '</span><span>SIU not scored</span>';
+      return;
+    }
+
+    const unanswered = ['S1','S2','S3','S4','S5','I1','U1'].filter(k => !state.items[k]).length;
+    h += '<div class="res-head">Capacity (SIU)</div>';
+    h += row('Sensing S', fmtRange(lo.S, hi.S, 2));
+    h += row('Integration I', fmtRange(lo.I, hi.I, 2));
+    h += row('Unity U', fmtRange(lo.U, hi.U, 2));
+    h += row('A = (S × I × U)^(1/3)', fmtRange(lo.A, hi.A, 2));
+    h += row('min(S, I, U)', fmtRange(lo.min, hi.min, 2));
+
+    h += '<div class="res-head">Gate</div>';
+    h += '<div class="res-row"><span class="k">A at least 0.35</span><span class="v">' + gateCell(lo, hi, 'a') + '</span></div>';
+    h += '<div class="res-row"><span class="k">min(S, I, U) at least 0.35</span><span class="v">' + gateCell(lo, hi, 'min') + '</span></div>';
+    h += '<div class="res-row"><span class="k">I2 at least Partial</span><span class="v">' + gateCell(lo, hi, 'i2') + '</span></div>';
+
+    const bandTxt = SIU.bandRange(lo, hi);
+    const badge = b => '<span class="band-badge tier-badge ' + BAND_CLASS[b] + '">' + b + '</span>';
+    h += '<div class="res-head">Band</div><div style="margin:4px 0 2px">' +
+      (lo.band === hi.band ? badge(lo.band) : badge(lo.band) + ' <span style="color:var(--text-muted)">to</span> ' + badge(hi.band)) + '</div>';
+    if (hi.veryHighIfShown) h += '<p class="small-note">Very high if the untested stretch items are shown.</p>';
+    if (unanswered) h += '<p class="small-note maybe">' + unanswered + ' key item(s) unanswered, scored as No.</p>';
+
+    let tierOut = '';
+    if (r.mode === 'construct') tierOut = hi.gate.pass ? (lo.gate.pass ? 'Aware construct' : 'Aware construct on the upper end') : 'Construct, below the gate';
+    else tierOut = hi.gate.pass ? (lo.gate.pass ? 'Tier 3, awareness' : 'Tier 3 on the upper end only') : p.tier + ', below the gate';
+    h += '<p class="small-note">' + esc(tierOut) + '. The band estimates architecture, not experience.</p>';
+
+    h += '<div class="res-head">Self profile</div>';
+    let mobileSelf = '';
+    if (!gateAny) {
+      h += '<p class="small-note">Not scored: the gate is not cleared. B, IP and NC are None.</p>';
+      mobileSelf = 'no self scored';
+    } else if (!anySelf) {
+      h += '<p class="small-note">No self indicators entered yet.</p>';
+      mobileSelf = 'self not entered';
+    } else {
+      const e = r.self.ends;
+      for (const t of ['B', 'IP', 'NC']) {
+        const lab = SIU.rungRangeLabel(e.lower.rungs[t], e.upper.rungs[t]);
+        const capped = e.lower.capped[t] || e.upper.capped[t];
+        const sym = t === 'NC' && (r.self.symbolic.upper || r.self.symbolic.lower);
+        let note = '';
+        if (capped) note += ' <span class="maybe" title="Lowered by the SIU ceiling">(ceiling)</span>';
+        if (sym) note += ' <span class="maybe" title="No language or naming">(symbolic cap)</span>';
+        h += '<div class="res-row"><span class="k">' + t + '</span><span class="v">' + lab + note + '</span></div>';
+      }
+      const st = e.upper.state === e.lower.state ? e.upper.state : e.upper.state + ' at the top of the range; ' + e.lower.state + ' at the bottom';
+      h += '<div class="res-row"><span class="k">Self state</span><span class="v" style="font-family:var(--serif)">' + esc(st) + '</span></div>';
+      h += '<p class="small-note">States are checked in order: integrated, narrative, social, identified, implicit/situated, none. The first that fits is named.</p>';
+      mobileSelf = e.upper.state === e.lower.state ? e.upper.state : e.upper.state + ' / ' + e.lower.state;
+    }
+
+    $('results').innerHTML = h;
+    $('mobile-bar').innerHTML = '<span>A ' + fmtRange(lo.A, hi.A, 2) + '</span><span>' + esc(bandTxt) + '</span><span style="color:var(--text-dim)">' + esc(mobileSelf) + '</span>';
+  }
+
+  function row(k, v) { return '<div class="res-row"><span class="k">' + k + '</span><span class="v">' + v + '</span></div>'; }
+
+  function sheet() {
+    const r = SIU.score(state);
+    const lo = r.low, hi = r.high;
+    const L = [];
+    const label = { Y: 'Yes', P: 'Partial', N: 'No', U: 'Untested (U)', B: 'Borderline' };
+    L.push('SIU score sheet (field worksheet v2)');
+    L.push('System: ' + (state.name || '(unnamed)'));
+    L.push('Date: ' + new Date().toISOString().slice(0, 10));
+    if (state.notes) L.push('Notes: ' + state.notes);
+    L.push('');
+    L.push('Step 0');
+    for (const s of STEP0) if (state.step0[s.key]) L.push('  ' + s.key + ': ' + (label[state.step0[s.key]] || state.step0[s.key]));
+    L.push('  Placement: ' + (r.placement.tier || 'not placed'));
+    if (r.placement.scored) {
+      L.push('');
+      L.push('Step 1 items');
+      for (const term of ['S', 'I', 'U', 'X']) for (const [code, t] of ITEMS[term]) {
+        if (code === 'I5' && r.mode === 'construct') continue;
+        const a = state.items[code];
+        L.push('  ' + code.padEnd(3) + ' ' + t.padEnd(34) + ' ' + (a ? label[a] : '(blank, scored No)') + (state.tags[code] ? '  [' + state.tags[code] + ']' : ''));
+      }
+      L.push('');
+      L.push('S ' + fmtRange(lo.S, hi.S, 2) + '   I ' + fmtRange(lo.I, hi.I, 2) + '   U ' + fmtRange(lo.U, hi.U, 2));
+      L.push('A ' + fmtRange(lo.A, hi.A, 2) + '   min(S, I, U) ' + fmtRange(lo.min, hi.min, 2));
+      L.push('Gate: ' + (hi.gate.pass ? (lo.gate.pass ? 'pass' : 'pass on the upper end only') : 'fail'));
+      L.push('Band: ' + SIU.bandRange(lo, hi) + (hi.veryHighIfShown ? ' (Very high if the untested stretch items are shown)' : ''));
+      if (hi.gate.pass) {
+        L.push('');
+        L.push('Steps 2 to 4 indicators');
+        const sl = Object.fromEntries(STATUS_B4);
+        for (const t of ['B', 'IP', 'NC']) for (const [code, title] of SELF[t].items) {
+          const v = state.self[code] || 'N';
+          if (v !== 'N') L.push('  ' + code + ' ' + title + ': ' + sl[v]);
+        }
+        L.push('  Naming: ' + (state.naming === 'Y' ? 'shown' : 'not shown'));
+        const e = r.self.ends;
+        L.push('');
+        L.push('Raw rungs: ' + ['B', 'IP', 'NC'].map(t => t + ' ' + SIU.rungRangeLabel(r.self.raw[t].lower, r.self.raw[t].upper)).join(', '));
+        L.push('After caps: ' + ['B', 'IP', 'NC'].map(t => t + ' ' + SIU.rungRangeLabel(e.lower.rungs[t], e.upper.rungs[t])).join(', '));
+        L.push('Self state: ' + (e.upper.state === e.lower.state ? e.upper.state : e.upper.state + ' (top) / ' + e.lower.state + ' (bottom)'));
+      } else {
+        L.push('Self tracks: not scored (gate not cleared)');
+      }
+    }
+    L.push('');
+    L.push('Scored with the SIU calculator, worksheet v2: noelle-bytes.github.io/calculator.html');
+    return L.join('\n');
+  }
+
+  // Events
+  document.addEventListener('click', e => {
+    const b = e.target.closest('.seg button');
+    if (b) {
+      const sg = b.parentElement, group = sg.dataset.group, key = sg.dataset.key, v = b.dataset.v;
+      if (group === 'step0') {
+        state.step0[key] = state.step0[key] === v ? undefined : v;
+        // Clear answers after a change so stale later answers do not linger.
+        const order = ['made', 'flow', 'recovery', 'selfprod', 'lineage'];
+        if (key === 'made' && v === 'Y') for (const k of order.slice(1)) delete state.step0[k];
+      } else if (group === 'items') {
+        state.items[key] = state.items[key] === v ? undefined : v;
+      } else if (group === 'naming') {
+        state.naming = v;
+      }
+      if (group === 'step0') buildStep0();
+      else sg.querySelectorAll('button').forEach(x => x.classList.toggle('on', (group === 'items' ? state.items[key] : state.naming) === x.dataset.v));
+      document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+      update();
+      return;
+    }
+    const pr = e.target.closest('[data-preset]');
+    if (pr) {
+      const p = SIU.PRESETS[+pr.dataset.preset];
+      state = blank();
+      state.name = p.name;
+      state.step0 = Object.assign({}, p.step0);
+      state.items = Object.assign({}, p.items);
+      state.tags = Object.assign({}, p.tags || {});
+      state.self = Object.assign({}, p.self);
+      state.naming = p.naming || 'N';
+      buildAll();
+      document.querySelectorAll('.chip').forEach(c => c.classList.toggle('active', c === pr));
+    }
   });
-});
+  document.addEventListener('change', e => {
+    const t = e.target;
+    if (t.dataset.tag) { state.tags[t.dataset.tag] = t.value; return; }
+    if (t.dataset.self) { state.self[t.dataset.self] = t.value; update(); }
+  });
+  $('sp-name').addEventListener('input', e => { state.name = e.target.value; });
+  $('sp-notes').addEventListener('input', e => { state.notes = e.target.value; });
 
-update();
+  $('copy-btn').addEventListener('click', () => {
+    const txt = sheet();
+    const done = ok => { $('copy-msg').textContent = ok ? 'Score sheet copied.' : 'Copy failed; use Download instead.'; };
+    if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(() => done(true), () => done(false));
+    else {
+      const ta = document.createElement('textarea'); ta.value = txt; document.body.appendChild(ta); ta.select();
+      try { done(document.execCommand('copy')); } catch (err) { done(false); }
+      ta.remove();
+    }
+  });
+  $('dl-btn').addEventListener('click', () => {
+    const blob = new Blob([sheet()], { type: 'text/plain' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = ((state.name || 'siu-score-sheet').replace(/[^\w\- ]+/g, '').trim().replace(/\s+/g, '-') || 'siu-score-sheet') + '.txt';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  });
+  $('reset-btn').addEventListener('click', () => {
+    state = blank(); buildAll();
+    document.querySelectorAll('.chip.active').forEach(c => c.classList.remove('active'));
+  });
+
+  buildPresets();
+  buildAll();
+})();
 </script>
 <script>if("serviceWorker" in navigator)navigator.serviceWorker.register("sw.js")</script>
 </body>
